@@ -8,8 +8,9 @@ module.exports = {
       require.resolve('@babel/plugin-transform-react-jsx')
     ]
   }),
+  //define o caminho absoluto como /src das importações
   webpackFinal: (config) => {
-    config.resolve.modules.push(`${process.cwd()}/src`)
+    config.resolve.modules.push(`${process.cwd()}/src`) // cwd pega a raiz do projeto
     return config
   }
 }
