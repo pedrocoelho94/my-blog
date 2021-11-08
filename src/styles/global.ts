@@ -30,7 +30,7 @@ export default createGlobalStyle`
      color: ${theme.colors.primary};
    }
 
-   p {
+   /* p {
      margin: ${theme.spacings.medium} 0;
    }
 
@@ -47,6 +47,6 @@ export default createGlobalStyle`
    .table{
      width: 100%
      overflow-x: auto;
-   }
+   } */
  `}
 `

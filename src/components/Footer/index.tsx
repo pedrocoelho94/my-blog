@@ -1,4 +1,4 @@
-import TextComponent from 'components/TextComponent'
+import HtmlContent from 'components/HtmlContent'
 import * as S from './styles'
 
 export type FooterProps = {
@@ -7,7 +7,7 @@ export type FooterProps = {
 
 const Footer = ({ footerHtml }: FooterProps) => (
   <S.Footer>
-    <TextComponent>{footerHtml}</TextComponent>
+    <HtmlContent html={footerHtml} />
   </S.Footer>
 )
 

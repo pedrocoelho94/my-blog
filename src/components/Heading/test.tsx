@@ -79,7 +79,7 @@ describe('<Heading />', () => {
 
     expect(screen.getByRole('heading', { name: 'texto' })).toHaveStyleRule(
       'font-size',
-      theme.font.sizes.xlarge,
+      theme.font.sizes.large,
       {
         media: '(max-width: 768px)'
       }
