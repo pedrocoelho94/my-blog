@@ -1,5 +1,6 @@
-import Main from 'components/Main'
+import mock from 'components/ArticleHeader/mock'
+import ArticleHeader from 'components/ArticleHeader'
 
 export default function Home() {
-  return <Main />
+  return <ArticleHeader id="123123" {...mock} />
 }

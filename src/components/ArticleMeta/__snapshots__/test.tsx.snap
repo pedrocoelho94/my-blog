@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArticleMeta /> should format date 1`] = `
+.c0 {
+  font-size: 1.6rem;
+  color: #AAAAAA;
+  font-style: italic;
+}
+
+.c0 .categories span:not(:last-child):after {
+  content: ', ';
+}
+
+.c0 a {
+  color: #dc143c;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.c0 a:hover {
+  -webkit-filter: brightness(0.5);
+  filter: brightness(0.5);
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <p>
+      <span>
+        Por 
+      </span>
+      <a
+        href="/author/pedro-coelho"
+      >
+        Pedro Coelho
+      </a>
+      <span
+        class="separator"
+      >
+         em 
+      </span>
+      <time
+        datetime="2021-03-02T15:16:09.246+00:00"
+      >
+        2 de mar. de 2021
+      </time>
+      <span
+        class="separator"
+      >
+         - 
+      </span>
+      <span
+        class="categories"
+      >
+        <span>
+          <a
+            href="/category/tech"
+          >
+            Tech
+          </a>
+        </span>
+        <span>
+          <a
+            href="/category/javascript"
+          >
+            JS
+          </a>
+        </span>
+      </span>
+    </p>
+  </div>
+</div>
+`
