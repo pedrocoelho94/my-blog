@@ -46,6 +46,7 @@ exports[
 
 .c3 {
   margin: 2.4rem 0;
+  font-size: 2.4rem;
 }
 
 .c4 {

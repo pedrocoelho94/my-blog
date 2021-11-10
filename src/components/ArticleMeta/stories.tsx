@@ -4,7 +4,7 @@ import ArticleMeta, { ArticleMetaProps } from '.'
 import mock from './mock'
 
 export default {
-  title: 'ArticleMeta',
+  title: 'Posts/ArticleMeta',
   component: ArticleMeta,
   args: mock,
   argTypes: {

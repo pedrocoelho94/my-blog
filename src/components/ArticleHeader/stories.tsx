@@ -4,7 +4,7 @@ import ArticleHeader, { ArticleHeaderProps } from '.'
 import mock from './mock'
 
 export default {
-  title: 'ArticleHeader',
+  title: 'Posts/ArticleHeader',
   component: ArticleHeader,
   args: mock
 } as Meta

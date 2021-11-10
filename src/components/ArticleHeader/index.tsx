@@ -1,7 +1,5 @@
-import ArticleMeta from 'components/ArticleMeta'
+import ArticleMeta, { ArticleMetaProps } from 'components/ArticleMeta'
 import Heading from 'components/Heading'
-import { Author } from 'shared-typed/author'
-import { Category } from 'shared-typed/category'
 import { StrapiImage } from 'shared-typed/cover'
 import * as S from './styles'
 
@@ -10,10 +8,7 @@ export type ArticleHeaderProps = {
   title: string
   excerpt: string
   cover: StrapiImage
-  author: Author
-  categories: Category[]
-  createdAt: string
-}
+} & ArticleMetaProps
 
 const ArticleHeader = ({
   title,
