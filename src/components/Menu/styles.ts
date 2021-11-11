@@ -57,8 +57,15 @@ export const OpenClose = styled.a<MenuBehavior>`
     width: 3rem;
     height: 3rem;
     transition: all 0.3s ease-in-out;
-    left: 0;
+    left: 0.5rem;
     color: ${theme.colors.white};
+
+    ${!isMenuVisible &&
+    css`
+      ${media.lessThan('medium')`
+        left: 0;
+      `}
+    `}
 
     ${isMenuVisible &&
     css`

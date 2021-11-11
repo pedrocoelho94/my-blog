@@ -173,7 +173,7 @@ exports[`<Post /> should render correctly 1`] = `
 
 @media (max-width:768px) {
   .c3 {
-    font-size: 3.2rem;
+    font-size: calc(1.6rem * 1.2);
   }
 }
 

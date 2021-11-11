@@ -64,7 +64,7 @@ exports[`<Menu /> should match snapshot 1`] = `
   height: 3rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  left: 0;
+  left: 0.5rem;
   color: #FFFFFF;
 }
 
@@ -107,13 +107,19 @@ exports[`<Menu /> should match snapshot 1`] = `
 
 @media (max-width:768px) {
   .c6 {
-    font-size: 3.2rem;
+    font-size: calc(1.6rem * 1.2);
   }
 }
 
 @media (max-width:768px) {
   .c2 {
     left: -32rem;
+  }
+}
+
+@media (max-width:768px) {
+  .c0 {
+    left: 0;
   }
 }
 

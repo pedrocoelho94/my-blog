@@ -34,7 +34,7 @@ export const Title = styled.h1<HeadingProps>`
     ${titleCase(uppercase!)}
 
     ${media.lessThan('medium')`
-      font-size: ${theme.font.sizes.large}
+      font-size: calc(${theme.font.sizes.small} * 1.2)
     `}
   `}
 `
