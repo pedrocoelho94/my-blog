@@ -8,6 +8,7 @@ import { Author } from 'shared-typed/author'
 import { StrapiImage } from 'shared-typed/cover'
 
 export type PostCardProps = {
+  id: string
   title: string
   cover: StrapiImage
   slug: string
