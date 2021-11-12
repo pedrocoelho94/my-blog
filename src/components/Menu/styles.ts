@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import * as HeadingStyles from 'components/Heading/styles'
 import media from 'styled-media-query'
 
 type MenuBehavior = {
@@ -14,37 +13,24 @@ export const Wrapper = styled.main<MenuBehavior>`
     position: fixed;
     z-index: 1;
     width: 100%;
-    max-width: 32rem;
+    max-width: 26rem;
     height: 100vh;
     top: 0;
     transition: all 0.3s ease-in-out;
 
-    left: ${isMenuVisible ? '0' : '-30rem'};
+    left: ${isMenuVisible ? '0' : '-24rem'};
     overflow-y: ${isMenuVisible ? 'auto' : 'hidden'};
 
     ${media.lessThan('medium')`
-      left: ${isMenuVisible ? '0' : '-32rem'};
+      left: ${isMenuVisible ? '0' : '-26rem'};
     `}
   `}
 `
 
 export const Nav = styled.nav`
-  margin: auto;
-  width: 100%;
-`
-
-export const Logo = styled.div`
   ${({ theme }) => css`
-    ${HeadingStyles.Title} {
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      margin-bottom: ${theme.spacings.xlarge};
-
-      img {
-        border: 0.5rem solid ${theme.colors.secondary};
-      }
-    }
+    margin: ${theme.spacings.xxlarge} auto;
+    width: 100%;
   `}
 `
 
@@ -58,18 +44,19 @@ export const OpenClose = styled.a<MenuBehavior>`
     height: 3rem;
     transition: all 0.3s ease-in-out;
     left: 0.5rem;
+    top: 2rem;
     color: ${theme.colors.white};
 
     ${!isMenuVisible &&
     css`
       ${media.lessThan('medium')`
-        left: 0;
+        left: 0rem;
       `}
     `}
 
     ${isMenuVisible &&
     css`
-      left: 26rem;
+      left: 21rem;
       color: ${theme.colors.secondary};
     `};
   `}

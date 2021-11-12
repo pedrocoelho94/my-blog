@@ -7,13 +7,6 @@ exports[`<Menu /> should match snapshot 1`] = `
   overflow: hidden;
 }
 
-.c6 {
-  color: #000000;
-  line-height: 1.2;
-  font-size: 2.4rem;
-  text-transform: uppercase;
-}
-
 .c2 {
   background: #000000;
   padding: 3.2rem;
@@ -24,35 +17,18 @@ exports[`<Menu /> should match snapshot 1`] = `
   position: fixed;
   z-index: 1;
   width: 100%;
-  max-width: 32rem;
+  max-width: 26rem;
   height: 100vh;
   top: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  left: -30rem;
+  left: -24rem;
   overflow-y: hidden;
 }
 
 .c3 {
-  margin: auto;
+  margin: 4.8rem auto;
   width: 100%;
-}
-
-.c4 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0;
-  margin-bottom: 4.0rem;
-}
-
-.c4 .c5 img {
-  border: 0.5rem solid #dc143c;
 }
 
 .c0 {
@@ -65,30 +41,11 @@ exports[`<Menu /> should match snapshot 1`] = `
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   left: 0.5rem;
+  top: 2rem;
   color: #FFFFFF;
 }
 
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: inherit;
-}
-
-.c7 > img {
-  height: 15rem;
-  width: 15rem;
-  border-radius: 50%;
-}
-
-.c8 {
+.c4 {
   display: block;
   color: #FFFFFF;
   -webkit-text-decoration: none;
@@ -100,26 +57,20 @@ exports[`<Menu /> should match snapshot 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.c8:hover {
+.c4:hover {
   border-color: #dc143c;
   color: #dc143c;
 }
 
 @media (max-width:768px) {
-  .c6 {
-    font-size: calc(1.6rem * 1.2);
-  }
-}
-
-@media (max-width:768px) {
   .c2 {
-    left: -32rem;
+    left: -26rem;
   }
 }
 
 @media (max-width:768px) {
   .c0 {
-    left: 0;
+    left: 0rem;
   }
 }
 
@@ -155,96 +106,78 @@ exports[`<Menu /> should match snapshot 1`] = `
     <nav
       class="c3"
     >
-      <div
-        class="c4"
-      >
-        <h1
-          class="c5 c6"
-        >
-          <a
-            class="c7"
-            href="/"
-            target="_self"
-          >
-            <img
-              alt="Pedro Coelho"
-              src="/assets/images/me.jpg"
-            />
-          </a>
-        </h1>
-      </div>
       <a
-        class="c8"
+        class="c4"
         href="/home/1"
         target="_self"
       >
         My jobs
       </a>
       <a
-        class="c8"
+        class="c4"
         href="/home/2"
         target="_self"
       >
         About me
       </a>
       <a
-        class="c8"
+        class="c4"
         href="/home/3"
         target="_self"
       >
         Services
       </a>
       <a
-        class="c8"
+        class="c4"
         href="http://localhost/home/4"
         target="_self"
       >
         External Link
       </a>
       <a
-        class="c8"
+        class="c4"
         href="/home/5"
         target="_self"
       >
         JavaScript
       </a>
       <a
-        class="c8"
+        class="c4"
         href="/home/6"
         target="_self"
       >
         Python
       </a>
       <a
-        class="c8"
+        class="c4"
         href="/home/7"
         target="_self"
       >
         Consectetur
       </a>
       <a
-        class="c8"
+        class="c4"
         href="/home/8"
         target="_self"
       >
         Text test
       </a>
       <a
-        class="c8"
+        class="c4"
         href="/home/9"
         target="_self"
       >
         Pac-man
       </a>
       <a
-        class="c8"
+        class="c4"
         href="/home/10"
         target="_self"
       >
         Star Wars
       </a>
       <a
-        class="c8"
+        class="c4"
         href="/home/11"
         target="_self"
       >

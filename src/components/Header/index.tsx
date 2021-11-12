@@ -16,7 +16,7 @@ const Header = ({
   showText = true
 }: HeaderProps) => (
   <S.Wrapper>
-    <LogoLink link="/" srcImg={logo} text={`${blogName} - Home`} />
+    <LogoLink link="/" srcImg={logo} text={`${blogName} Blog`} />
 
     {showText && (
       <S.Content>

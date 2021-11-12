@@ -40,6 +40,7 @@ exports[`<Post /> should render correctly 1`] = `
 .c1 .c2 {
   margin: 0;
   margin-bottom: 2.4rem;
+  font-size: 3.2rem;
 }
 
 .c4 {

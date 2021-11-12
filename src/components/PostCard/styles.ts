@@ -3,18 +3,15 @@ import * as HeadingStyles from 'components/Heading/styles'
 import media, { generateMedia } from 'styled-media-query'
 
 const customMedia = generateMedia({
-  smallMedium: '550px'
+  smallMedium: '600px'
 })
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     display: grid;
+    align-items: start;
     grid-template-columns: 1fr 1fr;
     gap: ${theme.spacings.medium};
-
-    ${media.lessThan('medium')`
-      grid-template-columns: 4fr 6fr;
-    `}
 
     ${customMedia.lessThan('smallMedium')`
       grid-template-columns: 1fr;
@@ -47,7 +44,7 @@ export const Cover = styled.img`
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: opacity 0.2s ease-in-out;
 
   &:hover {

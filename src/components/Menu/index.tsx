@@ -2,7 +2,6 @@ import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 
 import * as S from './styles'
-import LogoLink from 'components/LogoLink'
 import MenuLink from 'components/MenuLink'
 import { useState } from 'react'
 
@@ -15,11 +14,9 @@ export type MenuPropsLinks = {
 
 export type MenuProps = {
   links: MenuPropsLinks[]
-  blogName: string
-  logo: string
 }
 
-const Menu = ({ blogName, logo, links = [] }: MenuProps) => {
+const Menu = ({ links = [] }: MenuProps) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false)
 
   const handleOpenCloseMenu = (event: React.MouseEvent) => {
@@ -45,10 +42,6 @@ const Menu = ({ blogName, logo, links = [] }: MenuProps) => {
 
       <S.Wrapper isMenuVisible={isMenuVisible} aria-hidden={!isMenuVisible}>
         <S.Nav>
-          <S.Logo>
-            <LogoLink link="/" text={blogName} srcImg={logo} />
-          </S.Logo>
-
           {links.map((link) => (
             <MenuLink key={link.id} link={link.link} newTab={link.newTab}>
               {link.text}

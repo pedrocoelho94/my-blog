@@ -30,14 +30,6 @@ describe('<Menu />', () => {
 
     expect(screen.getByRole('navigation')).toBeInTheDocument()
 
-    expect(
-      screen.getByRole('heading', { name: /pedro coelho/i })
-    ).toBeInTheDocument()
-
-    expect(
-      screen.getByRole('img', { name: /pedro coelho/i })
-    ).toBeInTheDocument()
-
     fireEvent.click(buttonLink)
 
     expect(screen.getByLabelText('Open menu')).toBeInTheDocument()

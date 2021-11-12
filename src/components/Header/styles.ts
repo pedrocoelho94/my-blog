@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import * as LogoLinkStyles from 'components/LogoLink/styles'
 import * as HeadingStyles from 'components/Heading/styles'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.header`
   ${({ theme }) => css`
@@ -24,6 +25,15 @@ export const Wrapper = styled.header`
         border-radius: 50%;
       }
     }
+
+    ${media.lessThan('small')`
+      flex-direction: column;
+      gap: 1rem;
+
+      ${HeadingStyles.Title}{
+        text-align: center
+      }
+    `}
   `}
 `
 export const Description = styled.p``

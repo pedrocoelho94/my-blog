@@ -1,5 +1,9 @@
 export default {
   name: 'default',
+  grid: {
+    container: '130rem',
+    gutter: '3.2rem'
+  },
   colors: {
     primary: '#000000',
     darkText: '#333333',
