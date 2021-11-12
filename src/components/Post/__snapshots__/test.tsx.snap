@@ -161,14 +161,12 @@ exports[`<Post /> should render correctly 1`] = `
 .c0 {
   width: 100%;
   margin: 0 auto;
-  padding: 0 1.6rem;
   max-width: 96rem;
 }
 
 .c7 {
   width: 100%;
   margin: 0 auto;
-  padding: 0 1.6rem;
   max-width: 80rem;
 }
 
