@@ -5,26 +5,41 @@ import * as S from './styles'
 
 export type ArticleMetaProps = {
   createdAt: string
-  author: Author
-  categories: Category[]
+  author?: Author
+  categories?: Category[]
 }
 
-const ArticleMeta = ({ author, categories, createdAt }: ArticleMetaProps) => (
+const ArticleMeta = ({
+  author = undefined,
+  categories = [],
+  createdAt
+}: ArticleMetaProps) => (
   <S.Wrapper>
     <p>
-      <span>Por </span>
-      <a href={`/author/${author.slug}`}>{author.displayName}</a>
-      <span className="separator"> em </span>
-      <time dateTime={createdAt}>{formatDate(createdAt)}</time>
-      <span className="separator"> - </span>
+      {typeof author !== 'undefined' && (
+        <>
+          <span>Por </span>
+          <a href={`/author/${author.slug}`}>{author.displayName}</a>
+          <span className="separator"> em </span>
+        </>
+      )}
 
-      <span className="categories">
-        {categories.map((category) => (
-          <span key={`article-meta-cat-${category.id}`}>
-            <a href={`/category/${category.slug}`}>{category.displayName}</a>
+      <time dateTime={createdAt}>{formatDate(createdAt)}</time>
+
+      {categories.length > 0 && (
+        <>
+          <span className="separator"> - </span>
+          <span className="categories">
+            {categories.map((category) => (
+              <span key={`article-meta-cat-${category.id}`}>
+                <a href={`/category/${category.slug}`}>
+                  {category.displayName}
+                </a>
+              </span>
+            ))}
           </span>
-        ))}
-      </span>
+        </>
+      )}
     </p>
   </S.Wrapper>
 )

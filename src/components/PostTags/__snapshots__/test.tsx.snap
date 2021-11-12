@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostTags /> should match snapshot with no tags 1`] = `<div />`
+
+exports[`<PostTags /> should render two tags 1`] = `
+.c0 {
+  margin: 2.4rem 0;
+}
+
+.c0 span {
+  margin-right: 0.5rem;
+}
+
+.c0 span:not(:last-child)::after {
+  content: ', ';
+}
+
+.c0 a {
+  color: #dc143c;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.c0 a:hover {
+  -webkit-filter: brightness(0.5);
+  filter: brightness(0.5);
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    tags:
+     
+    <span>
+      <a
+        href="/tag/barcelona"
+      >
+        Barcelona
+      </a>
+    </span>
+    <span>
+      <a
+        href="/tag/xavi"
+      >
+        Xavi
+      </a>
+    </span>
+  </p>
+</div>
+`

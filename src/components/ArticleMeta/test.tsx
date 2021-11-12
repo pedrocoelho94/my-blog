@@ -10,9 +10,10 @@ describe('<ArticleMeta />', () => {
   it('should render author and category links', () => {
     renderWithTheme(<ArticleMeta {...props} />)
 
-    expect(
-      screen.getByRole('link', { name: props.author.displayName })
-    ).toHaveAttribute('href', `/author/${props.author.slug}`)
+    expect(screen.getByRole('link', { name: /pedro coelho/i })).toHaveAttribute(
+      'href',
+      `/author/pedro-coelho`
+    )
 
     expect(screen.getByRole('link', { name: /tech/i })).toHaveAttribute(
       'href',
@@ -31,6 +32,14 @@ describe('<ArticleMeta />', () => {
     expect(screen.getByText('2 de mar. de 2021')).toHaveAttribute(
       'datetime',
       props.createdAt
+    )
+
+    expect(container).toMatchSnapshot()
+  })
+
+  it('should match snapshot with no author and categories', () => {
+    const { container } = renderWithTheme(
+      <ArticleMeta {...props} author={undefined} categories={undefined} />
     )
 
     expect(container).toMatchSnapshot()

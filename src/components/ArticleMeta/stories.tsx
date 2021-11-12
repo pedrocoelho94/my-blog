@@ -23,3 +23,21 @@ export const Default: Story<ArticleMetaProps> = (args) => (
     <ArticleMeta {...args} />
   </div>
 )
+
+export const NoAuthor: Story<ArticleMetaProps> = (args) => (
+  <div>
+    <ArticleMeta {...args} author={undefined} />
+  </div>
+)
+
+export const NoCategories: Story<ArticleMetaProps> = (args) => (
+  <div>
+    <ArticleMeta {...args} categories={undefined} />
+  </div>
+)
+
+export const NoAuthorNoCategories: Story<ArticleMetaProps> = (args) => (
+  <div>
+    <ArticleMeta {...args} author={undefined} categories={undefined} />
+  </div>
+)

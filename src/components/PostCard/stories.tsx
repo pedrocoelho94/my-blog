@@ -14,3 +14,9 @@ export const Default: Story<PostCardProps> = (args) => (
     <PostCard {...args} />
   </div>
 )
+
+export const NoAuthor: Story<PostCardProps> = (args) => (
+  <div>
+    <PostCard {...args} author={undefined} />
+  </div>
+)

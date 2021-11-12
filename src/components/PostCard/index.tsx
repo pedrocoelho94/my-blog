@@ -14,7 +14,7 @@ export type PostCardProps = {
   slug: string
   createdAt: string
   excerpt: string
-  author: Author
+  author?: Author
 }
 
 const PostCard = ({
@@ -22,7 +22,7 @@ const PostCard = ({
   cover,
   excerpt,
   slug,
-  author,
+  author = undefined,
   createdAt
 }: PostCardProps) => (
   <S.Wrapper>
@@ -36,12 +36,14 @@ const PostCard = ({
 
     <S.Content>
       <S.Info>
-        <span>
-          <AccountCircle size={18} />
-          <Link href={`/author/${author.slug}`}>
-            <a>{author.displayName}</a>
-          </Link>
-        </span>
+        {typeof author !== 'undefined' && (
+          <span>
+            <AccountCircle size={18} />
+            <Link href={`/author/${author.slug}`}>
+              <a>{author.displayName}</a>
+            </Link>
+          </span>
+        )}
         <span>
           <CalendarToday size={16} />
           {formatDate(createdAt)}
