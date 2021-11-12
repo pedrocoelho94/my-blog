@@ -1,6 +1,12 @@
-import mock from 'components/ArticleHeader/mock'
-import ArticleHeader from 'components/ArticleHeader'
+import { loadPosts } from 'api/loadPosts'
+import { useEffect } from 'react'
 
 export default function Home() {
-  return <ArticleHeader id="123123" {...mock} />
+  useEffect(() => {
+    loadPosts({
+      authorSlug: 'pedro-coelho'
+    }).then((resp) => console.log(resp.posts))
+  }, [])
+
+  return <h1>oi</h1>
 }
