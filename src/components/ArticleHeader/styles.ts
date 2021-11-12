@@ -10,6 +10,7 @@ export const Wrapper = styled.header`
     ${HeadingStyles.Title} {
       margin: 0;
       margin-bottom: ${theme.spacings.medium};
+      font-size: ${theme.font.sizes.large};
     }
   `}
 `

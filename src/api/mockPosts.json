@@ -2,10 +2,12 @@
   "data": {
     "setting": {
       "id": "61842424d3840c120c10847f",
-      "blogName": "Skytter",
-      "blogDescription": "Blog do Skytter",
+      "blogName": "Pedro Coelho",
+      "blogDescription": "Uma descrição para o seu blog.",
       "logo": {
-        "url": "https://res.cloudinary.com/rabbitz/image/upload/v1636046549/1212_42656b9f6a.png"
+        "id": "3252352123",
+        "alternativeText": "",
+        "url": "/assets/images/me.jpg"
       },
       "menuLink": [
         {

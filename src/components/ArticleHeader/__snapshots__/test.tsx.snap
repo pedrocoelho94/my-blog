@@ -42,6 +42,7 @@ exports[
 .c0 .c1 {
   margin: 0;
   margin-bottom: 2.4rem;
+  font-size: 3.2rem;
 }
 
 .c3 {
