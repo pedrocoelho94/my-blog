@@ -13,11 +13,7 @@ export type BaseTemplateProps = {
 
 const BaseTemplate = ({ settings, children }: BaseTemplateProps) => (
   <S.Wrapper>
-    <Menu
-      links={settings.menuLink}
-      blogName={settings.blogName}
-      logo={settings.logo.url}
-    />
+    <Menu links={settings.menuLink} />
 
     <S.Header>
       <Container>

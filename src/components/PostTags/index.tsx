@@ -1,3 +1,4 @@
+import { Container } from 'components/Container'
 import Link from 'next/link'
 
 import { PostTag } from 'shared-typed/tag'
@@ -12,14 +13,17 @@ const PostTags = ({ tags = [] }: PostTagsProps) => {
 
   return (
     <S.Wrapper>
-      tags:{' '}
-      {tags?.map((tag) => (
-        <span key={tag.id}>
-          <Link href={`/tag/${tag.slug}`} passHref>
-            <a>{tag.displayName}</a>
-          </Link>
-        </span>
-      ))}
+      <Container>
+        {' '}
+        tags:{' '}
+        {tags?.map((tag) => (
+          <span key={tag.id}>
+            <Link href={`/tag/${tag.slug}`} passHref>
+              <a>{tag.displayName}</a>
+            </Link>
+          </span>
+        ))}
+      </Container>
     </S.Wrapper>
   )
 }

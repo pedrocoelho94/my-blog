@@ -3,6 +3,15 @@
 exports[`<PostTags /> should match snapshot with no tags 1`] = `<div />`
 
 exports[`<PostTags /> should render two tags 1`] = `
+.c1 {
+  width: 100%;
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(3.2rem / 2);
+  padding-right: calc(3.2rem / 2);
+}
+
 .c0 {
   margin: 2.4rem 0;
 }
@@ -28,26 +37,38 @@ exports[`<PostTags /> should render two tags 1`] = `
   filter: brightness(0.5);
 }
 
+@media (min-width:768px) {
+  .c1 {
+    padding-left: calc(3.2rem * 0.7);
+    padding-right: calc(3.2rem * 0.7);
+  }
+}
+
 <div>
   <p
     class="c0"
   >
-    tags:
-     
-    <span>
-      <a
-        href="/tag/barcelona"
-      >
-        Barcelona
-      </a>
-    </span>
-    <span>
-      <a
-        href="/tag/xavi"
-      >
-        Xavi
-      </a>
-    </span>
+    <div
+      class="c1"
+    >
+       
+      tags:
+       
+      <span>
+        <a
+          href="/tag/barcelona"
+        >
+          Barcelona
+        </a>
+      </span>
+      <span>
+        <a
+          href="/tag/xavi"
+        >
+          Xavi
+        </a>
+      </span>
+    </div>
   </p>
 </div>
 `

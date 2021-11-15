@@ -54,18 +54,27 @@ exports[`<Post /> should render correctly 1`] = `
   margin-bottom: 2.4rem;
 }
 
-.c8 {
+.c0 {
+  width: 100%;
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(3.2rem / 2);
+  padding-right: calc(3.2rem / 2);
+}
+
+.c7 {
   font-size: calc(1.6rem + 0.2rem);
   line-height: 1.5;
 }
 
-.c8 p {
+.c7 p {
   margin: 4.0rem 0;
 }
 
-.c8 a,
-.c8 a:visited,
-.c8 a:link {
+.c7 a,
+.c7 a:visited,
+.c7 a:link {
   color: #dc143c;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -73,12 +82,12 @@ exports[`<Post /> should render correctly 1`] = `
   transition: all 0.2s ease-in-out;
 }
 
-.c8 a:hover {
+.c7 a:hover {
   -webkit-filter: brightness(0.8);
   filter: brightness(0.8);
 }
 
-.c8 code {
+.c7 code {
   font-family: monospace;
   color: #dc143c;
   font-size: 1.6rem;
@@ -87,7 +96,7 @@ exports[`<Post /> should render correctly 1`] = `
   margin: 0.2rem;
 }
 
-.c8 pre {
+.c7 pre {
   background: #000000;
   padding: 2.4rem;
   font-family: monospace;
@@ -98,57 +107,57 @@ exports[`<Post /> should render correctly 1`] = `
   font-size: 1.6rem;
 }
 
-.c8 pre code {
+.c7 pre code {
   color: inherit;
   background: inherit;
 }
 
-.c8 hr {
+.c7 hr {
   border: none;
   border-bottom: 0.1rem solid #DDDDDD;
 }
 
-.c8 img {
+.c7 img {
   max-width: 100%;
 }
 
-.c8 .image {
+.c7 .image {
   background: #DDDDDD;
   line-height: 0;
   margin: 2.4rem 0;
 }
 
-.c8 .image figcaption {
+.c7 .image figcaption {
   font-size: 1.6rem;
   padding: 0.8rem;
   text-align: center;
   line-height: 1.3;
 }
 
-.c8 ul,
-.c8 ol {
+.c7 ul,
+.c7 ol {
   margin: 2.4rem 4.0rem;
 }
 
-.c8 .table {
+.c7 .table {
   width: 100%;
   overflow: hidden;
   overflow-x: auto;
 }
 
-.c8 table {
+.c7 table {
   width: 100%;
   border-collapse: collapse;
   margin: 2.4rem 0;
 }
 
-.c8 table td,
-.c8 table th {
+.c7 table td,
+.c7 table th {
   padding: 1.6rem;
   border: 0.1rem solid #DDDDDD;
 }
 
-.c8 blockquote {
+.c7 blockquote {
   border-left: 0.5rem solid #dc143c;
   color: #AAAAAA;
   -webkit-filter: brightness(80%);
@@ -158,18 +167,6 @@ exports[`<Post /> should render correctly 1`] = `
   margin: 2.4rem;
 }
 
-.c0 {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 96rem;
-}
-
-.c7 {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 80rem;
-}
-
 @media (max-width:768px) {
   .c3 {
     font-size: calc(1.6rem * 1.2);
@@ -177,7 +174,14 @@ exports[`<Post /> should render correctly 1`] = `
 }
 
 @media (min-width:768px) {
-  .c8 .image-style-side {
+  .c0 {
+    padding-left: calc(3.2rem * 0.7);
+    padding-right: calc(3.2rem * 0.7);
+  }
+}
+
+@media (min-width:768px) {
+  .c7 .image-style-side {
     float: right;
     max-width: 50%;
     margin: 2.4rem;
@@ -185,7 +189,7 @@ exports[`<Post /> should render correctly 1`] = `
 }
 
 @media (max-width:768px) {
-  .c8 {
+  .c7 {
     font-size: 2rem;
   }
 }
@@ -256,12 +260,8 @@ exports[`<Post /> should render correctly 1`] = `
           </p>
         </div>
       </header>
-    </div>
-    <div
-      class="c7"
-    >
       <div
-        class="c8"
+        class="c7"
       >
         
   

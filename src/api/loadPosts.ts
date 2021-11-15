@@ -17,7 +17,7 @@ export type LoadPostsVariables = {
 
 export type StrapiPostAndSettings = {
   setting: SettingsStrapi
-  posts: PostStrapi
+  posts: PostStrapi[]
 }
 
 export const loadPosts = async (

@@ -6,7 +6,7 @@ export type PostContainerProps = {
 
 const PostContainerModifier = {
   max: (theme: DefaultTheme) => css`
-    max-width: ${theme.sizes.max};
+    max-width: ${theme.grid.container};
   `,
   content: (theme: DefaultTheme) => css`
     max-width: ${theme.sizes.content};

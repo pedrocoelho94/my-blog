@@ -1,7 +1,7 @@
 export default {
   name: 'default',
   grid: {
-    container: '130rem',
+    container: '120rem',
     gutter: '3.2rem'
   },
   colors: {
@@ -10,7 +10,8 @@ export default {
     secondary: '#dc143c',
     white: '#FFFFFF',
     mediumGray: '#DDDDDD',
-    darkerGray: '#AAAAAA'
+    darkerGray: '#AAAAAA',
+    lightGray: '#F7F7F7'
   },
   font: {
     family: {

@@ -3,34 +3,34 @@
 exports[`<PostsTemplate /> should match snapshot 1`] = `
 .c0 {
   width: 100%;
-  max-width: 130rem;
+  max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: calc(3.2rem / 2);
   padding-right: calc(3.2rem / 2);
 }
 
-.c9 {
+.c11 {
   color: #000000;
   line-height: 1.2;
   font-size: 2.4rem;
   text-transform: uppercase;
 }
 
-.c13 {
+.c15 {
   color: #000000;
   line-height: 1.2;
   font-size: 2.4rem;
   text-transform: none;
 }
 
-.c2 {
+.c4 {
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
 }
 
-.c18 {
+.c20 {
   display: grid;
   -webkit-align-items: start;
   -webkit-box-align: start;
@@ -40,13 +40,13 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   gap: 2.4rem;
 }
 
-.c18 .c8 {
+.c20 .c10 {
   color: #333333;
   margin-top: 0;
   margin-bottom: 1.6rem;
 }
 
-.c18 a {
+.c20 a {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
@@ -54,16 +54,16 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   transition: all 0.2s ease-in-out;
 }
 
-.c18 a:hover {
+.c20 a:hover {
   color: #dc143c;
 }
 
-.c19 {
+.c21 {
   position: relative;
   padding-bottom: 56.25%;
 }
 
-.c20 {
+.c22 {
   position: absolute;
   top: 0;
   left: 0;
@@ -74,11 +74,11 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   transition: opacity 0.2s ease-in-out;
 }
 
-.c20:hover {
+.c22:hover {
   opacity: 0.8;
 }
 
-.c21 {
+.c23 {
   opacity: 0.6;
   margin-bottom: 0.8rem;
   display: -webkit-box;
@@ -88,7 +88,7 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   gap: 1.6rem;
 }
 
-.c21 span {
+.c23 span {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -99,38 +99,38 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   align-items: center;
 }
 
-.c21 span > svg {
+.c23 span > svg {
   margin-right: 0.8rem;
 }
 
-.c22 {
+.c24 {
   max-width: 100%;
 }
 
-.c16 {
+.c18 {
   width: 100%;
   margin: 0 auto;
 }
 
-.c17 {
+.c19 {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 6.4rem;
 }
 
-.c24 {
+.c26 {
   font-size: calc(1.6rem + 0.2rem);
   line-height: 1.5;
 }
 
-.c24 p {
+.c26 p {
   margin: 4.0rem 0;
 }
 
-.c24 a,
-.c24 a:visited,
-.c24 a:link {
+.c26 a,
+.c26 a:visited,
+.c26 a:link {
   color: #dc143c;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -138,12 +138,12 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   transition: all 0.2s ease-in-out;
 }
 
-.c24 a:hover {
+.c26 a:hover {
   -webkit-filter: brightness(0.8);
   filter: brightness(0.8);
 }
 
-.c24 code {
+.c26 code {
   font-family: monospace;
   color: #dc143c;
   font-size: 1.6rem;
@@ -152,7 +152,7 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   margin: 0.2rem;
 }
 
-.c24 pre {
+.c26 pre {
   background: #000000;
   padding: 2.4rem;
   font-family: monospace;
@@ -163,57 +163,57 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   font-size: 1.6rem;
 }
 
-.c24 pre code {
+.c26 pre code {
   color: inherit;
   background: inherit;
 }
 
-.c24 hr {
+.c26 hr {
   border: none;
   border-bottom: 0.1rem solid #DDDDDD;
 }
 
-.c24 img {
+.c26 img {
   max-width: 100%;
 }
 
-.c24 .image {
+.c26 .image {
   background: #DDDDDD;
   line-height: 0;
   margin: 2.4rem 0;
 }
 
-.c24 .image figcaption {
+.c26 .image figcaption {
   font-size: 1.6rem;
   padding: 0.8rem;
   text-align: center;
   line-height: 1.3;
 }
 
-.c24 ul,
-.c24 ol {
+.c26 ul,
+.c26 ol {
   margin: 2.4rem 4.0rem;
 }
 
-.c24 .table {
+.c26 .table {
   width: 100%;
   overflow: hidden;
   overflow-x: auto;
 }
 
-.c24 table {
+.c26 table {
   width: 100%;
   border-collapse: collapse;
   margin: 2.4rem 0;
 }
 
-.c24 table td,
-.c24 table th {
+.c26 table td,
+.c26 table th {
   padding: 1.6rem;
   border: 0.1rem solid #DDDDDD;
 }
 
-.c24 blockquote {
+.c26 blockquote {
   border-left: 0.5rem solid #dc143c;
   color: #AAAAAA;
   -webkit-filter: brightness(80%);
@@ -223,18 +223,18 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   margin: 2.4rem;
 }
 
-.c23 {
+.c25 {
   text-align: center;
   border-top: 0.1rem solid #DDDDDD;
 }
 
-.c23 a {
+.c25 a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c25 {
+.c27 {
   cursor: pointer;
   position: fixed;
   background: #000000;
@@ -258,7 +258,7 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   z-index: 6;
 }
 
-.c11 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -272,13 +272,13 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   color: inherit;
 }
 
-.c11 > img {
+.c13 > img {
   height: 15rem;
   width: 15rem;
   border-radius: 50%;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -300,15 +300,15 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   gap: 3rem;
 }
 
-.c7 .c8 {
+.c9 .c10 {
   margin: 0 0 calc(1.6rem - 1rem);
 }
 
-.c7 .c10 > img {
+.c9 .c12 > img {
   border-radius: 50%;
 }
 
-.c12 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -322,7 +322,13 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   max-width: 48rem;
 }
 
-.c3 {
+.c2 {
+  z-index: 9;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+
+.c5 {
   background: #000000;
   padding: 3.2rem;
   display: -webkit-box;
@@ -330,7 +336,6 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  z-index: 1;
   width: 100%;
   max-width: 26rem;
   height: 100vh;
@@ -341,12 +346,12 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   overflow-y: hidden;
 }
 
-.c4 {
+.c6 {
   margin: 4.8rem auto;
   width: 100%;
 }
 
-.c1 {
+.c3 {
   position: fixed;
   top: 2.4rem;
   background: #000000;
@@ -360,7 +365,7 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   color: #FFFFFF;
 }
 
-.c5 {
+.c7 {
   display: block;
   color: #FFFFFF;
   -webkit-text-decoration: none;
@@ -372,20 +377,42 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.c5:hover {
+.c7:hover {
   border-color: #dc143c;
   color: #dc143c;
 }
 
-.c6 {
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.1);
+}
+
+.c8 {
   margin-top: 6.4rem;
 }
 
-.c14 {
+.c16 {
   margin-bottom: 6.4rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
-.c15 {
+.c17 {
   display: grid;
   grid-template-columns: 70% 30%;
 }
@@ -398,31 +425,31 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
 }
 
 @media (max-width:768px) {
-  .c9 {
+  .c11 {
     font-size: calc(1.6rem * 1.2);
   }
 }
 
 @media (max-width:768px) {
-  .c13 {
+  .c15 {
     font-size: calc(1.6rem * 1.2);
   }
 }
 
 @media (max-width:600px) {
-  .c18 {
+  .c20 {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width:768px) {
-  .c21 {
+  .c23 {
     font-size: calc(0.8rem * 1.6);
   }
 }
 
 @media (min-width:768px) {
-  .c24 .image-style-side {
+  .c26 .image-style-side {
     float: right;
     max-width: 50%;
     margin: 2.4rem;
@@ -430,114 +457,118 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
 }
 
 @media (max-width:768px) {
-  .c24 {
+  .c26 {
     font-size: 2rem;
   }
 }
 
 @media (max-width:450px) {
-  .c11 > img {
+  .c13 > img {
     height: 10rem;
     width: 10rem;
   }
 }
 
 @media (max-width:450px) {
-  .c7 {
+  .c9 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 1rem;
   }
 
-  .c7 .c8 {
+  .c9 .c10 {
     text-align: center;
   }
 }
 
 @media (max-width:768px) {
-  .c3 {
+  .c5 {
     left: -26rem;
   }
 }
 
 @media (max-width:768px) {
-  .c1 {
+  .c3 {
     left: 0rem;
   }
 }
 
 @media (max-width:1170px) {
-  .c15 {
+  .c17 {
     grid-template-columns: 1fr;
   }
 }
 
 <div>
   <div
-    class="c0"
+    class="c0 c1"
   >
-    <a
-      aria-label="Open or close menu"
-      class="c1"
-      href="#"
-      title="Open menu"
-    >
-      <svg
-        aria-hidden="true"
-        aria-label="Open menu"
-        class="c2"
-        fill="currentColor"
-        focusable="false"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M0 0h24v24H0V0z"
-          fill="none"
-        />
-        <path
-          d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-        />
-      </svg>
-    </a>
-    <main
-      aria-hidden="true"
-      class="c3"
-    >
-      <nav
-        class="c4"
-      >
-        <a
-          class="c5"
-          href="/"
-          target="_self"
-        >
-          home
-        </a>
-        <a
-          class="c5"
-          href="/contact"
-          target="_self"
-        >
-          contact
-        </a>
-      </nav>
-    </main>
     <div
-      class="c6"
+      class="c2"
+    >
+      <a
+        aria-label="Open or close menu"
+        class="c3"
+        href="#"
+        title="Open menu"
+      >
+        <svg
+          aria-hidden="true"
+          aria-label="Open menu"
+          class="c4"
+          fill="currentColor"
+          focusable="false"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0V0z"
+            fill="none"
+          />
+          <path
+            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+          />
+        </svg>
+      </a>
+      <main
+        aria-hidden="true"
+        class="c5"
+      >
+        <nav
+          class="c6"
+        >
+          <a
+            class="c7"
+            href="/"
+            target="_self"
+          >
+            home
+          </a>
+          <a
+            class="c7"
+            href="/contact"
+            target="_self"
+          >
+            contact
+          </a>
+        </nav>
+      </main>
+    </div>
+    <div
+      class="c8"
     >
       <div
         class="c0"
       >
         <header
-          class="c7"
+          class="c9"
         >
           <h1
-            class="c8 c9"
+            class="c10 c11"
           >
             <a
-              class="c10 c11"
+              class="c12 c13"
               href="/"
               target="_self"
             >
@@ -548,10 +579,10 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
             </a>
           </h1>
           <div
-            class="c12"
+            class="c14"
           >
             <h2
-              class="c8 c13"
+              class="c10 c15"
             >
               Pedro Coelho
             </h2>
@@ -565,32 +596,32 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="c14"
+      class="c16"
     >
       <div
-        class="c15"
+        class="c17"
       >
         <div
           class="c0"
         >
           <div
-            class="c16"
+            class="c18"
           >
             <div
-              class="c17"
+              class="c19"
             >
               <div
-                class="c18"
+                class="c20"
               >
                 <div
-                  class="c19"
+                  class="c21"
                 >
                   <a
                     href="/post/al-sadd-anuncia-acordo-para-liberar-xavi-mas-barcelona-nega"
                   >
                     <img
                       alt=""
-                      class="c20"
+                      class="c22"
                       src="https://res.cloudinary.com/rabbitz/image/upload/v1636129235/Xavi_Hernandez_Barcelona_c60f5b3e16.jpg"
                     />
                   </a>
@@ -599,12 +630,12 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
                   class=""
                 >
                   <div
-                    class="c21"
+                    class="c23"
                   >
                     <span>
                       <svg
                         aria-hidden="true"
-                        class="c2"
+                        class="c4"
                         fill="currentColor"
                         focusable="false"
                         height="18"
@@ -629,7 +660,7 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
                     <span>
                       <svg
                         aria-hidden="true"
-                        class="c2"
+                        class="c4"
                         fill="currentColor"
                         focusable="false"
                         height="16"
@@ -649,7 +680,7 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
                     </span>
                   </div>
                   <h2
-                    class="c8 c13"
+                    class="c10 c15"
                   >
                     <a
                       href="/post/al-sadd-anuncia-acordo-para-liberar-xavi-mas-barcelona-nega"
@@ -658,24 +689,24 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
                     </a>
                   </h2>
                   <p
-                    class="c22"
+                    class="c24"
                   >
                     A novela continua: Barcelona vê em anúncio de acerto do Al Sadd como uma forma de pressão para o pagamento da multa.
                   </p>
                 </div>
               </div>
               <div
-                class="c18"
+                class="c20"
               >
                 <div
-                  class="c19"
+                  class="c21"
                 >
                   <a
                     href="/post/com-dois-penaltis-napoli-vira-contra-o-legia-e-se-recupera-em-seu-grupo-da-liga-europa"
                   >
                     <img
                       alt=""
-                      class="c20"
+                      class="c22"
                       src="https://res.cloudinary.com/rabbitz/image/upload/v1636129861/zielinski_napoli_9359de0d9d.jpg"
                     />
                   </a>
@@ -684,12 +715,12 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
                   class=""
                 >
                   <div
-                    class="c21"
+                    class="c23"
                   >
                     <span>
                       <svg
                         aria-hidden="true"
-                        class="c2"
+                        class="c4"
                         fill="currentColor"
                         focusable="false"
                         height="18"
@@ -714,7 +745,7 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
                     <span>
                       <svg
                         aria-hidden="true"
-                        class="c2"
+                        class="c4"
                         fill="currentColor"
                         focusable="false"
                         height="16"
@@ -734,7 +765,7 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
                     </span>
                   </div>
                   <h2
-                    class="c8 c13"
+                    class="c10 c15"
                   >
                     <a
                       href="/post/com-dois-penaltis-napoli-vira-contra-o-legia-e-se-recupera-em-seu-grupo-da-liga-europa"
@@ -743,7 +774,7 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
                     </a>
                   </h2>
                   <p
-                    class="c22"
+                    class="c24"
                   >
                     Após levar apenas um ponto nas duas primeiras rodadas, o Napoli chegou a sete se colocou em situação mais confortável para a reta final.
                   </p>
@@ -758,10 +789,10 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
       class="c0"
     >
       <footer
-        class="c23"
+        class="c25"
       >
         <div
-          class="c24"
+          class="c26"
         >
           <p>
             Footer do Blog
@@ -771,13 +802,13 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
     </div>
     <a
       aria-label="Go to top"
-      class="c25"
+      class="c27"
       href="#"
       title="Go to top"
     >
       <svg
         aria-hidden="true"
-        class="c2"
+        class="c4"
         fill="currentColor"
         focusable="false"
         viewBox="0 0 24 24"
@@ -799,63 +830,63 @@ exports[`<PostsTemplate /> should match snapshot 1`] = `
 exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
 .c0 {
   width: 100%;
-  max-width: 130rem;
+  max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: calc(3.2rem / 2);
   padding-right: calc(3.2rem / 2);
 }
 
-.c9 {
+.c11 {
   color: #000000;
   line-height: 1.2;
   font-size: 2.4rem;
   text-transform: uppercase;
 }
 
-.c13 {
+.c15 {
   color: #000000;
   line-height: 1.2;
   font-size: 2.4rem;
   text-transform: none;
 }
 
-.c2 {
+.c4 {
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
 }
 
-.c16 {
+.c18 {
   width: 100%;
   margin: 0 auto;
 }
 
-.c17 {
+.c19 {
   padding: 3.2rem;
   text-align: center;
   font-size: 2.4rem;
 }
 
-.c18 {
+.c20 {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   gap: 6.4rem;
 }
 
-.c20 {
+.c22 {
   font-size: calc(1.6rem + 0.2rem);
   line-height: 1.5;
 }
 
-.c20 p {
+.c22 p {
   margin: 4.0rem 0;
 }
 
-.c20 a,
-.c20 a:visited,
-.c20 a:link {
+.c22 a,
+.c22 a:visited,
+.c22 a:link {
   color: #dc143c;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -863,12 +894,12 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
   transition: all 0.2s ease-in-out;
 }
 
-.c20 a:hover {
+.c22 a:hover {
   -webkit-filter: brightness(0.8);
   filter: brightness(0.8);
 }
 
-.c20 code {
+.c22 code {
   font-family: monospace;
   color: #dc143c;
   font-size: 1.6rem;
@@ -877,7 +908,7 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
   margin: 0.2rem;
 }
 
-.c20 pre {
+.c22 pre {
   background: #000000;
   padding: 2.4rem;
   font-family: monospace;
@@ -888,57 +919,57 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
   font-size: 1.6rem;
 }
 
-.c20 pre code {
+.c22 pre code {
   color: inherit;
   background: inherit;
 }
 
-.c20 hr {
+.c22 hr {
   border: none;
   border-bottom: 0.1rem solid #DDDDDD;
 }
 
-.c20 img {
+.c22 img {
   max-width: 100%;
 }
 
-.c20 .image {
+.c22 .image {
   background: #DDDDDD;
   line-height: 0;
   margin: 2.4rem 0;
 }
 
-.c20 .image figcaption {
+.c22 .image figcaption {
   font-size: 1.6rem;
   padding: 0.8rem;
   text-align: center;
   line-height: 1.3;
 }
 
-.c20 ul,
-.c20 ol {
+.c22 ul,
+.c22 ol {
   margin: 2.4rem 4.0rem;
 }
 
-.c20 .table {
+.c22 .table {
   width: 100%;
   overflow: hidden;
   overflow-x: auto;
 }
 
-.c20 table {
+.c22 table {
   width: 100%;
   border-collapse: collapse;
   margin: 2.4rem 0;
 }
 
-.c20 table td,
-.c20 table th {
+.c22 table td,
+.c22 table th {
   padding: 1.6rem;
   border: 0.1rem solid #DDDDDD;
 }
 
-.c20 blockquote {
+.c22 blockquote {
   border-left: 0.5rem solid #dc143c;
   color: #AAAAAA;
   -webkit-filter: brightness(80%);
@@ -948,18 +979,18 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
   margin: 2.4rem;
 }
 
-.c19 {
+.c21 {
   text-align: center;
   border-top: 0.1rem solid #DDDDDD;
 }
 
-.c19 a {
+.c21 a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c21 {
+.c23 {
   cursor: pointer;
   position: fixed;
   background: #000000;
@@ -983,7 +1014,7 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
   z-index: 6;
 }
 
-.c11 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -997,13 +1028,13 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
   color: inherit;
 }
 
-.c11 > img {
+.c13 > img {
   height: 15rem;
   width: 15rem;
   border-radius: 50%;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1025,15 +1056,15 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
   gap: 3rem;
 }
 
-.c7 .c8 {
+.c9 .c10 {
   margin: 0 0 calc(1.6rem - 1rem);
 }
 
-.c7 .c10 > img {
+.c9 .c12 > img {
   border-radius: 50%;
 }
 
-.c12 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1047,7 +1078,13 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
   max-width: 48rem;
 }
 
-.c3 {
+.c2 {
+  z-index: 9;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+
+.c5 {
   background: #000000;
   padding: 3.2rem;
   display: -webkit-box;
@@ -1055,7 +1092,6 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  z-index: 1;
   width: 100%;
   max-width: 26rem;
   height: 100vh;
@@ -1066,12 +1102,12 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
   overflow-y: hidden;
 }
 
-.c4 {
+.c6 {
   margin: 4.8rem auto;
   width: 100%;
 }
 
-.c1 {
+.c3 {
   position: fixed;
   top: 2.4rem;
   background: #000000;
@@ -1085,7 +1121,7 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
   color: #FFFFFF;
 }
 
-.c5 {
+.c7 {
   display: block;
   color: #FFFFFF;
   -webkit-text-decoration: none;
@@ -1097,20 +1133,42 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.c5:hover {
+.c7:hover {
   border-color: #dc143c;
   color: #dc143c;
 }
 
-.c6 {
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.1);
+}
+
+.c8 {
   margin-top: 6.4rem;
 }
 
-.c14 {
+.c16 {
   margin-bottom: 6.4rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
-.c15 {
+.c17 {
   display: grid;
   grid-template-columns: 70% 30%;
 }
@@ -1123,19 +1181,19 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
 }
 
 @media (max-width:768px) {
-  .c9 {
+  .c11 {
     font-size: calc(1.6rem * 1.2);
   }
 }
 
 @media (max-width:768px) {
-  .c13 {
+  .c15 {
     font-size: calc(1.6rem * 1.2);
   }
 }
 
 @media (min-width:768px) {
-  .c20 .image-style-side {
+  .c22 .image-style-side {
     float: right;
     max-width: 50%;
     margin: 2.4rem;
@@ -1143,114 +1201,118 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
 }
 
 @media (max-width:768px) {
-  .c20 {
+  .c22 {
     font-size: 2rem;
   }
 }
 
 @media (max-width:450px) {
-  .c11 > img {
+  .c13 > img {
     height: 10rem;
     width: 10rem;
   }
 }
 
 @media (max-width:450px) {
-  .c7 {
+  .c9 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 1rem;
   }
 
-  .c7 .c8 {
+  .c9 .c10 {
     text-align: center;
   }
 }
 
 @media (max-width:768px) {
-  .c3 {
+  .c5 {
     left: -26rem;
   }
 }
 
 @media (max-width:768px) {
-  .c1 {
+  .c3 {
     left: 0rem;
   }
 }
 
 @media (max-width:1170px) {
-  .c15 {
+  .c17 {
     grid-template-columns: 1fr;
   }
 }
 
 <div>
   <div
-    class="c0"
+    class="c0 c1"
   >
-    <a
-      aria-label="Open or close menu"
-      class="c1"
-      href="#"
-      title="Open menu"
-    >
-      <svg
-        aria-hidden="true"
-        aria-label="Open menu"
-        class="c2"
-        fill="currentColor"
-        focusable="false"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M0 0h24v24H0V0z"
-          fill="none"
-        />
-        <path
-          d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-        />
-      </svg>
-    </a>
-    <main
-      aria-hidden="true"
-      class="c3"
-    >
-      <nav
-        class="c4"
-      >
-        <a
-          class="c5"
-          href="/"
-          target="_self"
-        >
-          home
-        </a>
-        <a
-          class="c5"
-          href="/contact"
-          target="_self"
-        >
-          contact
-        </a>
-      </nav>
-    </main>
     <div
-      class="c6"
+      class="c2"
+    >
+      <a
+        aria-label="Open or close menu"
+        class="c3"
+        href="#"
+        title="Open menu"
+      >
+        <svg
+          aria-hidden="true"
+          aria-label="Open menu"
+          class="c4"
+          fill="currentColor"
+          focusable="false"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0V0z"
+            fill="none"
+          />
+          <path
+            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+          />
+        </svg>
+      </a>
+      <main
+        aria-hidden="true"
+        class="c5"
+      >
+        <nav
+          class="c6"
+        >
+          <a
+            class="c7"
+            href="/"
+            target="_self"
+          >
+            home
+          </a>
+          <a
+            class="c7"
+            href="/contact"
+            target="_self"
+          >
+            contact
+          </a>
+        </nav>
+      </main>
+    </div>
+    <div
+      class="c8"
     >
       <div
         class="c0"
       >
         <header
-          class="c7"
+          class="c9"
         >
           <h1
-            class="c8 c9"
+            class="c10 c11"
           >
             <a
-              class="c10 c11"
+              class="c12 c13"
               href="/"
               target="_self"
             >
@@ -1261,10 +1323,10 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
             </a>
           </h1>
           <div
-            class="c12"
+            class="c14"
           >
             <h2
-              class="c8 c13"
+              class="c10 c15"
             >
               Pedro Coelho
             </h2>
@@ -1278,24 +1340,24 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
       </div>
     </div>
     <div
-      class="c14"
+      class="c16"
     >
       <div
-        class="c15"
+        class="c17"
       >
         <div
           class="c0"
         >
           <div
-            class="c16"
+            class="c18"
           >
             <p
-              class="c17"
+              class="c19"
             >
               Nenhum post encontrado aqui
             </p>
             <div
-              class="c18"
+              class="c20"
             />
           </div>
         </div>
@@ -1305,10 +1367,10 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
       class="c0"
     >
       <footer
-        class="c19"
+        class="c21"
       >
         <div
-          class="c20"
+          class="c22"
         >
           <p>
             Footer do Blog
@@ -1318,13 +1380,13 @@ exports[`<PostsTemplate /> should match snapshot without posts 1`] = `
     </div>
     <a
       aria-label="Go to top"
-      class="c21"
+      class="c23"
       href="#"
       title="Go to top"
     >
       <svg
         aria-hidden="true"
-        class="c2"
+        class="c4"
         fill="currentColor"
         focusable="false"
         viewBox="0 0 24 24"

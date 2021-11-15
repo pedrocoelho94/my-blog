@@ -5,13 +5,29 @@ type MenuBehavior = {
   isMenuVisible: boolean
 }
 
-export const Wrapper = styled.main<MenuBehavior>`
+export const Wrapper = styled.div<MenuBehavior>`
+  ${({ isMenuVisible }) => css`
+    z-index: 9;
+    transition: background 0.2s ease-in-out;
+
+    ${isMenuVisible &&
+    css`
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+    `};
+  `}
+`
+
+export const Content = styled.main<MenuBehavior>`
   ${({ theme, isMenuVisible }) => css`
     background: ${theme.colors.primary};
     padding: ${theme.spacings.large};
     display: flex;
     position: fixed;
-    z-index: 1;
     width: 100%;
     max-width: 26rem;
     height: 100vh;

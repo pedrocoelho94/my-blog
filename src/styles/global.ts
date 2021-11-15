@@ -15,7 +15,7 @@ export default createGlobalStyle`
      font-size: 1.6rem;
      font-family: ${theme.font.family.default};
      color: ${theme.colors.darkText};
-     background: ${theme.colors.white};
+     background: ${theme.colors.lightGray};
    }
 
    h1,

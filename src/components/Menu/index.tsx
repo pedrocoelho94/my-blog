@@ -25,7 +25,7 @@ const Menu = ({ links = [] }: MenuProps) => {
   }
 
   return (
-    <>
+    <S.Wrapper isMenuVisible={isMenuVisible}>
       <S.OpenClose
         isMenuVisible={isMenuVisible}
         href="#"
@@ -40,7 +40,7 @@ const Menu = ({ links = [] }: MenuProps) => {
         )}
       </S.OpenClose>
 
-      <S.Wrapper isMenuVisible={isMenuVisible} aria-hidden={!isMenuVisible}>
+      <S.Content isMenuVisible={isMenuVisible} aria-hidden={!isMenuVisible}>
         <S.Nav>
           {links.map((link) => (
             <MenuLink key={link.id} link={link.link} newTab={link.newTab}>
@@ -48,8 +48,8 @@ const Menu = ({ links = [] }: MenuProps) => {
             </MenuLink>
           ))}
         </S.Nav>
-      </S.Wrapper>
-    </>
+      </S.Content>
+    </S.Wrapper>
   )
 }
 
