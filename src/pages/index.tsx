@@ -1,16 +1,26 @@
 import Head from 'next/head'
 import PostsTemplate from 'templates/PostsTemplate'
-import { loadPosts, StrapiPostAndSettings } from 'api/loadPosts'
+import {
+  defaultLoadPostsVariables,
+  loadPosts,
+  StrapiPostAndSettings
+} from 'api/loadPosts'
 import { GetStaticProps } from 'next'
 
-export default function Home({ posts, setting }: StrapiPostAndSettings) {
+export default function Home({
+  posts,
+  setting,
+  variables
+}: StrapiPostAndSettings) {
+  console.log(variables)
+
   return (
     <>
       <Head>
         <title>{setting.blogName}</title>
         <meta name="description" content={setting.blogDescription} />
       </Head>
-      <PostsTemplate settings={setting} posts={posts} />
+      <PostsTemplate settings={setting} posts={posts} variables={variables} />
     </>
   )
 }
@@ -35,7 +45,10 @@ export const getStaticProps: GetStaticProps<StrapiPostAndSettings> =
       revalidate: 24 * 60 * 60,
       props: {
         posts: data.posts,
-        setting: data.setting
+        setting: data.setting,
+        variables: {
+          ...defaultLoadPostsVariables
+        }
       }
     }
   }

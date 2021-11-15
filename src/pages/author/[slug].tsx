@@ -1,10 +1,18 @@
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/dist/client/router'
-import { loadPosts, StrapiPostAndSettings } from 'api/loadPosts'
+import {
+  defaultLoadPostsVariables,
+  loadPosts,
+  StrapiPostAndSettings
+} from 'api/loadPosts'
 import PostsTemplate from 'templates/PostsTemplate'
 
-export default function AuthorPage({ posts, setting }: StrapiPostAndSettings) {
+export default function AuthorPage({
+  posts,
+  setting,
+  variables
+}: StrapiPostAndSettings) {
   const router = useRouter()
 
   if (router.isFallback) {
@@ -18,7 +26,7 @@ export default function AuthorPage({ posts, setting }: StrapiPostAndSettings) {
           Author: {posts[0].author?.displayName} - {setting.blogName}
         </title>
       </Head>
-      <PostsTemplate settings={setting} posts={posts} />
+      <PostsTemplate settings={setting} posts={posts} variables={variables} />
     </>
   )
 }
@@ -31,8 +39,9 @@ export const getStaticProps: GetStaticProps<StrapiPostAndSettings> = async (
   ctx
 ) => {
   let data: StrapiPostAndSettings | null = null
+  const variables = { authorSlug: ctx.params?.slug as string }
 
-  data = await loadPosts({ authorSlug: ctx.params?.slug as string })
+  data = await loadPosts(variables)
 
   if (!data?.posts.length) {
     return { notFound: true }
@@ -41,7 +50,11 @@ export const getStaticProps: GetStaticProps<StrapiPostAndSettings> = async (
   return {
     props: {
       posts: data.posts,
-      setting: data.setting
+      setting: data.setting,
+      variables: {
+        ...defaultLoadPostsVariables,
+        ...variables
+      }
     },
     revalidate: 24 * 60 * 60
   }
