@@ -18,11 +18,11 @@ const ArticleMeta = ({
 }: ArticleMetaProps) => (
   <S.Wrapper>
     <p>
-      {typeof author !== 'undefined' && (
+      {author && typeof author !== 'undefined' && (
         <>
           <span>Por </span>
-          <Link href={`/author/${author.slug}`} passHref>
-            <a>{author.displayName}</a>
+          <Link href={`/author/${author?.slug}`} passHref>
+            <a>{author?.displayName}</a>
           </Link>
           <span className="separator"> em </span>
         </>
@@ -30,7 +30,7 @@ const ArticleMeta = ({
 
       <time dateTime={createdAt}>{formatDate(createdAt)}</time>
 
-      {categories.length > 0 && (
+      {categories && categories.length > 0 && (
         <>
           <span className="separator"> - </span>
           <span className="categories">

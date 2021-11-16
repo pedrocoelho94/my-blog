@@ -50,11 +50,13 @@ const PostsTemplate = ({
         <Container>
           <PostGrid posts={statePosts} />
 
-          <S.ButtonContainer>
-            <S.Button onClick={handleLoadMorePosts} disabled={buttonDisabled}>
-              {noMorePosts ? 'Sem mais posts' : 'Carregar mais'}
-            </S.Button>
-          </S.ButtonContainer>
+          {statePosts.length > 0 && (
+            <S.ButtonContainer>
+              <S.Button onClick={handleLoadMorePosts} disabled={buttonDisabled}>
+                {noMorePosts ? 'Sem mais posts' : 'Carregar mais'}
+              </S.Button>
+            </S.ButtonContainer>
+          )}
         </Container>
       </S.Wrapper>
     </BaseTemplate>

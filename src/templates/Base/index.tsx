@@ -3,6 +3,7 @@ import Footer from 'components/Footer'
 import GoTop from 'components/GoTop'
 import Header from 'components/Header'
 import Menu from 'components/Menu'
+import { useRouter } from 'next/dist/client/router'
 import { SettingsStrapi } from 'shared-typed/settings'
 import * as S from './styles'
 
@@ -11,28 +12,43 @@ export type BaseTemplateProps = {
   children: React.ReactNode
 }
 
-const BaseTemplate = ({ settings, children }: BaseTemplateProps) => (
-  <S.Wrapper>
-    <Menu links={settings.menuLink} />
+const BaseTemplate = ({ settings, children }: BaseTemplateProps) => {
+  const router = useRouter()
 
-    <S.Header>
-      <Container>
-        <Header
-          blogName={settings.blogName}
-          blogDescription={settings.blogDescription}
-          logo={settings.logo.url}
-        />
-      </Container>
-    </S.Header>
+  return (
+    <S.Wrapper>
+      <Menu links={settings.menuLink} />
 
-    <S.Content>{children}</S.Content>
+      <S.Header>
+        <Container>
+          <Header
+            blogName={settings.blogName}
+            blogDescription={settings.blogDescription}
+            logo={settings.logo.url}
+          />
+        </Container>
 
-    <S.Footer>
-      <Footer footerHtml={settings.footer} />
-    </S.Footer>
+        <S.SearchContainer>
+          <form action="/search/" method="GET">
+            <S.SearchInput
+              type="search"
+              placeholder="O que você procura?"
+              name="q"
+              defaultValue={router?.query.q}
+            />
+          </form>
+        </S.SearchContainer>
+      </S.Header>
 
-    <GoTop />
-  </S.Wrapper>
-)
+      <S.Content>{children}</S.Content>
+
+      <S.Footer>
+        <Footer footerHtml={settings.footer} />
+      </S.Footer>
+
+      <GoTop />
+    </S.Wrapper>
+  )
+}
 
 export default BaseTemplate

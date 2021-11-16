@@ -18,7 +18,7 @@ export const Wrapper = styled.header`
 export const Excerpt = styled.p`
   ${({ theme }) => css`
     margin: ${theme.spacings.medium} 0;
-    font-size: ${theme.font.sizes.medium};
+    font-size: calc(${theme.font.sizes.medium} * 0.9);
   `}
 `
 

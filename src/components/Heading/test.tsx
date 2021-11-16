@@ -30,7 +30,7 @@ describe('<Heading />', () => {
     const heading = screen.getByRole('heading', { name: 'texto' })
 
     expect(heading).toHaveStyle({
-      'font-size': theme.font.sizes.medium
+      'font-size': 'calc(2.4rem * 0.8)'
     })
 
     rerender(

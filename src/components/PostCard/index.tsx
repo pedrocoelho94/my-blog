@@ -36,7 +36,7 @@ const PostCard = ({
 
     <S.Content>
       <S.Info>
-        {typeof author !== 'undefined' && (
+        {author && typeof author !== 'undefined' && (
           <span>
             <AccountCircle size={18} />
             <Link href={`/author/${author.slug}`}>

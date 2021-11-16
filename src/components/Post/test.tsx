@@ -16,7 +16,7 @@ describe('<Post />', () => {
     ).toBeInTheDocument()
 
     expect(screen.getByText(props.excerpt)).toHaveStyle({
-      'font-size': '2.4rem'
+      'font-size': 'calc(2.4rem * 0.9)'
     })
 
     expect(
