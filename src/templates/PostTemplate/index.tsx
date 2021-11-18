@@ -1,3 +1,4 @@
+import Comments from 'components/Comments'
 import { Container } from 'components/Container'
 import Post from 'components/Post'
 import PostTags from 'components/PostTags'
@@ -17,6 +18,12 @@ const PostTemplate = ({ settings, post }: PostTemplateProps) => (
       <Container>
         <Post {...post} />
         <PostTags tags={post.tags} />
+        <Comments
+          title={post.title}
+          slug={post.slug}
+          id={post.id}
+          allowComments={post.allowComments}
+        />
       </Container>
     </S.Wrapper>
   </BaseTemplate>
