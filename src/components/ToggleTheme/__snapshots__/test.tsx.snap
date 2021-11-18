@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToggleTheme /> should render the heading 1`] = `
+.c0 {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 2;
+}
+
+.c1 {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 2.5rem;
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  color: rgba(0,0,0,0);
+}
+
+.c3 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.c3:checked + .c4 {
+  background: #dc143c;
+  border: 1px solid #dc143c;
+}
+
+.c3:focus + .c4 {
+  border: 1px solid #dc143c;
+}
+
+.c3:checked.c2:focus + .c4 {
+  border: 1px solid #000000;
+}
+
+.c3:checked + .c4:before {
+  -webkit-transform: translateX(2rem);
+  -ms-transform: translateX(2rem);
+  transform: translateX(2rem);
+  background: #000000;
+}
+
+.c5 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #AAAAAA;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 2rem;
+  border: 1px solid #AAAAAA;
+}
+
+.c5:before {
+  content: '';
+  position: absolute;
+  height: 1.9rem;
+  width: 1.9rem;
+  left: 0.4rem;
+  bottom: 0.2rem;
+  background: #FFFFFF;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+    >
+      Toggle light and dark modes
+      <input
+        class="c2 c3"
+        type="checkbox"
+        value="Dark mode active"
+      />
+      <span
+        class="c4 c5"
+      />
+    </label>
+  </div>
+</div>
+`

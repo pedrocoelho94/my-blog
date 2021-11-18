@@ -3,6 +3,7 @@ import Footer from 'components/Footer'
 import GoTop from 'components/GoTop'
 import Header from 'components/Header'
 import Menu from 'components/Menu'
+import ToggleTheme from 'components/ToggleTheme'
 import { useRouter } from 'next/dist/client/router'
 import { SettingsStrapi } from 'shared-typed/settings'
 import * as S from './styles'
@@ -17,6 +18,8 @@ const BaseTemplate = ({ settings, children }: BaseTemplateProps) => {
 
   return (
     <S.Wrapper>
+      <ToggleTheme />
+
       <Menu links={settings.menuLink} />
 
       <S.Header>

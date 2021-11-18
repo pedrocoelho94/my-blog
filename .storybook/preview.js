@@ -1,5 +1,5 @@
 import { RouterContext } from 'next/dist/shared/lib/router-context'
-import { ThemeProvider } from 'styled-components'
+import { BlogThemeProvider } from '../src/context/BlogThemeContext'
 import GlobalStyles from '../src/styles/global'
 import theme from 'styles/theme'
 
@@ -25,9 +25,9 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={theme}>
+    <BlogThemeProvider>
       <GlobalStyles />
       <Story />
-    </ThemeProvider>
+    </BlogThemeProvider>
   )
 ]

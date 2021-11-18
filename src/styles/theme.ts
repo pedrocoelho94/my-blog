@@ -29,10 +29,6 @@ export default {
       xhuge: '6.4rem'
     }
   },
-  media: {
-    lteMedium: '(max-width: 768px)',
-    lteSmall: '(max-width: 360px)'
-  },
   spacings: {
     xsmall: '0.8rem',
     small: '1.6rem',
@@ -47,4 +43,4 @@ export default {
     max: '96rem',
     content: '80rem'
   }
-} as const
+}
