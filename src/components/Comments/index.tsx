@@ -11,17 +11,16 @@ export type CommentsProps = {
 const Comments = ({ id, slug, title, allowComments }: CommentsProps) => {
   if (!allowComments) return null
 
+  const config = {
+    url: `https://pedrocoelho.vercel.app/post/${slug}`,
+    identifier: id,
+    title: title,
+    language: 'pt_BR'
+  }
+
   return (
     <S.Wrapper>
-      <DiscussionEmbed
-        shortname="pedrocoelho-blog"
-        config={{
-          url: `https://pedrocoelho.vercel.app/post/${slug}`,
-          identifier: id,
-          title: title,
-          language: 'pt_BR'
-        }}
-      />
+      <DiscussionEmbed shortname="pedrocoelho-blog" config={config} />
     </S.Wrapper>
   )
 }

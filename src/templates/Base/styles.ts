@@ -41,7 +41,7 @@ export const SearchInput = styled.input`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    margin-bottom: ${theme.spacings.xhuge};
+    margin-bottom: ${theme.spacings.large};
     flex: 1 0 auto;
   `}
 `

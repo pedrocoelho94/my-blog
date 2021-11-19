@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ToggleTheme /> should render the heading 1`] = `
+exports[
+  `<ToggleTheme /> should render input and toggle between theme when toggling input 1`
+] = `
 .c0 {
   position: fixed;
   top: 2rem;
@@ -17,6 +19,26 @@ exports[`<ToggleTheme /> should render the heading 1`] = `
   font-size: 0;
   overflow: hidden;
   color: rgba(0,0,0,0);
+}
+
+.c6:checked + .c4 {
+  background: #dc143c;
+  border: 1px solid #dc143c;
+}
+
+.c6:focus + .c4 {
+  border: 1px solid #dc143c;
+}
+
+.c6:checked.c2:focus + .c4 {
+  border: 1px solid #000000;
+}
+
+.c6:checked + .c4:before {
+  -webkit-transform: translateX(2rem);
+  -ms-transform: translateX(2rem);
+  transform: translateX(2rem);
+  background: #000000;
 }
 
 .c3 {
@@ -38,14 +60,14 @@ exports[`<ToggleTheme /> should render the heading 1`] = `
 }
 
 .c3:checked.c2:focus + .c4 {
-  border: 1px solid #000000;
+  border: 1px solid #e7e7e7;
 }
 
 .c3:checked + .c4:before {
   -webkit-transform: translateX(2rem);
   -ms-transform: translateX(2rem);
   transform: translateX(2rem);
-  background: #000000;
+  background: #e7e7e7;
 }
 
 .c5 {
@@ -55,11 +77,11 @@ exports[`<ToggleTheme /> should render the heading 1`] = `
   left: 0;
   right: 0;
   bottom: 0;
-  background: #AAAAAA;
+  background: #cccccc;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius: 2rem;
-  border: 1px solid #AAAAAA;
+  border: 1px solid #cccccc;
 }
 
 .c5:before {
@@ -69,7 +91,7 @@ exports[`<ToggleTheme /> should render the heading 1`] = `
   width: 1.9rem;
   left: 0.4rem;
   bottom: 0.2rem;
-  background: #FFFFFF;
+  background: #272727;
   border-radius: 50%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
