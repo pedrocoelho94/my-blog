@@ -2,7 +2,7 @@ import { loadPosts, LoadPostsVariables } from 'api/loadPosts'
 import { Container } from 'components/Container'
 import { PostCardProps } from 'components/PostCard'
 import PostGrid from 'components/PostGrid'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { SettingsStrapi } from 'shared-typed/settings'
 import BaseTemplate from 'templates/Base'
 import * as S from './styles'
@@ -22,6 +22,14 @@ const PostsTemplate = ({
   const [stateVariables, setStateVariables] = useState(variables)
   const [buttonDisabled, setButtonDisabled] = useState(false)
   const [noMorePosts, setNoMorePosts] = useState(false)
+
+  //atualizar a página quando for feita uma pesquisa
+  useEffect(() => {
+    setStatePosts(posts)
+    setNoMorePosts(false)
+    setButtonDisabled(false)
+    setStateVariables(variables)
+  }, [posts, variables])
 
   const handleLoadMorePosts = async () => {
     setButtonDisabled(true)

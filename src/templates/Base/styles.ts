@@ -31,6 +31,19 @@ export const SearchContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    svg.searchOkIcon,
+    svg.searchCancelIcon {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-left: 1rem;
+    }
+
+    svg.searchCancelIcon {
+      ${({ theme }) => css`
+        color: ${theme.colors.secondary};
+      `}
+    }
   `}
 `
 export const SearchInput = styled.input`
