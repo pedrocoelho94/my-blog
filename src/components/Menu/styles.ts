@@ -29,7 +29,8 @@ export const Content = styled(Container)`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: calc(${theme.spacings.xsmall} * 0.8);
     padding-bottom: calc(${theme.spacings.xsmall} * 0.8);
 

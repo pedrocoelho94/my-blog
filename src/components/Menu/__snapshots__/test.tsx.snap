@@ -47,7 +47,8 @@ exports[`<Menu /> should match snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: calc(0.8rem * 0.8);
   padding-bottom: calc(0.8rem * 0.8);
 }
@@ -176,13 +177,6 @@ exports[`<Menu /> should match snapshot 1`] = `
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
-}
-
-@media (min-width:768px) {
-  .c1 {
-    padding-left: calc(3.2rem * 0.7);
-    padding-right: calc(3.2rem * 0.7);
-  }
 }
 
 @media (max-width:768px) {

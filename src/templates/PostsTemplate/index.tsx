@@ -1,5 +1,4 @@
 import { loadPosts, LoadPostsVariables } from 'api/loadPosts'
-import { Container } from 'components/Container'
 import { PostCardProps } from 'components/PostCard'
 import PostGrid from 'components/PostGrid'
 import { useEffect, useState } from 'react'
@@ -55,7 +54,7 @@ const PostsTemplate = ({
   return (
     <BaseTemplate settings={settings}>
       <S.Wrapper>
-        <Container>
+        <div>
           <PostGrid posts={statePosts} />
 
           {statePosts.length > 0 && (
@@ -65,7 +64,7 @@ const PostsTemplate = ({
               </S.Button>
             </S.ButtonContainer>
           )}
-        </Container>
+        </div>
       </S.Wrapper>
     </BaseTemplate>
   )

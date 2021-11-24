@@ -1,5 +1,4 @@
 import Comments from 'components/Comments'
-import { Container } from 'components/Container'
 import Post from 'components/Post'
 import PostTags from 'components/PostTags'
 import { PostStrapi } from 'shared-typed/postStrapi'
@@ -15,7 +14,7 @@ export type PostTemplateProps = {
 const PostTemplate = ({ settings, post }: PostTemplateProps) => (
   <BaseTemplate settings={settings}>
     <S.Wrapper>
-      <Container>
+      <div>
         <Post {...post} />
         <PostTags tags={post.tags} />
         <Comments
@@ -24,7 +23,7 @@ const PostTemplate = ({ settings, post }: PostTemplateProps) => (
           id={post.id}
           allowComments={post.allowComments}
         />
-      </Container>
+      </div>
     </S.Wrapper>
   </BaseTemplate>
 )
