@@ -1,5 +1,4 @@
 import ArticleHeader, { ArticleHeaderProps } from 'components/ArticleHeader'
-import { Container } from 'components/Container'
 import HtmlContent from 'components/HtmlContent'
 
 import * as S from './styles'
@@ -19,19 +18,17 @@ const Post = ({
   content
 }: PostsProps) => (
   <S.Wrapper>
-    <Container>
-      <ArticleHeader
-        id={id}
-        title={title}
-        excerpt={excerpt}
-        cover={cover}
-        author={author}
-        categories={categories}
-        createdAt={createdAt}
-      />
+    <ArticleHeader
+      id={id}
+      title={title}
+      excerpt={excerpt}
+      cover={cover}
+      author={author}
+      categories={categories}
+      createdAt={createdAt}
+    />
 
-      <HtmlContent html={content} />
-    </Container>
+    <HtmlContent html={content} />
   </S.Wrapper>
 )
 

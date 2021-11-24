@@ -40,15 +40,12 @@ describe('<MenuLink />', () => {
         color: #FFFFFF;
         -webkit-text-decoration: none;
         text-decoration: none;
-        margin-bottom: 1.6rem;
         font-size: 1.8rem;
-        border-right: 0.5rem solid #000000;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
       }
 
       .c0:hover {
-        border-color: #dc143c;
         color: #dc143c;
       }
 

@@ -1,7 +1,8 @@
 import { Container } from 'components/Container'
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
-export const Wrapper = styled(Container)`
+export const Wrapper = styled.main`
   ${({ theme }) => css`
     display: flex;
     min-height: 100vh;
@@ -54,8 +55,13 @@ export const SearchInput = styled.input`
 
 export const Content = styled.div`
   ${({ theme }) => css`
+    margin-top: 15rem;
     margin-bottom: ${theme.spacings.large};
     flex: 1 0 auto;
+
+    ${media.lessThan('medium')`
+      margin-top: 12rem;
+    `}
   `}
 `
 

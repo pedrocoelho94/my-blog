@@ -1,9 +1,10 @@
-import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu'
-import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
+import { useRouter } from 'next/router'
 
 import * as S from './styles'
 import MenuLink from 'components/MenuLink'
 import { useState } from 'react'
+
+import { NearMe } from '@styled-icons/material-outlined/NearMe'
 
 export type MenuPropsLinks = {
   id: string
@@ -17,38 +18,68 @@ export type MenuProps = {
 }
 
 const Menu = ({ links = [] }: MenuProps) => {
-  const [isMenuVisible, setIsMenuVisible] = useState(false)
+  const router = useRouter()
+  const [searchValue, setSearchValue] = useState('')
+  const [toggle, setToggleNav] = useState(false)
 
-  const handleOpenCloseMenu = (event: React.MouseEvent) => {
-    event.preventDefault()
-    setIsMenuVisible(!isMenuVisible)
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault()
+    const url = encodeURI(searchValue)
+    console.log(url)
+    router.push(`/search/${url}`)
   }
 
   return (
-    <S.Wrapper isMenuVisible={isMenuVisible}>
-      <S.OpenClose
-        isMenuVisible={isMenuVisible}
-        href="#"
-        aria-label="Open or close menu"
-        title={isMenuVisible ? 'Close menu' : 'Open menu'}
-        onClick={handleOpenCloseMenu}
-      >
-        {isMenuVisible ? (
-          <CloseIcon aria-label="Close menu" />
-        ) : (
-          <MenuIcon aria-label="Open menu" />
-        )}
-      </S.OpenClose>
+    <S.Wrapper>
+      <S.Content>
+        <S.Logo src="/assets/images/claquete.png" />
 
-      <S.Content isMenuVisible={isMenuVisible} aria-hidden={!isMenuVisible}>
-        <S.Nav>
+        <S.Menu role="navigation">
           {links.map((link) => (
-            <MenuLink key={link.id} link={link.link} newTab={link.newTab}>
-              {link.text}
-            </MenuLink>
+            <S.Item key={`web-${link.id}`}>
+              <MenuLink newTab={link.newTab} link={link.link}>
+                {link.text}
+              </MenuLink>
+            </S.Item>
           ))}
-        </S.Nav>
+
+          <S.SearchBox onSubmit={handleSearch}>
+            <S.SearchInput
+              type="search"
+              placeholder="Buscar"
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
+              aria-label="search box"
+            />
+            <S.SearchButton>
+              <NearMe />
+            </S.SearchButton>
+          </S.SearchBox>
+        </S.Menu>
+
+        <S.NavIcon
+          onClick={() => setToggleNav(!toggle)}
+          aria-hidden={!toggle}
+          aria-label="open or close menu"
+          title={toggle ? 'Fechar menu' : 'Abrir menu'}
+        >
+          <S.Line open={toggle} />
+          <S.Line open={toggle} />
+          <S.Line open={toggle} />
+        </S.NavIcon>
       </S.Content>
+
+      <S.Overlay open={toggle} aria-label="menu mobile" aria-hidden={!toggle}>
+        <S.OverlayMenu open={toggle}>
+          {links.map((link) => (
+            <S.Item key={`mobile-${link.id}`}>
+              <MenuLink newTab={link.newTab} link={link.link}>
+                {link.text}
+              </MenuLink>
+            </S.Item>
+          ))}
+        </S.OverlayMenu>
+      </S.Overlay>
     </S.Wrapper>
   )
 }

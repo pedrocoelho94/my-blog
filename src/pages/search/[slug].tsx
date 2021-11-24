@@ -19,7 +19,7 @@ export default function SearchPage({
     <>
       <Head>
         <title>
-          Pesquisa: {router.query.q} - {setting.blogName}
+          Pesquisa: {router.query.slug} - {setting.blogName}
         </title>
       </Head>
       <PostsTemplate settings={setting} posts={posts} variables={variables} />
@@ -30,15 +30,16 @@ export default function SearchPage({
 export const getServerSideProps: GetServerSideProps<StrapiPostAndSettings> =
   async (ctx) => {
     let data: StrapiPostAndSettings | null = null
-    const query = ctx.query.q || ''
+    //const query = ctx.query.q || ''
+    const searchTerm = ctx.params?.slug
 
-    console.log('WAAAAT', ctx.query)
+    console.log('WAAAAT', searchTerm)
 
-    if (!query) {
+    if (!searchTerm) {
       return { notFound: true }
     }
 
-    const variables = { postSearch: query as string }
+    const variables = { postSearch: searchTerm as string }
 
     data = await loadPosts(variables)
 

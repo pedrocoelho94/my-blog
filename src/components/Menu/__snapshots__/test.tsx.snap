@@ -1,81 +1,218 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Menu /> should match snapshot 1`] = `
-.c2 {
-  display: inline-block;
-  vertical-align: middle;
-  overflow: hidden;
-}
-
-.c0 {
-  z-index: 9;
-  -webkit-transition: background 0.2s ease-in-out;
-  transition: background 0.2s ease-in-out;
-}
-
-.c3 {
-  background: #000000;
-  padding: 3.2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  width: 100%;
-  max-width: 26rem;
-  height: 100vh;
-  top: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  left: -24rem;
-  overflow-y: hidden;
-}
-
-.c4 {
-  margin: 4.8rem auto;
-  width: 100%;
-}
-
-.c1 {
-  position: fixed;
-  top: 2.4rem;
-  background: #000000;
-  z-index: 2;
-  width: 3rem;
-  height: 3rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  left: 0.5rem;
-  top: 2rem;
-  color: #FFFFFF;
-}
-
 .c5 {
   display: block;
   color: #FFFFFF;
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin-bottom: 1.6rem;
   font-size: 1.8rem;
-  border-right: 0.5rem solid #000000;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .c5:hover {
-  border-color: #dc143c;
   color: #dc143c;
 }
 
-@media (max-width:768px) {
-  .c3 {
-    left: -26rem;
+.c1 {
+  width: 100%;
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(3.2rem / 2);
+  padding-right: calc(3.2rem / 2);
+}
+
+.c0 {
+  z-index: 9;
+  width: 100%;
+  height: 10rem;
+  background: #000000;
+  position: fixed;
+}
+
+.c2 {
+  width: 100%;
+  height: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: calc(0.8rem * 0.8);
+  padding-bottom: calc(0.8rem * 0.8);
+}
+
+.c3 {
+  height: 100%;
+}
+
+.c4 {
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.c10 {
+  list-style: none;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+.c11 {
+  display: block;
+  border-radius: 50px;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #FFFFFF;
+  -webkit-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
+}
+
+.c11:nth-child(2) {
+  width: 70%;
+}
+
+.c11:nth-child(3) {
+  width: 70%;
+}
+
+.c12 {
+  position: absolute;
+  width: 100vw;
+  height: 0;
+  background-color: #dc143c;
+  -webkit-transition: height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
+  z-index: 2;
+}
+
+.c13 {
+  list-style: none;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 5rem;
+}
+
+.c13 li {
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.c6 {
+  border: none;
+  border-radius: 5px 0 0 5px;
+  height: 3rem;
+  width: 12rem;
+  padding: 0.8rem;
+  -webkit-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
+  outline: none;
+}
+
+.c6:focus {
+  width: 20rem;
+  -webkit-box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
+  box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
+}
+
+.c6:focus .c7 {
+  -webkit-box-shadow: 0px 0px 15px 10px rgba(220,20,60,0.67);
+  box-shadow: 0px 0px 15px 10px rgba(220,20,60,0.67);
+}
+
+.c8 {
+  cursor: pointer;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  height: 3rem;
+  padding: 0.8rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.c8:hover {
+  background-color: #dc143c;
+  color: #FFFFFF;
+}
+
+.c9 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    padding-left: calc(3.2rem * 0.7);
+    padding-right: calc(3.2rem * 0.7);
   }
 }
 
 @media (max-width:768px) {
-  .c1 {
-    left: 0rem;
+  .c0 {
+    height: 7rem;
+  }
+}
+
+@media (max-width:768px) {
+  .c2 {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+}
+
+@media (max-width:768px) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (min-width:768px) {
+  .c10 {
+    display: none;
+  }
+}
+
+@media (min-width:768px) {
+  .c12 {
+    display: none;
   }
 }
 
@@ -83,116 +220,186 @@ exports[`<Menu /> should match snapshot 1`] = `
   <div
     class="c0"
   >
-    <a
-      aria-label="Open or close menu"
-      class="c1"
-      href="#"
-      title="Open menu"
+    <div
+      class="c1 c2"
     >
-      <svg
-        aria-hidden="true"
-        aria-label="Open menu"
-        class="c2"
-        fill="currentColor"
-        focusable="false"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M0 0h24v24H0V0z"
-          fill="none"
-        />
-        <path
-          d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
-        />
-      </svg>
-    </a>
-    <main
-      aria-hidden="true"
-      class="c3"
-    >
-      <nav
+      <img
+        class="c3"
+        src="/assets/images/claquete.png"
+      />
+      <ul
         class="c4"
+        role="navigation"
       >
-        <a
-          class="c5"
-          href="/home/1"
-          target="_self"
+        <li
+          class=""
         >
-          My jobs
-        </a>
-        <a
-          class="c5"
-          href="/home/2"
-          target="_self"
+          <a
+            class="c5"
+            href="/"
+            target="_self"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class=""
         >
-          About me
-        </a>
-        <a
-          class="c5"
-          href="/home/3"
-          target="_self"
+          <a
+            class="c5"
+            href="/news"
+            target="_self"
+          >
+            Notícias
+          </a>
+        </li>
+        <li
+          class=""
         >
-          Services
-        </a>
-        <a
-          class="c5"
-          href="http://localhost/home/4"
-          target="_self"
+          <a
+            class="c5"
+            href="/reviews"
+            target="_self"
+          >
+            Críticas
+          </a>
+        </li>
+        <li
+          class=""
         >
-          External Link
-        </a>
-        <a
-          class="c5"
-          href="/home/5"
-          target="_self"
+          <a
+            class="c5"
+            href="/entrevistas"
+            target="_self"
+          >
+            Entrevistas
+          </a>
+        </li>
+        <li
+          class=""
         >
-          JavaScript
-        </a>
-        <a
-          class="c5"
-          href="/home/6"
-          target="_self"
+          <a
+            class="c5"
+            href="/about"
+            target="_self"
+          >
+            Quem somos
+          </a>
+        </li>
+        <form
+          class=""
         >
-          Python
-        </a>
-        <a
-          class="c5"
-          href="/home/7"
-          target="_self"
+          <input
+            aria-label="search box"
+            class="c6"
+            placeholder="Buscar"
+            type="search"
+            value=""
+          />
+          <button
+            class="c7 c8"
+          >
+            <svg
+              aria-hidden="true"
+              class="c9"
+              fill="currentColor"
+              focusable="false"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 0h24v24H0V0z"
+                fill="none"
+              />
+              <path
+                d="M17.27 6.73l-4.24 10.13-1.32-3.42-.32-.83-.82-.32-3.43-1.33 10.13-4.23M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"
+              />
+            </svg>
+          </button>
+        </form>
+      </ul>
+      <li
+        aria-hidden="true"
+        aria-label="open or close menu"
+        class="c10"
+        title="Abrir menu"
+      >
+        <span
+          class="c11"
+        />
+        <span
+          class="c11"
+        />
+        <span
+          class="c11"
+        />
+      </li>
+    </div>
+    <div
+      aria-hidden="true"
+      aria-label="menu mobile"
+      class="c12"
+    >
+      <ul
+        class="c13"
+      >
+        <li
+          class=""
         >
-          Consectetur
-        </a>
-        <a
-          class="c5"
-          href="/home/8"
-          target="_self"
+          <a
+            class="c5"
+            href="/"
+            target="_self"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class=""
         >
-          Text test
-        </a>
-        <a
-          class="c5"
-          href="/home/9"
-          target="_self"
+          <a
+            class="c5"
+            href="/news"
+            target="_self"
+          >
+            Notícias
+          </a>
+        </li>
+        <li
+          class=""
         >
-          Pac-man
-        </a>
-        <a
-          class="c5"
-          href="/home/10"
-          target="_self"
+          <a
+            class="c5"
+            href="/reviews"
+            target="_self"
+          >
+            Críticas
+          </a>
+        </li>
+        <li
+          class=""
         >
-          Star Wars
-        </a>
-        <a
-          class="c5"
-          href="/home/11"
-          target="_self"
+          <a
+            class="c5"
+            href="/entrevistas"
+            target="_self"
+          >
+            Entrevistas
+          </a>
+        </li>
+        <li
+          class=""
         >
-          A menu
-        </a>
-      </nav>
-    </main>
+          <a
+            class="c5"
+            href="/about"
+            target="_self"
+          >
+            Quem somos
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `

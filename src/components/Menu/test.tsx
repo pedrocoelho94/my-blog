@@ -6,40 +6,50 @@ import mock from './mock'
 const props: MenuProps = mock
 
 describe('<Menu />', () => {
-  it('should render button link', () => {
-    renderWithTheme(<Menu {...props} links={[]} />)
+  it('should render full menu', () => {
+    renderWithTheme(<Menu {...props} />)
 
-    expect(
-      screen.getByRole('link', { name: /Open or close menu/i })
-    ).toBeInTheDocument()
-    expect(screen.getByLabelText('Open menu')).toBeInTheDocument()
-
-    expect(screen.queryByLabelText('Close menu')).not.toBeInTheDocument()
-    expect(screen.queryByRole('navigation')).not.toBeInTheDocument()
+    expect(screen.getByRole('navigation')).toBeInTheDocument()
+    expect(screen.getByLabelText(/open or close menu/i)).toHaveStyleRule(
+      'display',
+      'none',
+      { media: '(min-width: 768px)' }
+    )
+    expect(screen.getByLabelText(/search box/i)).toBeInTheDocument()
   })
 
   it('should open/close menu on button click', () => {
     renderWithTheme(<Menu {...props} />)
 
-    const buttonLink = screen.getByRole('link', { name: /Open or close menu/i })
+    // muda o viewport do jest
+    Object.defineProperty(window, 'innerWidth', {
+      writable: true,
+      configurable: true,
+      value: 500
+    })
+    window.dispatchEvent(new Event('resize'))
+    expect(window.innerWidth).toBe(500)
 
-    fireEvent.click(buttonLink)
+    const iconButton = screen.getByLabelText(/open or close menu/i)
+    const menuMobile = screen.getByLabelText(/menu mobile/i)
 
-    expect(screen.getByLabelText('Close menu')).toBeInTheDocument()
-    expect(screen.queryByLabelText('Open menu')).not.toBeInTheDocument()
+    expect(iconButton).toHaveStyle({
+      display: 'list-item'
+    })
 
-    expect(screen.getByRole('navigation')).toBeInTheDocument()
+    expect(menuMobile.getAttribute('aria-hidden')).toBe('true')
 
-    fireEvent.click(buttonLink)
+    // Menu abre após o clique no icone do menu
+    fireEvent.click(iconButton)
+    expect(menuMobile.getAttribute('aria-hidden')).toBe('false')
 
-    expect(screen.getByLabelText('Open menu')).toBeInTheDocument()
-    expect(screen.queryByLabelText('Close menu')).not.toBeInTheDocument()
-    expect(screen.queryByRole('navigation')).not.toBeInTheDocument()
+    // Menu fecha após o clique no icone do menu
+    fireEvent.click(iconButton)
+    expect(menuMobile.getAttribute('aria-hidden')).toBe('true')
   })
 
   it('should match snapshot', () => {
     const { container } = renderWithTheme(<Menu {...props} />)
-
     expect(container).toMatchSnapshot()
   })
 })
