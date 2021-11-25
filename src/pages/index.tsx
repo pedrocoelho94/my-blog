@@ -20,30 +20,31 @@ export default function Home({ posts, setting, variables }: HomeTemplateProps) {
   )
 }
 
-export const getStaticProps: GetStaticProps<StrapiPostAndSettings> =
-  async () => {
-    let data = null
+export const getStaticProps: GetStaticProps<
+  StrapiPostAndSettings
+> = async () => {
+  let data = null
 
-    try {
-      data = await loadPosts()
-    } catch (e) {
-      data = null
-    }
+  try {
+    data = await loadPosts()
+  } catch (e) {
+    data = null
+  }
 
-    if (!data || !data.posts || !data.posts.length) {
-      return {
-        notFound: true
-      }
-    }
-
+  if (!data || !data.posts || !data.posts.length) {
     return {
-      revalidate: 24 * 60 * 60,
-      props: {
-        posts: data.posts,
-        setting: data.setting,
-        variables: {
-          ...defaultLoadPostsVariables
-        }
+      notFound: true
+    }
+  }
+
+  return {
+    revalidate: 60 * 60,
+    props: {
+      posts: data.posts,
+      setting: data.setting,
+      variables: {
+        ...defaultLoadPostsVariables
       }
     }
   }
+}
