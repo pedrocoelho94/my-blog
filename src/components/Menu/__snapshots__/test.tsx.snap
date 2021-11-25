@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Menu /> should match snapshot 1`] = `
-.c5 {
+.c6 {
   display: block;
   color: #FFFFFF;
   -webkit-text-decoration: none;
@@ -11,7 +11,7 @@ exports[`<Menu /> should match snapshot 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.c5:hover {
+.c6:hover {
   color: #dc143c;
 }
 
@@ -58,6 +58,10 @@ exports[`<Menu /> should match snapshot 1`] = `
 }
 
 .c4 {
+  height: 100%;
+}
+
+.c5 {
   list-style: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -70,14 +74,14 @@ exports[`<Menu /> should match snapshot 1`] = `
   gap: 2rem;
 }
 
-.c10 {
+.c11 {
   list-style: none;
   background: none;
   cursor: pointer;
   border: none;
 }
 
-.c11 {
+.c12 {
   display: block;
   border-radius: 50px;
   width: 25px;
@@ -88,15 +92,15 @@ exports[`<Menu /> should match snapshot 1`] = `
   transition: width 0.2s ease-in-out;
 }
 
-.c11:nth-child(2) {
+.c12:nth-child(2) {
   width: 70%;
 }
 
-.c11:nth-child(3) {
+.c12:nth-child(3) {
   width: 70%;
 }
 
-.c12 {
+.c13 {
   position: absolute;
   width: 100vw;
   height: 0;
@@ -106,7 +110,7 @@ exports[`<Menu /> should match snapshot 1`] = `
   z-index: 2;
 }
 
-.c13 {
+.c14 {
   list-style: none;
   position: absolute;
   display: -webkit-box;
@@ -129,14 +133,26 @@ exports[`<Menu /> should match snapshot 1`] = `
   gap: 5rem;
 }
 
-.c13 li {
+.c14 li {
   pointer-events: none;
   opacity: 0;
   -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
 }
 
-.c6 {
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7:focus {
+  -webkit-box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
+  box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
+}
+
+.c8 {
   border: none;
   border-radius: 5px 0 0 5px;
   height: 3rem;
@@ -147,33 +163,36 @@ exports[`<Menu /> should match snapshot 1`] = `
   outline: none;
 }
 
-.c6:focus {
+.c8:focus {
   width: 20rem;
   -webkit-box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
   box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
 }
 
-.c6:focus .c7 {
-  -webkit-box-shadow: 0px 0px 15px 10px rgba(220,20,60,0.67);
-  box-shadow: 0px 0px 15px 10px rgba(220,20,60,0.67);
-}
-
-.c8 {
+.c9 {
   cursor: pointer;
   border: none;
   border-radius: 0 5px 5px 0;
+  outline: none;
   height: 3rem;
   padding: 0.8rem;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  background-color: #FFFFFF;
+  border-left: 1px solid #DDDDDD;
 }
 
-.c8:hover {
+.c9:hover {
   background-color: #dc143c;
   color: #FFFFFF;
 }
 
-.c9 {
+.c9:focus {
+  -webkit-box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
+  box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
+}
+
+.c10 {
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
@@ -193,19 +212,19 @@ exports[`<Menu /> should match snapshot 1`] = `
 }
 
 @media (max-width:768px) {
-  .c4 {
+  .c5 {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .c10 {
+  .c11 {
     display: none;
   }
 }
 
 @media (min-width:768px) {
-  .c12 {
+  .c13 {
     display: none;
   }
 }
@@ -217,19 +236,27 @@ exports[`<Menu /> should match snapshot 1`] = `
     <div
       class="c1 c2"
     >
-      <img
+      <div
         class="c3"
-        src="/assets/images/claquete.png"
-      />
+      >
+        <a
+          href="/"
+        >
+          <img
+            class="c4"
+            src="/assets/images/claquete.png"
+          />
+        </a>
+      </div>
       <ul
-        class="c4"
+        class="c5"
         role="navigation"
       >
         <li
           class=""
         >
           <a
-            class="c5"
+            class="c6"
             href="/"
             target="_self"
           >
@@ -240,7 +267,7 @@ exports[`<Menu /> should match snapshot 1`] = `
           class=""
         >
           <a
-            class="c5"
+            class="c6"
             href="/news"
             target="_self"
           >
@@ -251,7 +278,7 @@ exports[`<Menu /> should match snapshot 1`] = `
           class=""
         >
           <a
-            class="c5"
+            class="c6"
             href="/reviews"
             target="_self"
           >
@@ -262,7 +289,7 @@ exports[`<Menu /> should match snapshot 1`] = `
           class=""
         >
           <a
-            class="c5"
+            class="c6"
             href="/entrevistas"
             target="_self"
           >
@@ -273,32 +300,34 @@ exports[`<Menu /> should match snapshot 1`] = `
           class=""
         >
           <a
-            class="c5"
+            class="c6"
             href="/about"
             target="_self"
           >
-            Quem somos
+            Sobre
           </a>
         </li>
         <form
-          class=""
+          class="c7"
         >
           <input
             aria-label="search box"
-            class="c6"
+            class="c8"
             placeholder="Buscar"
             type="search"
             value=""
           />
           <button
-            class="c7 c8"
+            class="c9"
           >
             <svg
               aria-hidden="true"
-              class="c9"
+              class="c10"
               fill="currentColor"
               focusable="false"
+              height="16"
               viewBox="0 0 24 24"
+              width="16"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -306,7 +335,7 @@ exports[`<Menu /> should match snapshot 1`] = `
                 fill="none"
               />
               <path
-                d="M17.27 6.73l-4.24 10.13-1.32-3.42-.32-.83-.82-.32-3.43-1.33 10.13-4.23M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"
+                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
               />
             </svg>
           </button>
@@ -315,33 +344,33 @@ exports[`<Menu /> should match snapshot 1`] = `
       <li
         aria-hidden="true"
         aria-label="open or close menu"
-        class="c10"
+        class="c11"
         title="Abrir menu"
       >
         <span
-          class="c11"
+          class="c12"
         />
         <span
-          class="c11"
+          class="c12"
         />
         <span
-          class="c11"
+          class="c12"
         />
       </li>
     </div>
     <div
       aria-hidden="true"
       aria-label="menu mobile"
-      class="c12"
+      class="c13"
     >
       <ul
-        class="c13"
+        class="c14"
       >
         <li
           class=""
         >
           <a
-            class="c5"
+            class="c6"
             href="/"
             target="_self"
           >
@@ -352,7 +381,7 @@ exports[`<Menu /> should match snapshot 1`] = `
           class=""
         >
           <a
-            class="c5"
+            class="c6"
             href="/news"
             target="_self"
           >
@@ -363,7 +392,7 @@ exports[`<Menu /> should match snapshot 1`] = `
           class=""
         >
           <a
-            class="c5"
+            class="c6"
             href="/reviews"
             target="_self"
           >
@@ -374,7 +403,7 @@ exports[`<Menu /> should match snapshot 1`] = `
           class=""
         >
           <a
-            class="c5"
+            class="c6"
             href="/entrevistas"
             target="_self"
           >
@@ -385,11 +414,11 @@ exports[`<Menu /> should match snapshot 1`] = `
           class=""
         >
           <a
-            class="c5"
+            class="c6"
             href="/about"
             target="_self"
           >
-            Quem somos
+            Sobre
           </a>
         </li>
       </ul>

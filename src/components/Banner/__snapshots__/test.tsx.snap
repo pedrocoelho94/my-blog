@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Banner /> should render correctly 1`] = `
+.c0 {
+  position: relative;
+}
+
+.c1 {
+  -webkit-filter: brightness(0.95);
+  filter: brightness(0.95);
+  -webkit-transition: filter 0.2s ease-in-out;
+  transition: filter 0.2s ease-in-out;
+}
+
+.c1:hover {
+  -webkit-filter: brightness(1.2);
+  filter: brightness(1.2);
+}
+
+.c2 {
+  width: 100%;
+  height: 30rem;
+  background-image: url(image.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.c3 {
+  width: 100%;
+  padding: 2.4rem;
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.c4 {
+  margin-top: 0;
+  color: #FFFFFF;
+}
+
+.c5 {
+  font-weight: inherit;
+  margin-bottom: 0;
+  color: #FFFFFF;
+}
+
+@media (min-width:450px) {
+  .c2 {
+    height: 40rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 {
+    height: 60rem;
+  }
+}
+
+@media (max-width:450px) {
+  .c4 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width:450px) {
+  .c5 {
+    display: none;
+  }
+}
+
+<div
+  class="c0"
+>
+  <a
+    href="/post/slug"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        aria-label="Title"
+        class="c2"
+        role="img"
+        src="image.jpg"
+      />
+      <div
+        class="c3"
+      >
+        <h2
+          class="c4"
+        >
+          Title
+        </h2>
+        <h3
+          class="c5"
+        >
+          Excerpt
+        </h3>
+      </div>
+    </div>
+  </a>
+</div>
+`

@@ -7,6 +7,7 @@ import {
   StrapiPostAndSettings
 } from 'api/loadPosts'
 import PostsTemplate from 'templates/PostsTemplate'
+import BaseTemplate from 'templates/Base'
 
 export default function AuthorPage({
   posts,
@@ -26,7 +27,14 @@ export default function AuthorPage({
           Author: {posts[0].author?.displayName} - {setting.blogName}
         </title>
       </Head>
-      <PostsTemplate settings={setting} posts={posts} variables={variables} />
+
+      <BaseTemplate settings={setting}>
+        <PostsTemplate
+          posts={posts}
+          variables={variables}
+          author={posts[0].author?.displayName}
+        />
+      </BaseTemplate>
     </>
   )
 }

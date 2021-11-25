@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 import * as S from './styles'
 import MenuLink from 'components/MenuLink'
 import { useState } from 'react'
 
-import { NearMe } from '@styled-icons/material-outlined/NearMe'
+import { Search } from '@styled-icons/material-outlined'
 
 export type MenuPropsLinks = {
   id: string
@@ -32,7 +33,13 @@ const Menu = ({ links = [] }: MenuProps) => {
   return (
     <S.Wrapper>
       <S.Content>
-        <S.Logo src="/assets/images/claquete.png" />
+        <S.LogoContainer>
+          <Link href="/" passHref>
+            <a>
+              <S.Logo src="/assets/images/claquete.png" />
+            </a>
+          </Link>
+        </S.LogoContainer>
 
         <S.Menu role="navigation">
           {links.map((link) => (
@@ -52,7 +59,7 @@ const Menu = ({ links = [] }: MenuProps) => {
               aria-label="search box"
             />
             <S.SearchButton>
-              <NearMe />
+              <Search size={16} />
             </S.SearchButton>
           </S.SearchBox>
         </S.Menu>

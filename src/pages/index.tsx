@@ -1,26 +1,21 @@
 import Head from 'next/head'
-import PostsTemplate from 'templates/PostsTemplate'
+
 import {
   defaultLoadPostsVariables,
   loadPosts,
   StrapiPostAndSettings
 } from 'api/loadPosts'
 import { GetStaticProps } from 'next'
+import HomePage, { HomeTemplateProps } from 'templates/Home'
 
-export default function Home({
-  posts,
-  setting,
-  variables
-}: StrapiPostAndSettings) {
-  console.log(variables)
-
+export default function Home({ posts, setting, variables }: HomeTemplateProps) {
   return (
     <>
       <Head>
         <title>{setting.blogName}</title>
         <meta name="description" content={setting.blogDescription} />
       </Head>
-      <PostsTemplate settings={setting} posts={posts} variables={variables} />
+      <HomePage posts={posts} setting={setting} variables={variables} />
     </>
   )
 }

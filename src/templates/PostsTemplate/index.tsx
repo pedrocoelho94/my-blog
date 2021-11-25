@@ -2,20 +2,22 @@ import { loadPosts, LoadPostsVariables } from 'api/loadPosts'
 import { PostCardProps } from 'components/PostCard'
 import PostGrid from 'components/PostGrid'
 import { useEffect, useState } from 'react'
-import { SettingsStrapi } from 'shared-typed/settings'
-import BaseTemplate from 'templates/Base'
 import * as S from './styles'
 
 export type PostsTemplateProps = {
-  settings: SettingsStrapi
   posts?: PostCardProps[]
   variables?: LoadPostsVariables
+  category?: string
+  author?: string
+  searchTerm?: string | string[] | undefined
 }
 
 const PostsTemplate = ({
-  settings,
   posts = [],
-  variables
+  variables,
+  category = '',
+  author = '',
+  searchTerm = ''
 }: PostsTemplateProps) => {
   const [statePosts, setStatePosts] = useState(posts)
   const [stateVariables, setStateVariables] = useState(variables)
@@ -52,21 +54,32 @@ const PostsTemplate = ({
   }
 
   return (
-    <BaseTemplate settings={settings}>
-      <S.Wrapper>
-        <div>
-          <PostGrid posts={statePosts} />
+    <S.Wrapper>
+      <div>
+        {!!author && <S.Title>{author}</S.Title>}
+        {!!category && <S.Title>{category}</S.Title>}
 
-          {statePosts.length > 0 && (
-            <S.ButtonContainer>
-              <S.Button onClick={handleLoadMorePosts} disabled={buttonDisabled}>
-                {noMorePosts ? 'Sem mais posts' : 'Carregar mais'}
-              </S.Button>
-            </S.ButtonContainer>
-          )}
-        </div>
-      </S.Wrapper>
-    </BaseTemplate>
+        {!!searchTerm && (
+          <S.Title>
+            Você pesquisou por <S.HighlightText>{searchTerm}</S.HighlightText> e{' '}
+            {statePosts.length}{' '}
+            {statePosts.length === 1
+              ? 'resultado foi encontrado.'
+              : 'resultados foram encontrados.'}
+          </S.Title>
+        )}
+
+        <PostGrid posts={statePosts} />
+
+        {statePosts.length > 0 && (
+          <S.ButtonContainer>
+            <S.Button onClick={handleLoadMorePosts} disabled={buttonDisabled}>
+              {noMorePosts ? 'Sem mais posts' : 'Carregar mais'}
+            </S.Button>
+          </S.ButtonContainer>
+        )}
+      </div>
+    </S.Wrapper>
   )
 }
 

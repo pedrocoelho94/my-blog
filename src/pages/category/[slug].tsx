@@ -7,6 +7,7 @@ import {
   StrapiPostAndSettings
 } from 'api/loadPosts'
 import PostsTemplate from 'templates/PostsTemplate'
+import BaseTemplate from 'templates/Base'
 
 export default function CategoryPage({
   posts,
@@ -30,7 +31,14 @@ export default function CategoryPage({
           Category: {categoryName} - {setting.blogName}
         </title>
       </Head>
-      <PostsTemplate settings={setting} posts={posts} variables={variables} />
+
+      <BaseTemplate settings={setting}>
+        <PostsTemplate
+          posts={posts}
+          variables={variables}
+          category={categoryName}
+        />
+      </BaseTemplate>
     </>
   )
 }

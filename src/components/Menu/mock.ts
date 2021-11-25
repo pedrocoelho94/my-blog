@@ -28,7 +28,7 @@ export default {
       id: 'link-5',
       link: '/about',
       newTab: false,
-      text: 'Quem somos'
+      text: 'Sobre'
     }
   ],
   blogName: 'Claquete 42',

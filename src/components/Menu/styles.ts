@@ -41,6 +41,10 @@ export const Content = styled(Container)`
   `}
 `
 
+export const LogoContainer = styled.div`
+  height: 100%;
+`
+
 export const Logo = styled.img`
   height: 100%;
 `
@@ -143,7 +147,14 @@ export const OverlayMenu = styled.ul<OpenProps>`
   `}
 `
 
-export const SearchBox = styled.form``
+export const SearchBox = styled.form`
+  display: flex;
+
+  &:focus {
+    -webkit-box-shadow: 0px 0px 15px 8px rgba(220, 20, 60, 0.67);
+    box-shadow: 0px 0px 15px 8px rgba(220, 20, 60, 0.67);
+  }
+`
 
 export const SearchInput = styled.input`
   ${({ theme }) => css`
@@ -159,11 +170,6 @@ export const SearchInput = styled.input`
       width: 20rem;
       -webkit-box-shadow: 0px 0px 15px 8px rgba(220, 20, 60, 0.67);
       box-shadow: 0px 0px 15px 8px rgba(220, 20, 60, 0.67);
-
-      ${SearchButton} {
-        -webkit-box-shadow: 0px 0px 15px 10px rgba(220, 20, 60, 0.67);
-        box-shadow: 0px 0px 15px 10px rgba(220, 20, 60, 0.67);
-      }
     }
   `}
 `
@@ -172,13 +178,21 @@ export const SearchButton = styled.button`
     cursor: pointer;
     border: none;
     border-radius: 0 5px 5px 0;
+    outline: none;
     height: 3rem;
     padding: ${theme.spacings.xsmall};
     transition: all 0.2s ease-in-out;
+    background-color: ${theme.colors.white};
+    border-left: 1px solid ${theme.colors.mediumGray};
 
     &:hover {
       background-color: ${theme.colors.secondary};
       color: ${theme.colors.white};
+    }
+
+    &:focus {
+      -webkit-box-shadow: 0px 0px 15px 8px rgba(220, 20, 60, 0.67);
+      box-shadow: 0px 0px 15px 8px rgba(220, 20, 60, 0.67);
     }
   `}
 `

@@ -7,6 +7,7 @@ import {
   StrapiPostAndSettings
 } from 'api/loadPosts'
 import PostsTemplate from 'templates/PostsTemplate'
+import BaseTemplate from 'templates/Base'
 
 export default function SearchPage({
   posts,
@@ -19,10 +20,17 @@ export default function SearchPage({
     <>
       <Head>
         <title>
-          Pesquisa: {router.query.slug} - {setting.blogName}
+          Você pesquisou por: {router.query.slug} - {setting.blogName}
         </title>
       </Head>
-      <PostsTemplate settings={setting} posts={posts} variables={variables} />
+
+      <BaseTemplate settings={setting}>
+        <PostsTemplate
+          posts={posts}
+          variables={variables}
+          searchTerm={router.query.slug}
+        />
+      </BaseTemplate>
     </>
   )
 }

@@ -9,6 +9,14 @@ export const Wrapper = styled.div`
     grid-template-columns: 1fr;
   `}
 `
+export const Title = styled.h3``
+
+export const HighlightText = styled.span`
+  ${({ theme }) => css`
+    color: ${theme.colors.secondary};
+  `}
+`
+
 export const ButtonContainer = styled.div`
   ${({ theme }) => css`
     padding: 0 ${theme.spacings.large};
