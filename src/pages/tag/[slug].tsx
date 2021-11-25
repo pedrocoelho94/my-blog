@@ -7,6 +7,7 @@ import {
   StrapiPostAndSettings
 } from 'api/loadPosts'
 import PostsTemplate from 'templates/PostsTemplate'
+import BaseTemplate from 'templates/Base'
 
 export default function TagPage({
   posts,
@@ -30,7 +31,9 @@ export default function TagPage({
           Tag: {tagName} - {setting.blogName}
         </title>
       </Head>
-      <PostsTemplate settings={setting} posts={posts} variables={variables} />
+      <BaseTemplate settings={setting}>
+        <PostsTemplate posts={posts} variables={variables} tag={tagName} />
+      </BaseTemplate>
     </>
   )
 }

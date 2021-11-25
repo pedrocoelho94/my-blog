@@ -10,6 +10,7 @@ export type PostsTemplateProps = {
   category?: string
   author?: string
   searchTerm?: string | string[] | undefined
+  tag?: string
 }
 
 const PostsTemplate = ({
@@ -17,7 +18,8 @@ const PostsTemplate = ({
   variables,
   category = '',
   author = '',
-  searchTerm = ''
+  searchTerm = '',
+  tag = ''
 }: PostsTemplateProps) => {
   const [statePosts, setStatePosts] = useState(posts)
   const [stateVariables, setStateVariables] = useState(variables)
@@ -58,6 +60,7 @@ const PostsTemplate = ({
       <div>
         {!!author && <S.Title>Autor: {author}</S.Title>}
         {!!category && <S.Title>Categoria: {category}</S.Title>}
+        {!!tag && <S.Title>Tag: {tag}</S.Title>}
 
         {!!searchTerm && (
           <S.Title>
