@@ -56,8 +56,8 @@ const PostsTemplate = ({
   return (
     <S.Wrapper>
       <div>
-        {!!author && <S.Title>{author}</S.Title>}
-        {!!category && <S.Title>{category}</S.Title>}
+        {!!author && <S.Title>Autor: {author}</S.Title>}
+        {!!category && <S.Title>Categoria: {category}</S.Title>}
 
         {!!searchTerm && (
           <S.Title>
