@@ -74,7 +74,7 @@ exports[`<Banner /> should render correctly 1`] = `
   class="c0"
 >
   <a
-    href="/post/slug"
+    href="/undefined/slug"
   >
     <div
       class="c1"

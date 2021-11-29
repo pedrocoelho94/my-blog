@@ -11,7 +11,8 @@ const HomePage = ({ setting, posts, variables }: HomeTemplateProps) => {
   return (
     <BaseTemplate settings={setting}>
       <S.SectionContainer>
-        <BannerSlider posts={posts} />
+        {/* pega os ultimos 3 posts e adiciona no componente banner */}
+        <BannerSlider posts={posts.slice(0, 3)} />
       </S.SectionContainer>
 
       <PostsTemplate posts={posts} variables={variables} />

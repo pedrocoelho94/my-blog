@@ -27,6 +27,7 @@ export const getStaticProps: GetStaticProps<
 
   try {
     data = await loadPosts()
+    console.log(data.posts)
   } catch (e) {
     data = null
   }

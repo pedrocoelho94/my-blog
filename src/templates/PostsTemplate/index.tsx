@@ -7,9 +7,9 @@ import * as S from './styles'
 export type PostsTemplateProps = {
   posts?: PostCardProps[]
   variables?: LoadPostsVariables
-  category?: string
-  author?: string
-  searchTerm?: string | string[] | undefined
+  category?: string //pagina category
+  author?: string //pagina author
+  searchTerm?: string | string[] | undefined //pagina searchTerm
   tag?: string
 }
 

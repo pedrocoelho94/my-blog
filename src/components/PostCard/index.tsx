@@ -6,6 +6,7 @@ import { AccountCircle, CalendarToday } from '@styled-icons/material-outlined'
 import * as S from './styles'
 import { Author } from 'shared-typed/author'
 import { StrapiImage } from 'shared-typed/cover'
+import { Category } from 'shared-typed/category'
 
 export type PostCardProps = {
   id: string
@@ -15,6 +16,7 @@ export type PostCardProps = {
   createdAt: string
   excerpt: string
   author?: Author
+  categories: Category[]
 }
 
 const PostCard = ({
@@ -23,11 +25,12 @@ const PostCard = ({
   excerpt,
   slug,
   author = undefined,
-  createdAt
+  createdAt,
+  categories = []
 }: PostCardProps) => (
   <S.Wrapper>
     <S.ContainerCover>
-      <Link href={`/post/${slug}`} passHref>
+      <Link href={`/${categories?.[0].slug}/${slug}`} passHref>
         <a>
           <S.Cover src={cover.url} alt={cover.alternativeText} />
         </a>
@@ -51,7 +54,7 @@ const PostCard = ({
       </S.Info>
 
       <Heading as="h2" size="small">
-        <Link href={`/post/${slug}`} passHref>
+        <Link href={`/${categories?.[0].slug}/${slug}`} passHref>
           <a>{title}</a>
         </Link>
       </Heading>

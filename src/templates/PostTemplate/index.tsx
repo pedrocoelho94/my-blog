@@ -1,3 +1,4 @@
+import AsidePosts from 'components/AsidePosts'
 import Comments from 'components/Comments'
 import Post from 'components/Post'
 import PostTags from 'components/PostTags'
@@ -9,12 +10,19 @@ import * as S from './styles'
 export type PostTemplateProps = {
   settings: SettingsStrapi
   post: PostStrapi
+  recentsPostsByAuthor?: PostStrapi[]
+  recentsPostsByCategory?: PostStrapi[]
 }
 
-const PostTemplate = ({ settings, post }: PostTemplateProps) => (
+const PostTemplate = ({
+  settings,
+  post,
+  recentsPostsByAuthor = [],
+  recentsPostsByCategory = []
+}: PostTemplateProps) => (
   <BaseTemplate settings={settings}>
     <S.Wrapper>
-      <div>
+      <S.Main>
         <Post {...post} />
         <PostTags tags={post.tags} />
         <Comments
@@ -23,7 +31,38 @@ const PostTemplate = ({ settings, post }: PostTemplateProps) => (
           id={post.id}
           allowComments={post.allowComments}
         />
-      </div>
+      </S.Main>
+      <S.Aside>
+        {recentsPostsByCategory?.length > 0 && (
+          <S.AsideContent>
+            <S.AsideTitle>
+              Últimas {post?.categories?.[0].displayName}
+            </S.AsideTitle>
+            {recentsPostsByCategory?.map((post) => (
+              <AsidePosts
+                key={post.id}
+                title={post.title}
+                cover={post.cover.url}
+                slug={post.slug}
+              />
+            ))}
+          </S.AsideContent>
+        )}
+
+        {recentsPostsByAuthor?.length > 0 && (
+          <S.AsideContent>
+            <S.AsideTitle>Últimas de {post?.author?.displayName}</S.AsideTitle>
+            {recentsPostsByAuthor?.map((post) => (
+              <AsidePosts
+                key={post.id}
+                title={post.title}
+                cover={post.cover.url}
+                slug={post.slug}
+              />
+            ))}
+          </S.AsideContent>
+        )}
+      </S.Aside>
     </S.Wrapper>
   </BaseTemplate>
 )

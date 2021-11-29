@@ -135,7 +135,7 @@ exports[`<PostGrid /> should render two posts 1`] = `
           class="c3"
         >
           <a
-            href="/post/al-sadd-anuncia-acordo-para-liberar-xavi-mas-barcelona-nega"
+            href="/futebol/al-sadd-anuncia-acordo-para-liberar-xavi-mas-barcelona-nega"
           >
             <img
               alt=""
@@ -201,7 +201,7 @@ exports[`<PostGrid /> should render two posts 1`] = `
             class="c7 c8"
           >
             <a
-              href="/post/al-sadd-anuncia-acordo-para-liberar-xavi-mas-barcelona-nega"
+              href="/futebol/al-sadd-anuncia-acordo-para-liberar-xavi-mas-barcelona-nega"
             >
               Al Sadd anuncia acordo para liberar Xavi, mas Barcelona nega
             </a>
@@ -220,7 +220,7 @@ exports[`<PostGrid /> should render two posts 1`] = `
           class="c3"
         >
           <a
-            href="/post/com-dois-penaltis-napoli-vira-contra-o-legia-e-se-recupera-em-seu-grupo-da-liga-europa"
+            href="/futebol/com-dois-penaltis-napoli-vira-contra-o-legia-e-se-recupera-em-seu-grupo-da-liga-europa"
           >
             <img
               alt=""
@@ -286,7 +286,7 @@ exports[`<PostGrid /> should render two posts 1`] = `
             class="c7 c8"
           >
             <a
-              href="/post/com-dois-penaltis-napoli-vira-contra-o-legia-e-se-recupera-em-seu-grupo-da-liga-europa"
+              href="/futebol/com-dois-penaltis-napoli-vira-contra-o-legia-e-se-recupera-em-seu-grupo-da-liga-europa"
             >
               Com dois pênaltis, Napoli vira contra o Legia e se recupera em seu grupo da Liga Europa
             </a>
