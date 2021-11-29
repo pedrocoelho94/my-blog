@@ -37,8 +37,9 @@ export const BlogThemeProvider = ({ children }: BlogThemeProviderProps) => {
           name: 'inverted',
           colors: {
             primary: '#e7e7e7',
-            darkText: '#e4e4e4',
             secondary: '#dc143c',
+            darker: '#4d4d4d',
+            darkText: '#e4e4e4',
             white: '#272727',
             mediumGray: '#f9f9f9',
             darkerGray: '#cccccc',
