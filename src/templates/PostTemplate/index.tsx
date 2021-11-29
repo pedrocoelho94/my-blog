@@ -44,6 +44,7 @@ const PostTemplate = ({
                 title={post.title}
                 cover={post.cover.url}
                 slug={post.slug}
+                categories={post.categories}
               />
             ))}
           </S.AsideContent>
@@ -58,6 +59,7 @@ const PostTemplate = ({
                 title={post.title}
                 cover={post.cover.url}
                 slug={post.slug}
+                categories={post.categories}
               />
             ))}
           </S.AsideContent>
