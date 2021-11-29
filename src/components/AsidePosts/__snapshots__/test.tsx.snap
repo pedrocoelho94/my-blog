@@ -38,7 +38,7 @@ exports[`<AsidePosts /> should render the heading and image correctly 1`] = `
 >
   <a
     class="c0"
-    href="/post/slug-title"
+    href="/cat-slug/slug-title"
   >
     <img
       alt="title"
