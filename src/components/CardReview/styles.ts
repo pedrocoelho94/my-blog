@@ -49,7 +49,7 @@ export const ReviewContent = styled.div`
 `
 
 export const ReviewPoster = styled.img`
-  max-width: 100%;
+  max-width: 210px;
 
   ${customMedia.lessThan('smallMedium')`
       justify-self: center;
