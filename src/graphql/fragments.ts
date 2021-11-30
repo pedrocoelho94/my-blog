@@ -59,6 +59,21 @@ export const GRAPHQL_FRAGMENTS = gql`
     ...categories
     ...tags
     ...authorPost
+    reviewDetails {
+      ptbrTitle: title
+      originalTitle
+      director
+      creator
+      rating
+      yearRelease
+      sinopse
+      cast
+      poster {
+        id
+        alternativeText
+        url
+      }
+    }
   }
   fragment settings on Settings {
     id

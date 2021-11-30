@@ -36,11 +36,12 @@ export default function PostPage({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   let data: StrapiPostAndSettings | null = null
+  const variables = { categorySlug: 'news' }
 
-  data = await loadPosts()
+  data = await loadPosts(variables)
   // cria as páginas de acordo com o slug
   const paths = data.posts.map((post) => ({ params: { slug: post.slug } }))
-
+  console.log('PATHS NEWS', paths)
   return { paths, fallback: true }
 }
 

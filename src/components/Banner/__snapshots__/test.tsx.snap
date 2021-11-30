@@ -53,7 +53,7 @@ exports[`<Banner /> should render correctly 1`] = `
 
 @media (min-width:768px) {
   .c2 {
-    height: 60rem;
+    height: 45rem;
   }
 }
 

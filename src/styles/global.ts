@@ -25,7 +25,7 @@ export default createGlobalStyle`
    h5,
    h6 {
      font-family: ${theme.font.family.default};
-     margin: ${theme.spacings.large} 0;
+     margin: 0;
      font-weight: 800;
      color: ${theme.colors.primary};
    }

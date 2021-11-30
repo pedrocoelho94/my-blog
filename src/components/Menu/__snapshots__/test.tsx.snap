@@ -198,6 +198,13 @@ exports[`<Menu /> should match snapshot 1`] = `
   overflow: hidden;
 }
 
+@media (min-width:968px) {
+  .c1 {
+    padding-left: calc(3.2rem * 2);
+    padding-right: calc(3.2rem * 2);
+  }
+}
+
 @media (max-width:768px) {
   .c0 {
     height: 7rem;
@@ -369,57 +376,67 @@ exports[`<Menu /> should match snapshot 1`] = `
         <li
           class=""
         >
-          <a
-            class="c6"
-            href="/"
-            target="_self"
-          >
-            Home
-          </a>
+          <div>
+            <a
+              class="c6"
+              href="/"
+              target="_self"
+            >
+              Home
+            </a>
+          </div>
         </li>
         <li
           class=""
         >
-          <a
-            class="c6"
-            href="/news"
-            target="_self"
-          >
-            Notícias
-          </a>
+          <div>
+            <a
+              class="c6"
+              href="/news"
+              target="_self"
+            >
+              Notícias
+            </a>
+          </div>
         </li>
         <li
           class=""
         >
-          <a
-            class="c6"
-            href="/reviews"
-            target="_self"
-          >
-            Críticas
-          </a>
+          <div>
+            <a
+              class="c6"
+              href="/reviews"
+              target="_self"
+            >
+              Críticas
+            </a>
+          </div>
         </li>
         <li
           class=""
         >
-          <a
-            class="c6"
-            href="/entrevistas"
-            target="_self"
-          >
-            Entrevistas
-          </a>
+          <div>
+            <a
+              class="c6"
+              href="/entrevistas"
+              target="_self"
+            >
+              Entrevistas
+            </a>
+          </div>
         </li>
         <li
           class=""
         >
-          <a
-            class="c6"
-            href="/about"
-            target="_self"
-          >
-            Sobre
-          </a>
+          <div>
+            <a
+              class="c6"
+              href="/about"
+              target="_self"
+            >
+              Sobre
+            </a>
+          </div>
         </li>
       </ul>
     </div>

@@ -31,7 +31,7 @@ export const Image = styled.div<imgProps>`
     `}
 
     ${media.greaterThan('medium')`
-      height: 60rem;
+      height: 45rem;
     `}
   `}
 `

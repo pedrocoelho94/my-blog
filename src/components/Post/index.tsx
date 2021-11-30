@@ -27,7 +27,6 @@ const Post = ({
       categories={categories}
       createdAt={createdAt}
     />
-
     <HtmlContent html={content} />
   </S.Wrapper>
 )

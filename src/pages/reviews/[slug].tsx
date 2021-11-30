@@ -36,11 +36,12 @@ export default function PostPage({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   let data: StrapiPostAndSettings | null = null
+  const variables = { categorySlug: 'reviews' }
 
-  data = await loadPosts()
+  data = await loadPosts(variables)
   // cria as páginas de acordo com o slug
   const paths = data.posts.map((post) => ({ params: { slug: post.slug } }))
-
+  console.log('PATHS REVIEWS', paths)
   return { paths, fallback: true }
 }
 
@@ -61,8 +62,6 @@ export const getStaticProps: GetStaticProps<PostTemplateProps> = async (
     categorySlug: data.posts[0].categories?.[0].slug,
     limit: 5
   })
-
-  console.log('EPAAA', postsByCategory.posts)
 
   // exclui o post atual do array de ultimos posts do author
   const newPostsByAuthor = postsByAuthor.posts.filter(

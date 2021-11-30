@@ -30,6 +30,10 @@ const Menu = ({ links = [] }: MenuProps) => {
     router.push(`/search/${url}`)
   }
 
+  const handleClick = () => {
+    setToggleNav(false)
+  }
+
   return (
     <S.Wrapper>
       <S.Content>
@@ -80,9 +84,11 @@ const Menu = ({ links = [] }: MenuProps) => {
         <S.OverlayMenu open={toggle}>
           {links.map((link) => (
             <S.Item key={`mobile-${link.id}`}>
-              <MenuLink newTab={link.newTab} link={link.link}>
-                {link.text}
-              </MenuLink>
+              <div onClick={handleClick}>
+                <MenuLink newTab={link.newTab} link={link.link}>
+                  {link.text}
+                </MenuLink>
+              </div>
             </S.Item>
           ))}
         </S.OverlayMenu>
