@@ -1,4 +1,5 @@
 import AsidePosts from 'components/AsidePosts'
+import CardReview from 'components/CardReview'
 // import Comments from 'components/Comments'
 import Post from 'components/Post'
 import PostTags from 'components/PostTags'
@@ -30,28 +31,7 @@ const PostTemplate = ({
         )}
 
         {!!post.reviewDetails && (
-          <S.ReviewContainer>
-            <S.ReviewDetails bgImage={post.cover.url}></S.ReviewDetails>
-            <S.ReviewContent>
-              <S.ReviewPoster
-                src={post.reviewDetails?.poster?.url}
-                alt={post.reviewDetails?.poster?.alternativeText}
-              />
-              <S.ReviewInfo>
-                <S.ReviewTitle>
-                  {post.reviewDetails?.ptbrTitle}{' '}
-                  {`(${post.reviewDetails?.yearRelease})`}
-                </S.ReviewTitle>
-                <S.ReviewOriginalTitle>
-                  {post.reviewDetails?.originalTitle} -{' '}
-                  {post.reviewDetails?.director || post.reviewDetails?.creator}
-                </S.ReviewOriginalTitle>
-
-                <S.ReviewSinopse>{post.reviewDetails?.sinopse}</S.ReviewSinopse>
-                <S.ReviewCast>Elenco: {post.reviewDetails?.cast}</S.ReviewCast>
-              </S.ReviewInfo>
-            </S.ReviewContent>
-          </S.ReviewContainer>
+          <CardReview cover={post.cover} reviewDetails={post.reviewDetails} />
         )}
 
         <PostTags tags={post.tags} />
