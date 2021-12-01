@@ -50,6 +50,8 @@ export const ReviewContent = styled.div`
 
 export const ReviewPoster = styled.img`
   max-width: 210px;
+  -webkit-box-shadow: 0px 0px 15px 3px #3a3a3a;
+  box-shadow: 0px 0px 15px 3px #3a3a3a;
 
   ${customMedia.lessThan('smallMedium')`
       justify-self: center;
