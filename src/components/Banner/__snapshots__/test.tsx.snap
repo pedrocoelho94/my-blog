@@ -6,15 +6,18 @@ exports[`<Banner /> should render correctly 1`] = `
 }
 
 .c1 {
-  -webkit-filter: brightness(0.95);
-  filter: brightness(0.95);
-  -webkit-transition: filter 0.2s ease-in-out;
-  transition: filter 0.2s ease-in-out;
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .c1:hover {
-  -webkit-filter: brightness(1.2);
-  filter: brightness(1.2);
+  -webkit-filter: brightness(1);
+  filter: brightness(1);
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .c2 {

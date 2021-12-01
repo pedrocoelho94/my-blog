@@ -25,7 +25,10 @@ const CardReview = ({ cover, reviewDetails }: CardReviewProps) => (
         </S.ReviewOriginalTitle>
 
         <S.ReviewSinopse>{reviewDetails?.sinopse}</S.ReviewSinopse>
-        <S.ReviewCast>Elenco: {reviewDetails?.cast}</S.ReviewCast>
+        <S.ReviewCast>
+          {' '}
+          <span>Elenco:</span> {reviewDetails?.cast}
+        </S.ReviewCast>
       </S.ReviewInfo>
     </S.ReviewContent>
   </S.Wrapper>

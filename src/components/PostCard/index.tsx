@@ -7,6 +7,7 @@ import * as S from './styles'
 import { Author } from 'shared-typed/author'
 import { StrapiImage } from 'shared-typed/cover'
 import { Category } from 'shared-typed/category'
+import { ReviewProps } from 'shared-typed/review'
 
 export type PostCardProps = {
   id: string
@@ -17,6 +18,7 @@ export type PostCardProps = {
   excerpt: string
   author?: Author
   categories: Category[]
+  reviewDetails?: ReviewProps
 }
 
 const PostCard = ({

@@ -1,4 +1,5 @@
 import { loadPosts, LoadPostsVariables } from 'api/loadPosts'
+import GridReviews from 'components/GridReviews'
 import { PostCardProps } from 'components/PostCard'
 import PostGrid from 'components/PostGrid'
 import { useEffect, useState } from 'react'
@@ -7,7 +8,7 @@ import * as S from './styles'
 export type PostsTemplateProps = {
   posts?: PostCardProps[]
   variables?: LoadPostsVariables
-  category?: string //pagina category
+  category?: string[] //pagina category
   author?: string //pagina author
   searchTerm?: string | string[] | undefined //pagina searchTerm
   tag?: string
@@ -16,7 +17,7 @@ export type PostsTemplateProps = {
 const PostsTemplate = ({
   posts = [],
   variables,
-  category = '',
+  category = [],
   author = '',
   searchTerm = '',
   tag = ''
@@ -59,7 +60,7 @@ const PostsTemplate = ({
     <S.Wrapper>
       <div>
         {!!author && <S.Title>Autor: {author}</S.Title>}
-        {!!category && <S.Title>Categoria: {category}</S.Title>}
+        {!!category && <S.Title>Categoria: {category[0]}</S.Title>}
         {!!tag && <S.Title>Tag: {tag}</S.Title>}
 
         {!!searchTerm && (
@@ -72,7 +73,12 @@ const PostsTemplate = ({
           </S.Title>
         )}
 
-        <PostGrid posts={statePosts} />
+        {/* category[displayName, slug] */}
+        {category[1] === 'reviews' ? (
+          <GridReviews posts={statePosts} />
+        ) : (
+          <PostGrid posts={statePosts} />
+        )}
 
         {statePosts.length > 0 && (
           <S.ButtonContainer>

@@ -24,12 +24,12 @@ export const ReviewDetails = styled.div<ReviewDetailsProps>`
     background-image: url(${bgImage});
     background-position: center center;
     background-size: cover;
-    background-repeat: repeat-y;
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    filter: blur(20px);
-    -webkit-filter: blur(20px);
+    filter: blur(15px) brightness(0.4);
+    -webkit-filter: blur(15px) brightness(0.4);
+    transform: scale(1.1);
   `}
 `
 export const ReviewContent = styled.div`
@@ -77,6 +77,13 @@ export const ReviewSinopse = styled.p`
   ${({ theme }) => css`
     margin-bottom: ${theme.spacings.large};
     font-weight: 200;
+    font-size: 1.4rem;
   `}
 `
-export const ReviewCast = styled.p``
+export const ReviewCast = styled.p`
+  font-size: 1.4rem;
+
+  span {
+    font-weight: bold;
+  }
+`

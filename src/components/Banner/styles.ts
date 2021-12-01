@@ -6,11 +6,12 @@ export const Wrapper = styled.div`
 `
 
 export const Content = styled.div`
-  filter: brightness(0.95);
-  transition: filter 0.2s ease-in-out;
+  filter: brightness(0.9);
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    filter: brightness(1.2);
+    filter: brightness(1);
+    transform: scale(1.01);
   }
 `
 

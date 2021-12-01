@@ -20,15 +20,13 @@ export default function CategoryPage({
     return <h1>Loading...</h1>
   }
 
-  const categoryName = posts[0].categories?.filter(
-    (category) => category.slug === router.query.slug
-  )[0].displayName
+  const { displayName, slug } = posts[0].categories[0]
 
   return (
     <>
       <Head>
         <title>
-          Category: {categoryName} - {setting.blogName}
+          Category: {displayName} - {setting.blogName}
         </title>
       </Head>
 
@@ -36,7 +34,7 @@ export default function CategoryPage({
         <PostsTemplate
           posts={posts}
           variables={variables}
-          category={categoryName}
+          category={[displayName, slug]}
         />
       </BaseTemplate>
     </>
