@@ -91,7 +91,7 @@ exports[`<Post /> should render correctly 1`] = `
   background: #000000;
   padding: 2.4rem;
   font-family: monospace;
-  color: #FFFFFF;
+  color: #FAFAFA;
   margin: 2.4rem 0;
   width: 100%;
   overflow-x: auto;

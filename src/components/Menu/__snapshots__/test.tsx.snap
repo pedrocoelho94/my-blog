@@ -3,7 +3,7 @@
 exports[`<Menu /> should match snapshot 1`] = `
 .c6 {
   display: block;
-  color: #FFFFFF;
+  color: #FAFAFA;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 1.8rem;
@@ -27,7 +27,7 @@ exports[`<Menu /> should match snapshot 1`] = `
 .c0 {
   z-index: 9;
   width: 100%;
-  height: 10rem;
+  height: 8rem;
   background: #000000;
   position: fixed;
 }
@@ -87,7 +87,7 @@ exports[`<Menu /> should match snapshot 1`] = `
   width: 25px;
   height: 3px;
   margin: 5px;
-  background-color: #FFFFFF;
+  background-color: #FAFAFA;
   -webkit-transition: width 0.2s ease-in-out;
   transition: width 0.2s ease-in-out;
 }
@@ -178,13 +178,13 @@ exports[`<Menu /> should match snapshot 1`] = `
   padding: 0.8rem;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background-color: #FFFFFF;
+  background-color: #FAFAFA;
   border-left: 1px solid #DDDDDD;
 }
 
 .c9:hover {
   background-color: #dc143c;
-  color: #FFFFFF;
+  color: #FAFAFA;
 }
 
 .c9:focus {

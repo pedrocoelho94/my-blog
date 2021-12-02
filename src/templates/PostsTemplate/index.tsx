@@ -60,7 +60,7 @@ const PostsTemplate = ({
     <S.Wrapper>
       <div>
         {!!author && <S.Title>Autor: {author}</S.Title>}
-        {!!category && <S.Title>Categoria: {category[0]}</S.Title>}
+        {category.length > 0 && <S.Title>Categoria: {category[0]}</S.Title>}
         {!!tag && <S.Title>Tag: {tag}</S.Title>}
 
         {!!searchTerm && (

@@ -86,7 +86,13 @@ export const ReviewCast = styled.p``
 
 export const Main = styled.div``
 
-export const Aside = styled.aside``
+export const Aside = styled.aside`
+  ${media.between('medium', 'large')`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+  `}
+`
 
 export const AsideTitle = styled.h3`
   ${({ theme }) => css`

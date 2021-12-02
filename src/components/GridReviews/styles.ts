@@ -1,25 +1,41 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, max-content);
-  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+
+  ${media.greaterThan('small')`
+    grid-template-columns: repeat(3, 1fr);
+  `}
+
+  ${media.greaterThan('medium')`
+    grid-template-columns: repeat(4, 1fr);
+  `}
+
+  ${media.greaterThan('large')`
+    grid-template-columns: repeat(5, 1fr);
+  `}
 `
 export const Poster = styled.div`
   position: relative;
-  width: 180px;
-  height: 267px;
   transition: all 0.2s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
-  }
+  overflow: hidden;
+  border-radius: 5px;
 `
 
 export const Image = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `
 
 type RatingProps = {
@@ -44,15 +60,16 @@ const RatingModifiers = {
 export const Rating = styled.div<RatingProps>`
   ${({ theme, rating }) => css`
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 5;
     color: ${theme.colors.white};
     font-size: 1.8rem;
     font-weight: bold;
     width: 3.5rem;
     height: 3.5rem;
     display: flex;
+    border-radius: 5px;
 
     span {
       width: 100%;

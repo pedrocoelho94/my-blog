@@ -12,7 +12,7 @@ export default function Home({ posts, setting, variables }: HomeTemplateProps) {
   return (
     <>
       <Head>
-        <title>{setting.blogName}</title>
+        <title>{setting.blogName} - Home</title>
         <meta name="description" content={setting.blogDescription} />
       </Head>
       <HomePage posts={posts} setting={setting} variables={variables} />

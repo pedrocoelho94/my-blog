@@ -9,7 +9,7 @@ export default {
     secondary: '#dc143c',
     darker: '#4d4d4d',
     darkText: '#333333',
-    white: '#FFFFFF',
+    white: '#FAFAFA',
     mediumGray: '#DDDDDD',
     darkerGray: '#AAAAAA',
     lightGray: '#F7F7F7'

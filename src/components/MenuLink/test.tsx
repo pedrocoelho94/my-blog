@@ -34,28 +34,6 @@ describe('<MenuLink />', () => {
       '_blank'
     )
 
-    expect(container.firstChild).toMatchInlineSnapshot(`
-      .c0 {
-        display: block;
-        color: #FFFFFF;
-        -webkit-text-decoration: none;
-        text-decoration: none;
-        font-size: 1.8rem;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-      }
-
-      .c0:hover {
-        color: #dc143c;
-      }
-
-      <a
-        class="c0"
-        href="http://localhost"
-        target="_blank"
-      >
-        Children
-      </a>
-    `)
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

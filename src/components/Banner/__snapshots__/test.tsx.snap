@@ -39,13 +39,13 @@ exports[`<Banner /> should render correctly 1`] = `
 
 .c4 {
   margin-top: 0;
-  color: #FFFFFF;
+  color: #FAFAFA;
 }
 
 .c5 {
   font-weight: inherit;
   margin-bottom: 0;
-  color: #FFFFFF;
+  color: #FAFAFA;
 }
 
 @media (min-width:450px) {

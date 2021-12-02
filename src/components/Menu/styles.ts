@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     z-index: 9;
     width: 100%;
-    height: 10rem;
+    height: 8rem;
     background: ${theme.colors.primary};
     position: fixed;
 

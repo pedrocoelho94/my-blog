@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { generateMedia } from 'styled-media-query'
+import media, { generateMedia } from 'styled-media-query'
 
 const customMedia = generateMedia({
   smallMedium: '600px'
@@ -7,7 +7,7 @@ const customMedia = generateMedia({
 
 export const Wrapper = styled.div`
   width: 100%;
-  min-height: 40rem;
+  min-height: 30rem;
   border: 1px solid transparent;
   overflow: hidden;
   border-radius: 10px;
@@ -38,7 +38,7 @@ export const ReviewContent = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
-  padding: 5rem;
+  padding: 4rem;
   display: grid;
   grid-template-columns: 20rem auto;
   gap: 5rem;
@@ -46,6 +46,10 @@ export const ReviewContent = styled.div`
   ${customMedia.lessThan('smallMedium')`
       grid-template-columns: 1fr;
     `}
+
+  ${media.lessThan('small')`
+    padding: 1.5rem;
+  `}
 `
 
 export const ReviewPoster = styled.img`
