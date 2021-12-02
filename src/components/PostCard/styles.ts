@@ -37,6 +37,7 @@ export const Wrapper = styled.div`
 export const ContainerCover = styled.div`
   position: relative;
   padding-bottom: 56.25%;
+  max-width: 100%;
 `
 export const Cover = styled.img`
   position: absolute;
@@ -44,8 +45,9 @@ export const Cover = styled.img`
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: opacity 0.2s ease-in-out;
+  overflow: hidden;
 
   &:hover {
     opacity: 0.8;
