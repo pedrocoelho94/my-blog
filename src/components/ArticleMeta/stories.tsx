@@ -12,9 +12,7 @@ export default {
       control: {
         type: 'date'
       }
-    },
-    author: { type: null },
-    categories: { type: null }
+    }
   }
 } as Meta
 

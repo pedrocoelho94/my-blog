@@ -11,7 +11,14 @@ const props = {
     id: '123123',
     alternativeText: 'Alternative text',
     url: 'image.jpg'
-  }
+  },
+  categories: [
+    {
+      id: 'sdfiosdjf',
+      displayName: 'cat',
+      slug: 'cat-slug'
+    }
+  ]
 }
 
 describe('<Banner />', () => {

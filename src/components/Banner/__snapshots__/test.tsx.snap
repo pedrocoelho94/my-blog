@@ -77,7 +77,7 @@ exports[`<Banner /> should render correctly 1`] = `
   class="c0"
 >
   <a
-    href="/undefined/slug"
+    href="/cat-slug/slug"
   >
     <div
       class="c1"
