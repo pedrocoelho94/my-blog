@@ -8,14 +8,24 @@ import {
 import { GetStaticProps } from 'next'
 import HomePage, { HomeTemplateProps } from 'templates/Home'
 
-export default function Home({ posts, setting, variables }: HomeTemplateProps) {
+export default function Home({
+  posts,
+  postsReviews,
+  setting,
+  variables
+}: HomeTemplateProps) {
   return (
     <>
       <Head>
         <title>{setting.blogName} - Home</title>
         <meta name="description" content={setting.blogDescription} />
       </Head>
-      <HomePage posts={posts} setting={setting} variables={variables} />
+      <HomePage
+        posts={posts}
+        postsReviews={postsReviews}
+        setting={setting}
+        variables={variables}
+      />
     </>
   )
 }
@@ -24,10 +34,14 @@ export const getStaticProps: GetStaticProps<
   StrapiPostAndSettings
 > = async () => {
   let data = null
+  let dataReviews = null
 
   try {
     data = await loadPosts()
-    console.log(data.posts)
+    dataReviews = await loadPosts({
+      limit: 8,
+      categorySlug: 'reviews'
+    })
   } catch (e) {
     data = null
   }
@@ -42,6 +56,7 @@ export const getStaticProps: GetStaticProps<
     revalidate: 24 * 60 * 60,
     props: {
       posts: data.posts,
+      postsReviews: dataReviews?.posts,
       setting: data.setting,
       variables: {
         ...defaultLoadPostsVariables

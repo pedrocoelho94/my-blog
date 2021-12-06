@@ -18,6 +18,7 @@ export type LoadPostsVariables = {
 export type StrapiPostAndSettings = {
   setting: SettingsStrapi
   posts: PostStrapi[]
+  postsReviews?: PostStrapi[]
   variables?: LoadPostsVariables
 }
 

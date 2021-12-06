@@ -2,6 +2,9 @@ import styled, { css } from 'styled-components'
 
 export const SectionContainer = styled.section`
   ${({ theme }) => css`
-    margin: ${theme.spacings.xhuge} 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin: ${theme.spacings.xhuge} 0; ;
   `}
 `
