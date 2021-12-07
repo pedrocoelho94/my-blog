@@ -8,7 +8,7 @@ export const SectionContainer = styled.section`
     display: flex;
     flex-direction: column;
     gap: ${theme.spacings.medium};
-    margin-top: 3rem
+    margin-top: 3rem;
     margin-bottom: ${theme.spacings.huge};
 
     ${media.lessThan('medium')`

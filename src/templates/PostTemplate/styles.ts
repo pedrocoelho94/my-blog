@@ -1,7 +1,8 @@
+import { Container } from 'components/Container'
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(Container)`
   margin-top: 5rem;
   display: grid;
   grid-template-columns: 70% 30%;
