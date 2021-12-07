@@ -1,4 +1,5 @@
 import { loadPosts, LoadPostsVariables } from 'api/loadPosts'
+import { Container } from 'components/Container'
 import GridReviews from 'components/GridReviews'
 import { PostCardProps } from 'components/PostCard'
 import PostGrid from 'components/PostGrid'
@@ -58,26 +59,42 @@ const PostsTemplate = ({
 
   return (
     <S.Wrapper>
-      <div>
-        {!!author && <S.Title>Autor: {author}</S.Title>}
-        {category.length > 0 && <S.Title>Categoria: {category[0]}</S.Title>}
-        {!!tag && <S.Title>Tag: {tag}</S.Title>}
+      <S.TitleCategory>
+        {!!author && <S.Title>{author}</S.Title>}
+        {category.length > 0 && <S.Title>{category[0]}</S.Title>}
+        {!!tag && <S.Title>{tag}</S.Title>}
+      </S.TitleCategory>
 
+      <S.PostsContent>
         {!!searchTerm && (
-          <S.Title>
+          <S.SearchTerm>
             Você pesquisou por <S.HighlightText>{searchTerm}</S.HighlightText> e{' '}
             {statePosts.length}{' '}
             {statePosts.length === 1
               ? 'resultado foi encontrado.'
               : 'resultados foram encontrados.'}
-          </S.Title>
+          </S.SearchTerm>
         )}
 
-        {/* category[displayName, slug] */}
-        {category[1] === 'reviews' ? (
-          <GridReviews posts={statePosts} />
+        {/* Coloca o componente container apenas nas páginas de categorias, author ou tags */}
+        {!!author || category.length > 0 || !!tag || !!searchTerm ? (
+          <Container>
+            {/* category[displayName, slug] */}
+            {category[1] === 'reviews' ? (
+              <GridReviews posts={statePosts} />
+            ) : (
+              <PostGrid posts={statePosts} />
+            )}
+          </Container>
         ) : (
-          <PostGrid posts={statePosts} />
+          <>
+            {/* category[displayName, slug] */}
+            {category[1] === 'reviews' ? (
+              <GridReviews posts={statePosts} />
+            ) : (
+              <PostGrid posts={statePosts} />
+            )}
+          </>
         )}
 
         {statePosts.length > 0 && (
@@ -87,7 +104,7 @@ const PostsTemplate = ({
             </S.Button>
           </S.ButtonContainer>
         )}
-      </div>
+      </S.PostsContent>
     </S.Wrapper>
   )
 }

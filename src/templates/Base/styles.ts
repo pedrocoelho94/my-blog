@@ -58,12 +58,12 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     gap: ${theme.spacings.huge};
-    margin-top: calc(6.5rem + ${theme.spacings.medium});
+    margin-top: calc(5.6rem + ${theme.spacings.medium});
     margin-bottom: ${theme.spacings.large};
     flex: 1 0 auto;
 
     ${media.lessThan('medium')`
-    margin-top: calc(4rem + ${theme.spacings.medium});
+      margin-top: calc(4.6rem + ${theme.spacings.medium});
     `}
   `}
 `

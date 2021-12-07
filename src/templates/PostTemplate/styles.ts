@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
+  margin-top: 5rem;
   display: grid;
   grid-template-columns: 70% 30%;
   gap: 4rem;

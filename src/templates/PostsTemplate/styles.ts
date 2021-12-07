@@ -1,17 +1,60 @@
+import { Container } from 'components/Container'
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import media, { generateMedia } from 'styled-media-query'
+import * as PostCardStyles from 'components/PostCard/styles'
+import * as PostGridStyles from 'components/PostGrid/styles'
 
-export const Wrapper = styled.div`
+const customMedia = generateMedia({
+  smallMedium: '610px'
+})
+
+export const Wrapper = styled.div``
+
+export const PostsContent = styled.div`
   display: grid;
   grid-template-columns: 1fr;
 
-  ${media.lessThan('large')`
+  /* ${PostCardStyles.Wrapper} {
     grid-template-columns: 1fr;
+  }
+
+  ${PostGridStyles.Grid} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  ${media.lessThan('large')`
+    ${PostGridStyles.Grid} {
+      grid-template-columns: 1fr 1fr;
+    }
+  `}
+
+  ${customMedia.lessThan('smallMedium')`
+    ${PostGridStyles.Grid} {
+      grid-template-columns: 1fr;
+    }
+  `} */
+`
+
+export const TitleCategory = styled.div`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.secondary};
   `}
 `
-export const Title = styled.h3`
+
+export const Title = styled(Container)`
   ${({ theme }) => css`
-    margin-bottom: ${theme.spacings.large};
+    color: ${theme.colors.white};
+    font-size: 3rem;
+    padding-top: ${theme.spacings.medium};
+    padding-bottom: ${theme.spacings.medium};
+    margin-bottom: ${theme.spacings.medium};
+  `}
+`
+
+export const SearchTerm = styled(Title)`
+  ${({ theme }) => css`
+    color: ${theme.colors.darkText};
+    font-size: 1.8rem;
   `}
 `
 

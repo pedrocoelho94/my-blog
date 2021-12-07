@@ -1,4 +1,3 @@
-import { Container } from 'components/Container'
 import Footer from 'components/Footer'
 import GoTop from 'components/GoTop'
 import Menu from 'components/Menu'
@@ -21,9 +20,7 @@ const BaseTemplate = ({ settings, children }: BaseTemplateProps) => {
 
       <Menu links={settings.menuLink} />
 
-      <Container>
-        <S.Content>{children}</S.Content>
-      </Container>
+      <S.Content>{children}</S.Content>
 
       <S.Footer>
         <Footer footerHtml={settings.footer} />
