@@ -25,7 +25,7 @@ export const Content = styled.div`
     }
     .slick-list {
       margin-left: -0.9rem;
-      margin-right: -0.4rem;
+      margin-right: -0.3rem;
     }
 
     ${media.greaterThan('large')`

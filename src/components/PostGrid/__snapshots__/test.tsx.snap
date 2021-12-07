@@ -4,7 +4,7 @@ exports[`<PostGrid /> should render two posts 1`] = `
 .c8 {
   color: #000000;
   line-height: 1.2;
-  font-size: calc(2.4rem * 0.8);
+  font-size: calc(2.4rem * 0.75);
   text-transform: none;
 }
 
@@ -91,6 +91,7 @@ exports[`<PostGrid /> should render two posts 1`] = `
 
 .c9 {
   max-width: 100%;
+  font-size: calc(0.8rem * 1.9);
 }
 
 .c0 {
@@ -117,9 +118,9 @@ exports[`<PostGrid /> should render two posts 1`] = `
   }
 }
 
-@media (max-width:768px) {
+@media (max-width:1170px) {
   .c5 {
-    font-size: calc(0.8rem * 1.6);
+    font-size: calc(0.8rem * 1.5);
   }
 }
 

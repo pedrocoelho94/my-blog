@@ -5,7 +5,7 @@ import { HeadingProps } from '.'
 
 const titleSize = {
   small: (theme: DefaultTheme) => css`
-    font-size: calc(${theme.font.sizes.medium} * 0.8);
+    font-size: calc(${theme.font.sizes.medium} * 0.75);
   `,
   medium: (theme: DefaultTheme) =>
     css`

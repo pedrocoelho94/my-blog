@@ -13,14 +13,14 @@ export type LatestReviewsProps = {
 const settings: SliderSettings = {
   arrows: true,
   slidesToShow: 6,
-  slidesToScroll: 3,
+  slidesToScroll: 2,
   infinite: false,
   lazyLoad: 'ondemand',
   responsive: [
     {
       breakpoint: 1375,
       settings: {
-        slidesToScroll: 3,
+        slidesToScroll: 2,
         slidesToShow: 5.2
       }
     },

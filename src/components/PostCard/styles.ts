@@ -71,11 +71,14 @@ export const Info = styled.div`
       margin-right: ${theme.spacings.xsmall};
     }
 
-    ${media.lessThan('medium')`
-      font-size: calc(${theme.font.sizes.xsmall} * 1.6);
+    ${media.lessThan('large')`
+      font-size: calc(${theme.font.sizes.xsmall} * 1.5);
     `}
   `}
 `
 export const Excerpt = styled.p`
-  max-width: 100%;
+  ${({ theme }) => css`
+    max-width: 100%;
+    font-size: calc(${theme.font.sizes.xsmall} * 1.9);
+  `}
 `

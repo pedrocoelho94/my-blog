@@ -20,15 +20,27 @@ export const Cover = styled.img`
   object-fit: cover;
 `
 
+export const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`
+
 export const Title = styled.h4`
   ${({ theme }) => css`
-    font-size: 1.5rem;
-    height: 100%;
+    font-size: 1.3rem;
     margin: 0;
     color: ${theme.colors.darker};
 
     &:hover {
       text-decoration: underline;
     }
+  `}
+`
+export const Date = styled.p`
+  ${({ theme }) => css`
+    font-size: 1.3rem;
+    color: ${theme.colors.darker};
+    opacity: 0.8;
   `}
 `

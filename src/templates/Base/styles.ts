@@ -55,7 +55,10 @@ export const SearchInput = styled.input`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: ${theme.spacings.huge};
+    margin-top: calc(8rem + ${theme.spacings.medium});
     margin-bottom: ${theme.spacings.large};
     flex: 1 0 auto;
 
