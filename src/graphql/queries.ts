@@ -26,6 +26,7 @@ export const GRAPHQL_QUERY = gql`
           { title_contains: $postSearch }
           { content_contains: $postSearch }
           { excerpt_contains: $postSearch }
+          { tags: { displayName_contains: $postSearch } }
         ]
         categories: { slug: $categorySlug }
         author: { slug: $authorSlug }

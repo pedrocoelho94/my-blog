@@ -26,7 +26,7 @@ export default function CategoryPage({
     <>
       <Head>
         <title>
-          Category: {displayName} - {setting.blogName}
+          {displayName} - {setting.blogName}
         </title>
       </Head>
 

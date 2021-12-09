@@ -3,12 +3,15 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import { loadPosts, StrapiPostAndSettings } from 'api/loadPosts'
 import PostTemplate, { PostTemplateProps } from 'templates/PostTemplate'
+import { PostStrapi } from 'shared-typed/postStrapi'
+import { relatedPostsHook } from 'utils/relatedPostHook'
 
 export default function PostPage({
   post,
   settings,
   recentsPostsByAuthor,
-  recentsPostsByCategory
+  recentsPostsByCategory,
+  relatedPosts
 }: PostTemplateProps) {
   const router = useRouter()
 
@@ -29,6 +32,7 @@ export default function PostPage({
         settings={settings}
         recentsPostsByAuthor={recentsPostsByAuthor}
         recentsPostsByCategory={recentsPostsByCategory}
+        relatedPosts={relatedPosts}
       />
     </>
   )
@@ -51,8 +55,11 @@ export const getStaticProps: GetStaticProps<PostTemplateProps> = async (
   let data: StrapiPostAndSettings | null = null
   let postsByAuthor: StrapiPostAndSettings | null = null
   let postsByCategory: StrapiPostAndSettings | null = null
+  let relatedPosts: PostStrapi[] | null = null
 
   data = await loadPosts({ postSlug: ctx.params?.slug as string })
+
+  relatedPosts = await relatedPostsHook(data)
 
   postsByAuthor = await loadPosts({
     authorSlug: data.posts[0].author?.slug,
@@ -77,7 +84,8 @@ export const getStaticProps: GetStaticProps<PostTemplateProps> = async (
       post: data.posts[0],
       settings: data.setting,
       recentsPostsByAuthor: newPostsByAuthor,
-      recentsPostsByCategory: postsByCategory.posts
+      recentsPostsByCategory: postsByCategory.posts,
+      relatedPosts: relatedPosts
     },
     revalidate: 24 * 60 * 60
   }

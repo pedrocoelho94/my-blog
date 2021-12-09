@@ -8,6 +8,7 @@ import * as S from './styles'
 
 import { StrapiPostAndSettings } from 'api/loadPosts'
 import { Container } from 'components/Container'
+import HeadingBar from 'components/HeadingBar'
 
 export type HomeTemplateProps = StrapiPostAndSettings
 
@@ -29,9 +30,7 @@ const HomePage = ({
 
         <S.SectionPosts>
           <S.PostsContent>
-            <S.PostsTitle>
-              <ListAlt size={20} /> Últimas
-            </S.PostsTitle>
+            <HeadingBar icon={<ListAlt />}>Últimas</HeadingBar>
             <PostsTemplate posts={posts} variables={variables} />
           </S.PostsContent>
         </S.SectionPosts>

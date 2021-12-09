@@ -10,9 +10,14 @@ export type PostTagsProps = {
 const PostTags = ({ tags = [] }: PostTagsProps) => {
   if (tags.length === 0) return null
 
+  // organiza as tags em ordem alfabetica
+  tags.sort((a, b) =>
+    a.displayName > b.displayName ? 1 : b.displayName > a.displayName ? -1 : 0
+  )
+
   return (
     <S.Wrapper>
-      tags:{' '}
+      Saiba mais:{' '}
       {tags?.map((tag) => (
         <span key={tag.id}>
           <Link href={`/tag/${tag.slug}`} passHref>

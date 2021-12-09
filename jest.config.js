@@ -7,6 +7,7 @@ module.exports = {
     '!src/**/stories.tsx',
     '!src/pages/**/*.tsx',
     '!src/templates/**/*.{js,jsx,ts,tsx}',
+    '!src/utils/*.{js,jsx,ts,tsx}',
     '!src/context/**/*.{js,jsx,ts,tsx}',
     '!src/components/Comments/*.{js,jsx,ts,tsx}',
     '!src/graphql/*.ts',
