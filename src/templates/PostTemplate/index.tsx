@@ -24,7 +24,7 @@ const PostTemplate = ({
   recentsPostsByCategory = [],
   relatedPosts = []
 }: PostTemplateProps) => {
-  // remove o post principal da lista de relacionados
+  // remove o post principal da lista de posts relacionados
   const newRelatedPosts = relatedPosts.filter(
     (eachPost) => eachPost.id !== post.id
   )
