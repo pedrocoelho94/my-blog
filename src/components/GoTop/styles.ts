@@ -1,7 +1,11 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.a`
-  ${({ theme }) => css`
+type ScrollProps = {
+  showScroll: boolean
+}
+
+export const Wrapper = styled.a<ScrollProps>`
+  ${({ theme, showScroll }) => css`
     cursor: pointer;
     position: fixed;
     background: ${theme.colors.primary};
@@ -14,5 +18,11 @@ export const Wrapper = styled.a`
     bottom: 2rem;
     right: 2rem;
     z-index: 6;
+    transition: bottom 0.2s ease-in-out;
+
+    ${!showScroll &&
+    `
+      bottom: -5rem;
+    `};
   `}
 `

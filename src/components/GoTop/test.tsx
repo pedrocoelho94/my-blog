@@ -7,12 +7,7 @@ describe('<GoTop />', () => {
   it('should render the heading', () => {
     const { container } = renderWithTheme(<GoTop />)
 
-    expect(screen.getByRole('link', { name: 'Go to top' })).toBeInTheDocument()
-
-    expect(screen.getByRole('link', { name: 'Go to top' })).toHaveAttribute(
-      'href',
-      '#'
-    )
+    expect(screen.getByLabelText('Go to top')).toBeInTheDocument()
 
     expect(container).toMatchSnapshot()
   })

@@ -23,6 +23,9 @@ exports[`<GoTop /> should render the heading 1`] = `
   bottom: 2rem;
   right: 2rem;
   z-index: 6;
+  -webkit-transition: bottom 0.2s ease-in-out;
+  transition: bottom 0.2s ease-in-out;
+  bottom: -5rem;
 }
 
 .c1 {
@@ -35,7 +38,6 @@ exports[`<GoTop /> should render the heading 1`] = `
   <a
     aria-label="Go to top"
     class="c0"
-    href="#"
     title="Go to top"
   >
     <svg

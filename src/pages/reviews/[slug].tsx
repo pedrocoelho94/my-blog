@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/router'
 import { loadPosts, StrapiPostAndSettings } from 'api/loadPosts'
 import PostTemplate, { PostTemplateProps } from 'templates/PostTemplate'
 import { PostStrapi } from 'shared-typed/postStrapi'

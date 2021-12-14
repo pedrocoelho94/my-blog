@@ -16,7 +16,7 @@ const RelatedPosts = ({ posts }: RelatedPostsProps) => (
     <S.Content>
       {posts.slice(0, 4).map((post) => (
         <S.ContentItem key={post.id} aria-label="related">
-          <Link href={`/${post.categories[0].slug}/${post.slug}`}>
+          <Link href={`/${post.categories[0].slug}/${post.slug}`} passHref>
             <a>
               <S.Image src={post.cover.url} alt={post.cover.alternativeText} />
               <S.Title>{post.title}</S.Title>
