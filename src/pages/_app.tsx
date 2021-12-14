@@ -11,12 +11,10 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <BlogThemeProvider>
       <Head>
-        <title>Pedro Coelho</title>
-        {/* <link rel="shortcut icon" href="/img/icon-512.png" />
-        <link rel="apple-touch-icon" href="/img/icon-512.png" />
-        <link rel="manifest" href="/manifest.json" /> */}
+        <title>Claquete</title>
+        <link rel="shortcut icon" href="/assets/images/favicon.png" />
         <meta name="theme-color" content="#06092B" />
-        <meta name="description" content="My personal blog" />
+        <meta name="description" content="Website about movies" />
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />

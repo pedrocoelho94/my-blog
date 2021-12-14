@@ -18,7 +18,12 @@ const RelatedPosts = ({ posts }: RelatedPostsProps) => (
         <S.ContentItem key={post.id} aria-label="related">
           <Link href={`/${post.categories[0].slug}/${post.slug}`} passHref>
             <a>
-              <S.Image src={post.cover.url} alt={post.cover.alternativeText} />
+              <S.ContainerCover>
+                <S.Cover
+                  src={post.cover.url}
+                  alt={post.cover.alternativeText}
+                />
+              </S.ContainerCover>
               <S.Title>{post.title}</S.Title>
             </a>
           </Link>

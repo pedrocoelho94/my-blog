@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
     color: ${theme.colors.white};
     font-weight: bold;
     padding: ${theme.spacings.xsmall};
+    border-radius: 5px;
 
     svg {
       height: 22px;

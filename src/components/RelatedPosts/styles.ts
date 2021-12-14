@@ -42,10 +42,20 @@ export const ContentItem = styled.div`
   width: 100%;
 `
 
-export const Image = styled.img`
+export const ContainerCover = styled.div`
+  position: relative;
+  padding-bottom: 56.25%;
   max-width: 100%;
-  aspect-ratio: 16/9;
+`
+export const Cover = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  overflow: hidden;
+  border-radius: 5px;
 `
 
 export const Title = styled.h3`

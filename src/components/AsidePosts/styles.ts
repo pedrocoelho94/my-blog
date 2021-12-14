@@ -14,7 +14,7 @@ export const Content = styled.a`
 `
 
 export const Cover = styled.img`
-  border-radius: 0.8rem;
+  border-radius: 5px;
   width: 10rem;
   height: 10rem;
   object-fit: cover;

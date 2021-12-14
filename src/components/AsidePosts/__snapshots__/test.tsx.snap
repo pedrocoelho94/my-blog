@@ -15,7 +15,7 @@ exports[`<AsidePosts /> should render the heading and image correctly 1`] = `
 }
 
 .c1 {
-  border-radius: 0.8rem;
+  border-radius: 5px;
   width: 10rem;
   height: 10rem;
   object-fit: cover;

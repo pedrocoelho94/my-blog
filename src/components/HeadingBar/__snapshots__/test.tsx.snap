@@ -21,6 +21,7 @@ exports[`<HeadingBar /> should render the heading 1`] = `
   color: #FAFAFA;
   font-weight: bold;
   padding: 0.8rem;
+  border-radius: 5px;
 }
 
 .c0 svg {
