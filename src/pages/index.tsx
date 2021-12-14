@@ -7,12 +7,14 @@ import {
 } from 'api/loadPosts'
 import { GetStaticProps } from 'next'
 import HomePage, { HomeTemplateProps } from 'templates/Home'
+import { loadSponsors } from 'api/loadSponsors'
 
 export default function Home({
   posts,
   postsReviews,
   setting,
-  variables
+  variables,
+  sponsors
 }: HomeTemplateProps) {
   return (
     <>
@@ -25,6 +27,7 @@ export default function Home({
         postsReviews={postsReviews}
         setting={setting}
         variables={variables}
+        sponsors={sponsors}
       />
     </>
   )
@@ -34,9 +37,11 @@ export const getStaticProps: GetStaticProps<
   StrapiPostAndSettings
 > = async () => {
   let data = null
+  let sponsors = null
   let dataReviews = null
 
   try {
+    sponsors = await loadSponsors()
     data = await loadPosts()
     dataReviews = await loadPosts({
       limit: 8,
@@ -60,7 +65,8 @@ export const getStaticProps: GetStaticProps<
       setting: data.setting,
       variables: {
         ...defaultLoadPostsVariables
-      }
+      },
+      sponsors: sponsors
     }
   }
 }

@@ -22,7 +22,8 @@ export const SectionPosts = styled.section`
   ${({ theme }) => css`
     display: grid;
     grid-template-columns: 7fr 3fr;
-    gap: ${theme.spacings.medium};
+    column-gap: ${theme.spacings.medium};
+    row-gap: ${theme.spacings.huge};
 
     /* ${PostCardStyles.Wrapper} {
       grid-template-columns: 1fr 1fr;
@@ -56,5 +57,10 @@ export const PostsContent = styled.div`
     display: flex;
     flex-direction: column;
     gap: ${theme.spacings.medium};
+
+    ${media.lessThan('medium')`
+      order: 1
+    `}
   `}
 `
+export const Aside = styled.aside``

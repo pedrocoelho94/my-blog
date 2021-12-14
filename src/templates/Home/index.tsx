@@ -7,16 +7,20 @@ import { ListAlt } from '@styled-icons/material-outlined/ListAlt'
 import * as S from './styles'
 
 import { StrapiPostAndSettings } from 'api/loadPosts'
+import Sponsor, { SponsorProps } from 'components/Sponsor'
 import { Container } from 'components/Container'
 import HeadingBar from 'components/HeadingBar'
 
-export type HomeTemplateProps = StrapiPostAndSettings
+export type HomeTemplateProps = {
+  sponsors?: SponsorProps
+} & StrapiPostAndSettings
 
 const HomePage = ({
   setting,
   posts,
   postsReviews = [],
-  variables
+  variables,
+  sponsors = {}
 }: HomeTemplateProps) => {
   return (
     <BaseTemplate settings={setting}>
@@ -33,6 +37,12 @@ const HomePage = ({
             <HeadingBar icon={<ListAlt />}>Últimas</HeadingBar>
             <PostsTemplate posts={posts} variables={variables} />
           </S.PostsContent>
+
+          <S.Aside>
+            {!!sponsors.sponsors?.length && (
+              <Sponsor title={sponsors?.title} sponsors={sponsors?.sponsors} />
+            )}
+          </S.Aside>
         </S.SectionPosts>
       </Container>
     </BaseTemplate>
