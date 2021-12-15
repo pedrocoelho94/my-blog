@@ -45,7 +45,7 @@ export const getStaticProps: GetStaticProps<
   StrapiPostAndSettings
 > = async () => {
   let data: StrapiPostAndSettings | null = null
-  const variables = { categorySlug: 'interview', limit: 20 }
+  const variables = { categorySlug: 'interview', limit: 10 }
 
   data = await loadPosts(variables)
 
