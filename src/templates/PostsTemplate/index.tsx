@@ -29,6 +29,8 @@ const PostsTemplate = ({
   const [noMorePosts, setNoMorePosts] = useState(false)
 
   useEffect(() => {
+    setStatePosts(posts)
+
     if (posts.length < Number(variables?.limit)) {
       setButtonDisabled(true)
       setNoMorePosts(true)
