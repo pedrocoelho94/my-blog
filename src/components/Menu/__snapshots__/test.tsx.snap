@@ -30,6 +30,8 @@ exports[`<Menu /> should match snapshot 1`] = `
   height: 8rem;
   background: #000000;
   position: fixed;
+  -webkit-transition: height 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
 }
 
 .c2 {

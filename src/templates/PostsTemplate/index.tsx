@@ -28,12 +28,11 @@ const PostsTemplate = ({
   const [buttonDisabled, setButtonDisabled] = useState(false)
   const [noMorePosts, setNoMorePosts] = useState(false)
 
-  //atualizar a página quando for feita uma pesquisa
   useEffect(() => {
-    setStatePosts(posts)
-    setNoMorePosts(false)
-    setButtonDisabled(false)
-    setStateVariables(variables)
+    if (posts.length < Number(variables?.limit)) {
+      setButtonDisabled(true)
+      setNoMorePosts(true)
+    }
   }, [posts, variables])
 
   const handleLoadMorePosts = async () => {
@@ -47,14 +46,19 @@ const PostsTemplate = ({
 
     const morePosts = await loadPosts(newVariables)
 
-    if (!morePosts || !morePosts.posts || !morePosts.posts.length) {
-      setNoMorePosts(true)
-      return
-    }
+    // if (!morePosts || !morePosts.posts || !morePosts.posts.length) {
+    //   setNoMorePosts(true)
+    //   return
+    // }
 
     setButtonDisabled(false)
     setStateVariables(newVariables)
     setStatePosts((p) => [...p, ...morePosts.posts])
+
+    if (morePosts.posts.length < Number(variables?.limit)) {
+      setButtonDisabled(true)
+      setNoMorePosts(true)
+    }
   }
 
   return (

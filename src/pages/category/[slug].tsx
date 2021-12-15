@@ -49,7 +49,7 @@ export const getStaticProps: GetStaticProps<StrapiPostAndSettings> = async (
   ctx
 ) => {
   let data: StrapiPostAndSettings | null = null
-  const variables = { categorySlug: ctx.params?.slug as string }
+  const variables = { categorySlug: ctx.params?.slug as string, limit: 20 }
 
   data = await loadPosts(variables)
 

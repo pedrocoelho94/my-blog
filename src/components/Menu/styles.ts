@@ -8,17 +8,28 @@ type OpenProps = {
   open: boolean
 }
 
-export const Wrapper = styled.div`
-  ${({ theme }) => css`
+type SizeBarProps = {
+  isAtTop: boolean
+}
+
+export const Wrapper = styled.div<SizeBarProps>`
+  ${({ theme, isAtTop }) => css`
     z-index: 9;
     width: 100%;
     height: 8rem;
     background: ${theme.colors.primary};
     position: fixed;
+    transition: height 0.2s ease-in-out;
 
-    ${media.lessThan('medium')`
-      height: 7rem;
+    ${!isAtTop &&
+    `
+    height: 6rem;
     `}
+  `}
+
+  ${media.lessThan('medium')`
+    height: 7rem;
+
   `}
 `
 

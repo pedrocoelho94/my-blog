@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import * as S from './styles'
 import MenuLink from 'components/MenuLink'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Search } from '@styled-icons/material-outlined'
 
@@ -19,9 +19,27 @@ export type MenuProps = {
 }
 
 const Menu = ({ links = [] }: MenuProps) => {
+  const [isAtTop, setIsAtTop] = useState(true)
   const router = useRouter()
   const [searchValue, setSearchValue] = useState('')
   const [toggle, setToggleNav] = useState(false)
+
+  // Diminui o tamanho do menu depois de descer 300px
+  const changeHeightBar = () => {
+    if (window.pageYOffset > 300) {
+      setIsAtTop(false)
+    } else {
+      setIsAtTop(true)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeHeightBar)
+
+    return () => {
+      window.removeEventListener('scroll', changeHeightBar)
+    }
+  }, [])
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
@@ -35,7 +53,7 @@ const Menu = ({ links = [] }: MenuProps) => {
   }
 
   return (
-    <S.Wrapper>
+    <S.Wrapper isAtTop={isAtTop}>
       <S.Content>
         <S.LogoContainer>
           <Link href="/" passHref>

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import media, { generateMedia } from 'styled-media-query'
 
 const customMedia = generateMedia({
+  mediumMedium: '568px',
   smallMedium: '300px'
 })
 
@@ -15,11 +16,7 @@ export const Wrapper = styled.div`
     grid-template-columns: repeat(2, 1fr);
   `}
 
-  ${media.greaterThan('small')`
-    grid-template-columns: repeat(3, 1fr);
-  `}
-
-  ${media.greaterThan('medium')`
+  ${customMedia.greaterThan('mediumMedium')`
     grid-template-columns: repeat(4, 1fr);
   `}
 
