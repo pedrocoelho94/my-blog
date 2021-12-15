@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { GetStaticPaths, GetStaticProps } from 'next'
+import { GetStaticProps } from 'next'
 import { useRouter } from 'next/dist/client/router'
 import {
   defaultLoadPostsVariables,
@@ -41,9 +41,9 @@ export default function CategoryPage({
   )
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  return { paths: [], fallback: true }
-}
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   return { paths: [], fallback: true }
+// }
 
 export const getStaticProps: GetStaticProps<StrapiPostAndSettings> = async (
   ctx
