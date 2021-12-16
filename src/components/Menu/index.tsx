@@ -43,9 +43,8 @@ const Menu = ({ links = [] }: MenuProps) => {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
-    const url = encodeURI(searchValue)
-    console.log(url)
-    router.push(`/search/${url}`)
+    router.push(`/search/${encodeURI(searchValue)}`)
+    setSearchValue('')
   }
 
   const handleClick = () => {

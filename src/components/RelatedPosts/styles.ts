@@ -15,9 +15,9 @@ export const Wrapper = styled.section`
 export const Content = styled.div`
   ${({ theme }) => css`
     display: grid;
-    gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
+    gap: ${theme.spacings.medium};
 
     ${media.lessThan('medium')`
       grid-template-columns: repeat(2, 1fr);
@@ -39,7 +39,15 @@ export const Content = styled.div`
 `
 
 export const ContentItem = styled.div`
-  width: 100%;
+  ${({ theme }) => css`
+    width: 100%;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      gap: ${theme.spacings.xsmall};
+    }
+  `}
 `
 
 export const ContainerCover = styled.div`
@@ -59,6 +67,5 @@ export const Cover = styled.img`
 `
 
 export const Title = styled.h3`
-  font-size: 1.4rem;
   font-weight: normal;
 `

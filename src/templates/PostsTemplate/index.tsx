@@ -13,6 +13,7 @@ export type PostsTemplateProps = {
   author?: string //pagina author
   searchTerm?: string | string[] | undefined //pagina searchTerm
   tag?: string
+  twoColumns?: boolean
 }
 
 const PostsTemplate = ({
@@ -21,7 +22,8 @@ const PostsTemplate = ({
   category = [],
   author = '',
   searchTerm = '',
-  tag = ''
+  tag = '',
+  twoColumns = false
 }: PostsTemplateProps) => {
   const [statePosts, setStatePosts] = useState(posts)
   const [stateVariables, setStateVariables] = useState(variables)
@@ -74,11 +76,8 @@ const PostsTemplate = ({
       <S.PostsContent>
         {!!searchTerm && (
           <S.SearchTerm>
-            Você pesquisou por <S.HighlightText>{searchTerm}</S.HighlightText> e{' '}
-            {statePosts.length}{' '}
-            {statePosts.length === 1
-              ? 'resultado foi encontrado.'
-              : 'resultados foram encontrados.'}
+            Resultados para{' '}
+            <S.HighlightText>{`"${searchTerm}"`}</S.HighlightText>
           </S.SearchTerm>
         )}
 
@@ -89,7 +88,7 @@ const PostsTemplate = ({
             {category[1] === 'reviews' ? (
               <GridReviews posts={statePosts} />
             ) : (
-              <PostGrid posts={statePosts} />
+              <PostGrid posts={statePosts} twoColumns={twoColumns} />
             )}
           </Container>
         ) : (
@@ -98,7 +97,7 @@ const PostsTemplate = ({
             {category[1] === 'reviews' ? (
               <GridReviews posts={statePosts} />
             ) : (
-              <PostGrid posts={statePosts} />
+              <PostGrid posts={statePosts} twoColumns={twoColumns} />
             )}
           </>
         )}

@@ -77,7 +77,6 @@ export const NavIcon = styled.li`
   list-style: none;
   background: none;
   cursor: pointer;
-  border: none;
 
   ${media.greaterThan('medium')`
       display: none;
@@ -154,17 +153,16 @@ export const OverlayMenu = styled.ul<OpenProps>`
       pointer-events: ${open ? 'initial' : 'none'};
       opacity: ${open ? 1 : 0};
       transition: opacity 0.4s ease-in-out;
+
+      a {
+        font-size: 2.4rem;
+      }
     }
   `}
 `
 
 export const SearchBox = styled.form`
   display: flex;
-
-  &:focus {
-    -webkit-box-shadow: 0px 0px 15px 8px rgba(220, 20, 60, 0.67);
-    box-shadow: 0px 0px 15px 8px rgba(220, 20, 60, 0.67);
-  }
 `
 
 export const SearchInput = styled.input`
@@ -179,8 +177,6 @@ export const SearchInput = styled.input`
 
     &:focus {
       width: 20rem;
-      -webkit-box-shadow: 0px 0px 15px 8px rgba(220, 20, 60, 0.67);
-      box-shadow: 0px 0px 15px 8px rgba(220, 20, 60, 0.67);
     }
   `}
 `
@@ -199,11 +195,6 @@ export const SearchButton = styled.button`
     &:hover {
       background-color: ${theme.colors.secondary};
       color: ${theme.colors.white};
-    }
-
-    &:focus {
-      -webkit-box-shadow: 0px 0px 15px 8px rgba(220, 20, 60, 0.67);
-      box-shadow: 0px 0px 15px 8px rgba(220, 20, 60, 0.67);
     }
   `}
 `

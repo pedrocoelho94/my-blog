@@ -8,6 +8,7 @@ export default function Page404({ setting }: StrapiPostAndSettings) {
     <BaseTemplate settings={setting}>
       <Container>
         <h1>404: Not Found</h1>
+        <p>O link que você está tentando acessar não existe.</p>
       </Container>
     </BaseTemplate>
   )

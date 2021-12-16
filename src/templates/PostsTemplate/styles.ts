@@ -53,8 +53,11 @@ export const Title = styled(Container)`
 
 export const SearchTerm = styled(Title)`
   ${({ theme }) => css`
+    text-transform: uppercase;
     color: ${theme.colors.darkText};
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    margin-top: 0;
+    margin-bottom: 0;
   `}
 `
 

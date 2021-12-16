@@ -80,7 +80,6 @@ exports[`<Menu /> should match snapshot 1`] = `
   list-style: none;
   background: none;
   cursor: pointer;
-  border: none;
 }
 
 .c12 {
@@ -142,16 +141,15 @@ exports[`<Menu /> should match snapshot 1`] = `
   transition: opacity 0.4s ease-in-out;
 }
 
+.c14 li a {
+  font-size: 2.4rem;
+}
+
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c7:focus {
-  -webkit-box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
-  box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
 }
 
 .c8 {
@@ -167,8 +165,6 @@ exports[`<Menu /> should match snapshot 1`] = `
 
 .c8:focus {
   width: 20rem;
-  -webkit-box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
-  box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
 }
 
 .c9 {
@@ -187,11 +183,6 @@ exports[`<Menu /> should match snapshot 1`] = `
 .c9:hover {
   background-color: #dc143c;
   color: #FAFAFA;
-}
-
-.c9:focus {
-  -webkit-box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
-  box-shadow: 0px 0px 15px 8px rgba(220,20,60,0.67);
 }
 
 .c10 {
