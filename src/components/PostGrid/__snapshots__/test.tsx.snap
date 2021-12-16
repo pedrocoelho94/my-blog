@@ -124,6 +124,14 @@ exports[`<PostGrid /> should render two posts 1`] = `
   }
 }
 
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1170px) {
+
+}
+
 <div>
   <div
     class="c0"

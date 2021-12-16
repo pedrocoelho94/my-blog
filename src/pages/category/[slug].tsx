@@ -35,6 +35,7 @@ export default function CategoryPage({
           posts={posts}
           variables={variables}
           category={[displayName, slug]}
+          twoColumns
         />
       </BaseTemplate>
     </>
