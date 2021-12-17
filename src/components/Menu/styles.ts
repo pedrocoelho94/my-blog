@@ -126,7 +126,7 @@ export const Overlay = styled.div<OpenProps>`
     width: 100vw;
     height: 0;
     background-color: ${theme.colors.secondary};
-    transition: height 0.4s ease-in-out;
+    transition: height 0.3s ease-in-out;
     z-index: 2;
 
     ${open && overlayModifiers.open(theme)}
@@ -152,7 +152,7 @@ export const OverlayMenu = styled.ul<OpenProps>`
     li {
       pointer-events: ${open ? 'initial' : 'none'};
       opacity: ${open ? 1 : 0};
-      transition: opacity 0.4s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
 
       a {
         font-size: 2.4rem;
@@ -163,17 +163,31 @@ export const OverlayMenu = styled.ul<OpenProps>`
 
 export const SearchBox = styled.form`
   display: flex;
+  border-radius: 5px;
+`
+
+export const SearchLabel = styled.label`
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 `
 
 export const SearchInput = styled.input`
   ${({ theme }) => css`
-    border: none;
-    border-radius: 5px 0 0 5px;
-    height: 3rem;
-    width: 12rem;
-    padding: ${theme.spacings.xsmall};
-    transition: width 0.2s ease-in-out;
     outline: none;
+    border: none;
+    height: 3.5rem;
+    width: 12rem;
+    padding: 0 ${theme.spacings.xsmall};
+    z-index: 1;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+    border-radius: 5px 0px 0px 5px;
+    font-size: 1.6rem;
 
     &:focus {
       width: 20rem;
@@ -183,18 +197,49 @@ export const SearchInput = styled.input`
 export const SearchButton = styled.button`
   ${({ theme }) => css`
     cursor: pointer;
+    height: 3.5rem;
     border: none;
-    border-radius: 0 5px 5px 0;
-    outline: none;
-    height: 3rem;
+    border-radius: 0px 5px 5px 0px;
+    width: 3.5rem;
     padding: ${theme.spacings.xsmall};
     transition: all 0.2s ease-in-out;
     background-color: ${theme.colors.white};
-    border-left: 1px solid ${theme.colors.mediumGray};
+    color: ${theme.colors.secondary};
 
     &:hover {
       background-color: ${theme.colors.secondary};
       color: ${theme.colors.white};
+      border: none;
+    }
+  `}
+`
+
+export const SearchBoxMobile = styled.form<OpenProps>`
+  ${({ theme, open }) => css`
+    display: none;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    border-bottom: 1px solid white;
+
+    ${!!open &&
+    `
+      opacity: 1;
+      display: initial;
+    `}
+
+    ${SearchButton},
+    ${SearchInput} {
+      border: none;
+      background: transparent;
+      border-radius: 0;
+      color: ${theme.colors.white};
+      font-size: 1.8rem;
+    }
+
+    ${SearchInput} {
+      &::placeholder {
+        color: ${theme.colors.white};
+      }
     }
   `}
 `

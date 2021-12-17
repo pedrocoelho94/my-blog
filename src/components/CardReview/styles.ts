@@ -48,7 +48,7 @@ export const ReviewContent = styled.div`
     `}
 
   ${media.lessThan('small')`
-    padding: 1.5rem;
+    padding: 3rem 1.5rem;
   `}
 `
 

@@ -15,7 +15,11 @@ describe('<Menu />', () => {
       'none',
       { media: '(min-width: 768px)' }
     )
-    expect(screen.getByLabelText(/search box/i)).toBeInTheDocument()
+    expect(screen.getAllByLabelText(/search box/i)).toHaveLength(2)
+
+    expect(screen.getByLabelText('navbar')).toHaveStyle({
+      height: '8rem'
+    })
   })
 
   it('should open/close menu on button click', () => {
@@ -46,10 +50,5 @@ describe('<Menu />', () => {
     // Menu fecha após o clique no icone do menu
     fireEvent.click(iconButton)
     expect(menuMobile.getAttribute('aria-hidden')).toBe('true')
-  })
-
-  it('should match snapshot', () => {
-    const { container } = renderWithTheme(<Menu {...props} />)
-    expect(container).toMatchSnapshot()
   })
 })

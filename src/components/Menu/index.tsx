@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import * as S from './styles'
 import MenuLink from 'components/MenuLink'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { Search } from '@styled-icons/material-outlined'
 
@@ -19,10 +19,11 @@ export type MenuProps = {
 }
 
 const Menu = ({ links = [] }: MenuProps) => {
-  const [isAtTop, setIsAtTop] = useState(true)
   const router = useRouter()
+  const [isAtTop, setIsAtTop] = useState(true)
   const [searchValue, setSearchValue] = useState('')
   const [toggle, setToggleNav] = useState(false)
+  const searchBarRef = useRef<HTMLInputElement>(null)
 
   // Diminui o tamanho do menu depois de descer 300px
   const changeHeightBar = () => {
@@ -41,10 +42,20 @@ const Menu = ({ links = [] }: MenuProps) => {
     }
   }, [])
 
+  useEffect(() => {
+    setSearchValue('')
+    setToggleNav(false)
+    searchBarRef.current?.blur()
+  }, [router?.query.slug])
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
+
+    if (router.query.slug === searchValue) {
+      setSearchValue('')
+      setToggleNav(false)
+    }
     router.push(`/search/${encodeURI(searchValue)}`)
-    setSearchValue('')
   }
 
   const handleClick = () => {
@@ -52,7 +63,7 @@ const Menu = ({ links = [] }: MenuProps) => {
   }
 
   return (
-    <S.Wrapper isAtTop={isAtTop}>
+    <S.Wrapper isAtTop={isAtTop} aria-label="navbar">
       <S.Content>
         <S.LogoContainer>
           <Link href="/" passHref>
@@ -71,16 +82,18 @@ const Menu = ({ links = [] }: MenuProps) => {
             </S.Item>
           ))}
 
-          <S.SearchBox onSubmit={handleSearch}>
+          <S.SearchBox onSubmit={handleSearch} role="search">
+            <S.SearchLabel htmlFor="search">Buscar</S.SearchLabel>
             <S.SearchInput
-              type="search"
-              placeholder="Buscar"
+              id="search"
+              placeholder="Buscar..."
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               aria-label="search box"
+              ref={searchBarRef}
             />
-            <S.SearchButton>
-              <Search size={16} />
+            <S.SearchButton type="submit">
+              <Search size={22} />
             </S.SearchButton>
           </S.SearchBox>
         </S.Menu>
@@ -101,13 +114,27 @@ const Menu = ({ links = [] }: MenuProps) => {
         <S.OverlayMenu open={toggle}>
           {links.map((link) => (
             <S.Item key={`mobile-${link.id}`}>
-              <div onClick={handleClick}>
+              <div onClick={handleClick} aria-label="closeMenuDiv">
                 <MenuLink newTab={link.newTab} link={link.link}>
                   {link.text}
                 </MenuLink>
               </div>
             </S.Item>
           ))}
+
+          <S.SearchBoxMobile onSubmit={handleSearch} open={toggle}>
+            <S.SearchLabel htmlFor="searchMobile">Buscar</S.SearchLabel>
+            <S.SearchInput
+              id="searchMobile"
+              placeholder="Buscar"
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
+              aria-label="search box"
+            />
+            <S.SearchButton type="submit">
+              <Search size={24} />
+            </S.SearchButton>
+          </S.SearchBoxMobile>
         </S.OverlayMenu>
       </S.Overlay>
     </S.Wrapper>

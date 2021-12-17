@@ -21,6 +21,7 @@ export const Content = styled.div`
 
     ${media.lessThan('medium')`
       grid-template-columns: repeat(2, 1fr);
+      row-gap: calc(${theme.spacings.medium} * 1.4);
     `}
 
     ${media.lessThan('small')`
@@ -68,4 +69,9 @@ export const Cover = styled.img`
 
 export const Title = styled.h3`
   font-weight: normal;
+  font-size: 1.5rem;
+
+  ${media.lessThan('medium')`
+      font-size: 1.8rem;
+  `}
 `
