@@ -52,6 +52,7 @@ const PostTemplate = ({
           <Comments
             title={post.title}
             slug={post.slug}
+            category={post.categories[0].slug}
             id={post.id}
             allowComments={post.allowComments}
           />

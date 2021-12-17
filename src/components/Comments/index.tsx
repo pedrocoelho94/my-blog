@@ -4,15 +4,22 @@ import { DiscussionEmbed } from 'disqus-react'
 export type CommentsProps = {
   id: string
   slug: string
+  category: string
   title: string
   allowComments: boolean
 }
 
-const Comments = ({ id, slug, title, allowComments }: CommentsProps) => {
+const Comments = ({
+  id,
+  slug,
+  title,
+  allowComments,
+  category
+}: CommentsProps) => {
   if (!allowComments) return null
 
   const config = {
-    url: `https://pedrocoelho.vercel.app/post/${slug}`,
+    url: `https://claquete.vercel.app/${category}/${slug}`,
     identifier: id,
     title: title,
     language: 'pt_BR'
