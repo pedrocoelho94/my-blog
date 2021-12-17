@@ -48,6 +48,7 @@ export const Cover = styled.img`
   object-fit: cover;
   transition: opacity 0.2s ease-in-out;
   overflow: hidden;
+  border-radius: 5px;
 
   &:hover {
     opacity: 0.8;

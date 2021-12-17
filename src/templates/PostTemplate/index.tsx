@@ -1,7 +1,7 @@
 import AsidePosts from 'components/AsidePosts'
 import BannerRelatedPosts from 'components/RelatedPosts'
 import CardReview from 'components/CardReview'
-// import Comments from 'components/Comments'
+import Comments from 'components/Comments'
 import Post from 'components/Post'
 import PostTags from 'components/PostTags'
 import { PostStrapi } from 'shared-typed/postStrapi'
@@ -49,12 +49,12 @@ const PostTemplate = ({
             <BannerRelatedPosts posts={newRelatedPosts} />
           )}
 
-          {/* <Comments
-          title={post.title}
-          slug={post.slug}
-          id={post.id}
-          allowComments={post.allowComments}
-        /> */}
+          <Comments
+            title={post.title}
+            slug={post.slug}
+            id={post.id}
+            allowComments={post.allowComments}
+          />
         </S.Main>
         <S.Aside>
           {recentsPostsByCategory?.length > 0 && (

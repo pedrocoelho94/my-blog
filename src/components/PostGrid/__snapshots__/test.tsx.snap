@@ -58,6 +58,7 @@ exports[`<PostGrid /> should render two posts 1`] = `
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 .c4:hover {

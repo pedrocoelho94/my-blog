@@ -15,7 +15,7 @@ export const Content = styled.div`
     gap: ${theme.spacings.small};
 
     ${media.lessThan('medium')`
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
     `}
 
     ${media.lessThan('small')`

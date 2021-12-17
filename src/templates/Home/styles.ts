@@ -34,6 +34,10 @@ export const SectionPosts = styled.section`
       grid-template-columns: 1fr;
     } */
 
+    ${media.lessThan('large')`
+      grid-template-columns: 7.5fr 2.5fr;
+    `}
+
     ${media.lessThan('medium')`
       grid-template-columns: 1fr;
     `}
