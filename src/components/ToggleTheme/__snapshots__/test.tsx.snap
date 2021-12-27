@@ -77,11 +77,11 @@ exports[
   left: 0;
   right: 0;
   bottom: 0;
-  background: #cccccc;
+  background: #AAAAAA;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius: 2rem;
-  border: 1px solid #cccccc;
+  border: 1px solid #AAAAAA;
 }
 
 .c5:before {
@@ -91,7 +91,7 @@ exports[
   width: 1.9rem;
   left: 0.4rem;
   bottom: 0.2rem;
-  background: #272727;
+  background: #FAFAFA;
   border-radius: 50%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
