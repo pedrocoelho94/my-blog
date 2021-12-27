@@ -1,4 +1,5 @@
 import { screen, fireEvent } from '@testing-library/react'
+import { SessionProvider } from 'next-auth/react'
 import { renderWithTheme } from 'styles/renderWithTheme'
 
 import Menu, { MenuProps } from '.'
@@ -7,7 +8,16 @@ const props: MenuProps = mock
 
 describe('<Menu />', () => {
   it('should render full menu', () => {
-    renderWithTheme(<Menu {...props} />)
+    renderWithTheme(
+      <SessionProvider
+        session={{
+          expires: '1',
+          user: { email: 'a', name: 'Delta', image: 'c' }
+        }}
+      >
+        <Menu {...props} />
+      </SessionProvider>
+    )
 
     expect(screen.getByRole('navigation')).toBeInTheDocument()
     expect(screen.getByLabelText(/open or close menu/i)).toHaveStyleRule(
@@ -23,7 +33,16 @@ describe('<Menu />', () => {
   })
 
   it('should open/close menu on button click', () => {
-    renderWithTheme(<Menu {...props} />)
+    renderWithTheme(
+      <SessionProvider
+        session={{
+          expires: '1',
+          user: { email: 'a', name: 'Delta', image: 'c' }
+        }}
+      >
+        <Menu {...props} />
+      </SessionProvider>
+    )
 
     // muda o viewport do jest
     Object.defineProperty(window, 'innerWidth', {
