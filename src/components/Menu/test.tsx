@@ -6,15 +6,15 @@ import Menu, { MenuProps } from '.'
 import mock from './mock'
 const props: MenuProps = mock
 
+const sessionProps = {
+  expires: '1',
+  user: { email: 'a', name: 'Delta', image: 'c' }
+}
+
 describe('<Menu />', () => {
   it('should render full menu', () => {
     renderWithTheme(
-      <SessionProvider
-        session={{
-          expires: '1',
-          user: { email: 'a', name: 'Delta', image: 'c' }
-        }}
-      >
+      <SessionProvider session={sessionProps}>
         <Menu {...props} />
       </SessionProvider>
     )
@@ -34,12 +34,7 @@ describe('<Menu />', () => {
 
   it('should open/close menu on button click', () => {
     renderWithTheme(
-      <SessionProvider
-        session={{
-          expires: '1',
-          user: { email: 'a', name: 'Delta', image: 'c' }
-        }}
-      >
+      <SessionProvider session={sessionProps}>
         <Menu {...props} />
       </SessionProvider>
     )
