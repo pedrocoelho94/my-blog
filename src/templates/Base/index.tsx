@@ -8,12 +8,18 @@ import { SettingsStrapi } from 'shared-typed/settings'
 
 import * as S from './styles'
 
+//import { useSession } from 'next-auth/react'
+
 export type BaseTemplateProps = {
   settings: SettingsStrapi
   children: React.ReactNode
 }
 
 const BaseTemplate = ({ settings, children }: BaseTemplateProps) => {
+  //const { data: session } = useSession()
+
+  //console.log('SESSÃO', session)
+
   return (
     <S.Wrapper>
       <ToggleTheme />

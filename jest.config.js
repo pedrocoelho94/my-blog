@@ -13,7 +13,8 @@ module.exports = {
     '!src/graphql/*.ts',
     '!src/styles/**/*.ts',
     '!src/shared-typed/**/*.ts',
-    '!src/types/**/*.d.ts'
+    '!src/types/**/*.d.ts',
+    '!src/graphql/**/*.ts'
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/']

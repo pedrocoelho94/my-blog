@@ -7,6 +7,8 @@ import { useEffect, useRef, useState } from 'react'
 
 import { Search } from '@styled-icons/material-outlined'
 
+import { signOut, useSession } from 'next-auth/react'
+
 export type MenuPropsLinks = {
   id: string
   link: string
@@ -19,6 +21,8 @@ export type MenuProps = {
 }
 
 const Menu = ({ links = [] }: MenuProps) => {
+  const { data: session } = useSession()
+
   const router = useRouter()
   const [isAtTop, setIsAtTop] = useState(true)
   const [searchValue, setSearchValue] = useState('')
@@ -62,6 +66,11 @@ const Menu = ({ links = [] }: MenuProps) => {
     setToggleNav(false)
   }
 
+  const handleClickLogin = (event: React.MouseEvent) => {
+    event.preventDefault()
+    signOut({ redirect: false })
+  }
+
   return (
     <S.Wrapper isAtTop={isAtTop} aria-label="navbar">
       <S.Content>
@@ -81,6 +90,24 @@ const Menu = ({ links = [] }: MenuProps) => {
               </MenuLink>
             </S.Item>
           ))}
+
+          {session ? (
+            <S.Dropdown>
+              <S.Dropbtn>
+                <MenuLink link="#">{session.user.name}</MenuLink>
+              </S.Dropbtn>
+              <S.DropdownContent>
+                <MenuLink link="/profile">Perfil</MenuLink>
+                <MenuLink link="/profile/posts">Meus Posts</MenuLink>
+                <MenuLink link="/profile/create-post">Novo Post</MenuLink>
+                <div onClick={handleClickLogin}>
+                  <MenuLink link="#">Sair</MenuLink>
+                </div>
+              </S.DropdownContent>
+            </S.Dropdown>
+          ) : (
+            <MenuLink link="/login">Login</MenuLink>
+          )}
 
           <S.SearchBox onSubmit={handleSearch} role="search">
             <S.SearchLabel htmlFor="search">Buscar</S.SearchLabel>

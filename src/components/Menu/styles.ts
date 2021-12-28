@@ -243,3 +243,37 @@ export const SearchBoxMobile = styled.form<OpenProps>`
     }
   `}
 `
+export const Dropbtn = styled.div`
+  padding: 1.4rem 0;
+`
+
+export const DropdownContent = styled.div`
+  ${({ theme }) => css`
+    display: none;
+    position: absolute;
+    background-color: ${theme.colors.white};
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    a {
+      color: ${theme.colors.primary};
+      padding: 1.2rem 1.6rem;
+
+      &:hover {
+        background-color: ${theme.colors.gray2};
+      }
+    }
+  `}
+`
+export const Dropdown = styled.div`
+  ${({ theme }) => css`
+    display: inline-block;
+    &:hover {
+      color: ${theme.colors.secondary};
+    }
+    &:hover ${DropdownContent} {
+      display: block;
+    }
+  `}
+`

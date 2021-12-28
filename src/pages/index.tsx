@@ -22,6 +22,7 @@ export default function Home({
         <title>{setting.blogName} - Home</title>
         <meta name="description" content={setting.blogDescription} />
       </Head>
+
       <HomePage
         posts={posts}
         postsReviews={postsReviews}
