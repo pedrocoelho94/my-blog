@@ -6,27 +6,23 @@ import { BlogThemeProvider } from 'context/BlogThemeContext'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
-import Router from 'next/router'
-import NProgress from 'nprogress'
-import '/public/nprogress.css'
-
-//NPROGRESS
-//mostra uma barra no top enquanto faz a transição para uma nova página
-Router.events.on('routeChangeStart', (url) => {
-  console.log(`Loading: ${url}`)
-  NProgress.start()
-})
-
-Router.events.on('routeChangeComplete', () => NProgress.done())
-Router.events.on('routeChangeError', () => NProgress.done())
+import NextNprogress from 'nextjs-progressbar'
 
 // Estilos Globais
 import GlobalStyles from 'styles/global'
+import theme from 'styles/theme'
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <SessionProvider session={pageProps.session}>
       <BlogThemeProvider>
+        <NextNprogress
+          color={theme.colors.secondary}
+          startPosition={0.3}
+          stopDelayMs={200}
+          height={5}
+          showOnShallow={true}
+        />
         <Head>
           <title>Claquete</title>
           <link rel="shortcut icon" href="/assets/images/favicon.png" />

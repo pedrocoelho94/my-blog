@@ -4,9 +4,25 @@ import { GQL_FRAGMENT_GUESTREVIEW } from 'graphql/fragments/guestReview'
 export const GQL_MUTATION_UPDATE_GUESTREVIEW = gql`
   ${GQL_FRAGMENT_GUESTREVIEW}
 
-  mutation UPDATE_GUESTREVIEW($id: ID!, $title: String, $excerpt: String) {
+  mutation UPDATE_GUESTREVIEW(
+    $id: ID!
+    $title: String
+    $slug: String
+    $cover: String
+    $excerpt: String
+    $content: String
+  ) {
     updateGuestreview(
-      input: { where: { id: $id }, data: { title: $title, excerpt: $excerpt } }
+      input: {
+        where: { id: $id }
+        data: {
+          title: $title
+          slug: $slug
+          cover: $cover
+          excerpt: $excerpt
+          content: $content
+        }
+      }
     ) {
       guestreview {
         ...guestReviewFrag
@@ -18,8 +34,24 @@ export const GQL_MUTATION_UPDATE_GUESTREVIEW = gql`
 export const GQL_MUTATION_CREATE_GUESTREVIEW = gql`
   ${GQL_FRAGMENT_GUESTREVIEW}
 
-  mutation CREATE_GUESTREVIEW($title: String!, $excerpt: String!) {
-    createGuestreview(input: { data: { title: $title, excerpt: $excerpt } }) {
+  mutation CREATE_GUESTREVIEW(
+    $title: String!
+    $slug: String!
+    $cover: String!
+    $excerpt: String!
+    $content: String!
+  ) {
+    createGuestreview(
+      input: {
+        data: {
+          title: $title
+          slug: $slug
+          cover: $cover
+          excerpt: $excerpt
+          content: $content
+        }
+      }
+    ) {
       guestreview {
         ...guestReviewFrag
       }
