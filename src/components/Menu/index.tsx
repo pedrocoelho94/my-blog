@@ -99,7 +99,7 @@ const Menu = ({ links = [] }: MenuProps) => {
               <S.DropdownContent>
                 <MenuLink link="/profile">Perfil</MenuLink>
                 <MenuLink link="/profile/posts">Meus Posts</MenuLink>
-                <MenuLink link="/profile/create-post">Novo Post</MenuLink>
+                <MenuLink link="/profile/post/new">Novo Post</MenuLink>
                 <div onClick={handleClickLogin}>
                   <MenuLink link="#">Sair</MenuLink>
                 </div>
