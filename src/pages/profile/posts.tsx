@@ -5,12 +5,10 @@ import { GetServerSideProps } from 'next'
 import { getSession } from 'next-auth/react'
 import { serverSideRedirect } from 'utils/server-side-redirect'
 
-import PrivateComponent from 'components/PrivateComponent'
+//import PrivateComponent from 'components/PrivateComponent'
 import { loadPosts } from 'api/loadPosts'
 import { SettingsStrapi } from 'shared-typed/settings'
 import MyPostsTemplate from 'templates/MyPosts'
-
-//import { useRouter } from 'next/router'
 
 export type GuestPost = {
   id?: string
@@ -30,21 +28,21 @@ export default function MyPostsPage({
   guestreviews,
   setting
 }: MyPostsPageProps) {
-  //const router = useRouter()
-  //const refreshData = () => router.replace(router.asPath)
-
+  console.log('LOG', guestreviews.length)
   return (
     <>
       <Head>
         <title>{setting.blogName} - Meus Posts</title>
         <meta name="description" content={setting.blogDescription} />
       </Head>
-      {console.log('SERVER QTD', guestreviews.length)}
 
-      <PrivateComponent>
-        {guestreviews.length}
+      {guestreviews[0].title}
+      <MyPostsTemplate setting={setting} guestreviews={guestreviews} />
+
+      {/* <PrivateComponent>
+        {guestreviews[0].title}
         <MyPostsTemplate setting={setting} guestreviews={guestreviews} />
-      </PrivateComponent>
+      </PrivateComponent> */}
     </>
   )
 }
@@ -67,6 +65,8 @@ export const getServerSideProps: GetServerSideProps<MyPostsPageProps> = async (
         Authorization: `Bearer ${session.accessToken}`
       }
     )
+
+    console.log('TEST', guestreviews.length)
 
     return {
       props: {
