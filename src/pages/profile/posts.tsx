@@ -5,7 +5,7 @@ import { GetServerSideProps } from 'next'
 import { getSession } from 'next-auth/react'
 import { serverSideRedirect } from 'utils/server-side-redirect'
 
-//import PrivateComponent from 'components/PrivateComponent'
+import PrivateComponent from 'components/PrivateComponent'
 import { loadPosts } from 'api/loadPosts'
 import { SettingsStrapi } from 'shared-typed/settings'
 import MyPostsTemplate from 'templates/MyPosts'
@@ -36,13 +36,9 @@ export default function MyPostsPage({
         <meta name="description" content={setting.blogDescription} />
       </Head>
 
-      {guestreviews[0].title}
-      <MyPostsTemplate setting={setting} guestreviews={guestreviews} />
-
-      {/* <PrivateComponent>
-        {guestreviews[0].title}
+      <PrivateComponent>
         <MyPostsTemplate setting={setting} guestreviews={guestreviews} />
-      </PrivateComponent> */}
+      </PrivateComponent>
     </>
   )
 }

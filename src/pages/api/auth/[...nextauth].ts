@@ -2,6 +2,13 @@ import { gqlClient } from 'graphql/client'
 import { GQL_MUTATION_AUTHENTICATE_USER } from 'graphql/mutations/auth'
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
+import GoogleProvider from 'next-auth/providers/google'
+
+type NextAuthSession = Record<string, unknown>
+
+const actualDateInSeconds = Math.floor(Date.now() / 1000)
+// tem q ser a mesma expiração do strapi
+const tokenExpirationInSeconds = Math.floor(7 * 24 * 60 * 60) // 7 dias
 
 export default NextAuth({
   secret: process.env.NEXT_AUTH_SECRET,
@@ -39,49 +46,46 @@ export default NextAuth({
             }
           )
 
-          const { jwt, user } = login
-          const { id, username, email } = user
+          // const { jwt, user } = login
+          // const { id, username, email } = user
 
-          if (!jwt || !id || !username || !email) return null
+          // if (!jwt || !id || !username || !email) return null
 
-          return {
-            jwt,
-            id,
-            name: username,
-            email
-          }
+          // return {
+          //   jwt,
+          //   id,
+          //   name: username,
+          //   email
+          // }
+          return login
         } catch (e) {
-          console.log('LOGIN OU SENHA INVÁLIDOS')
           return null
         }
       }
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET
     })
   ],
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user, account }) {
       const isSignIn = !!user
-      // tem q ser a mesma expiração do strapi
-      const actualDateInSeconds = Math.floor(Date.now() / 1000)
-      const tokenExpirationInSeconds = Math.floor(7 * 24 * 60 * 60) // 7 dias
 
       if (isSignIn) {
-        if (!user || !user.jwt || !user.name || !user.email || !user.id) {
-          return Promise.resolve({})
+        if (account && account.provider === 'google') {
+          const response = await fetch(
+            `${process.env.NEXT_PUBLIC_API_URL}/auth/google/callback?access_token=${account?.access_token}`
+          )
+
+          const data = await response.json()
+          token = setToken(data)
+        } else {
+          token = setToken(user)
         }
-
-        token.jwt = user.jwt
-        token.id = user.id
-        token.name = user.name
-        token.email = user.email
-
-        token.expiration = Math.floor(
-          actualDateInSeconds + tokenExpirationInSeconds
-        )
       } else {
         if (!token?.expiration) return Promise.resolve({})
         if (actualDateInSeconds > token.expiration) return Promise.resolve({})
-
-        console.log('USUARIO LOGADO', token)
       }
 
       return Promise.resolve(token)
@@ -107,3 +111,16 @@ export default NextAuth({
     }
   }
 })
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const setToken = (data: any): NextAuthSession => {
+  if (!data || !data?.user || !data?.jwt) return {}
+
+  return {
+    jwt: data.jwt,
+    id: data.user.id,
+    name: data.user.username,
+    email: data.user.email,
+    expiration: actualDateInSeconds + tokenExpirationInSeconds
+  }
+}

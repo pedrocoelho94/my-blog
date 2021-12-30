@@ -17,7 +17,7 @@ const PrivateComponent = ({ children }: PrivateComponentProps) => {
   }
 
   if (!session) {
-    return <p>você não está autenticado</p>
+    return null
   }
 
   return children
